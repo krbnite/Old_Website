@@ -1,0 +1,57 @@
+<HTML>
+
+<HEAD>
+<TITLE>My IDL Libraries</TITLE>
+<meta name="description" content="A list of my IDL libraries and functions.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="../js/script1.js"></script>
+<script type="text/javascript" src="../js/script2.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</HEAD>
+
+
+<BODY BGCOLOR='white'>
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="../ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+<div id="content">
+	
+	<CENTER>
+		<hr/>
+		<b>Geomagnetic Indices</b>
+		<TABLE BORDER="1">
+		  <TR> 
+				<TD>Get_Dst</TD>
+			</TR>
+			<TR>
+				<TD>Get_Kp</TD>
+			</TR>
+			<TR>
+				<TD>Kp_UQT</TD>
+			</TR>
+			<TR>
+				<TD>UpdateKp</TD>
+				<TD>Updates local Kp database.</TD>
+			</TR>
+			<TR>
+				<TD>UpdateDst</TD>
+				<TD>Updates local Dst database.</TD>
+			</TR>
+		</TABLE>
+	</CENTER>
+
+
+</div><!--id="content"-->
+</div><!--id="container"-->
+</body>
+</html>
+
+
+					
+
+
+
+

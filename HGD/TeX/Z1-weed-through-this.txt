@@ -1,0 +1,352 @@
+% mainfile: ../Mag_Iono_2014.tex
+% \textbf{}
+% Ch10: ITM Convection
+% lec [13.0,13.5]
+
+
+Earth's Magnetosphere: Role of the Ionosphere and
+
+Topics:
+(1) Field-aligned currents (aka, Birkeland currents)
+(2) Role of the ionosphere in convection (aka ITM coupling)
+
+(1) Field-aligned Currents
+In the literature, you will see the phrases "Birkeland currents" and
+"field-aligned currents" (FACs) used interchangeably. It appears that
+magnetospheric-oriented papers are tending towards using "field-aligned
+currents" much more often these days, although you will find many older
+papers that exclusively talk in terms of Birkeland currents. They're the
+same thing. Don't let it blow your head up!
+
+If you refer to figure 1, we are talking about the region of currents
+extending from the low-altitude polar regions, along the magnetic field
+geometry, and into the tailward region. We've previously discusses other
+currents within the magnetospheric system, such as the magnetopause
+currents, which form somewhat of a barrier between the Earth's
+magnetosphere and the solar wind. These currents are surface currents
+(see figure 2).
+
+We've also discussed the neutral sheet current (ChX, SectXX) -- a
+dawn-to-dusk 
+current within the plasma sheet in the magnetotail; it is in response to the "stretching" of the Earth's magnetic
+field geometry in the tailward direction due to the solar wind. And then
+there was the ring current (ChX,SecXX), a current induced my the field
+gradient and curvature drifts.  
+
+The one important current system we have not yet talked about is the FAC
+system. This is becuase the FAC system is probably one of the more
+complex current systems --- because, really, to understand the Birkeland
+currents (yea, I just changed up the nomenclature), one needs to not
+only understand the dynamics of the magnetosphere, but must also
+investigate the processes and dynamics governing the ionosphere. We will
+discuss ionospheric dynamics more rigorously in CH-XXX; we will also
+discuss the mesosphere and, in turn, wrap these things together and talk
+about the mesosphere-lower-thermosphere [MLT] system.
+
+FACs were saved for last, also, because one could argue that they are
+hot research topics in terms of magnetosphere-ionosphere coupling.
+Surprisingly, still there is fairly little that is fully understood
+about these currents.
+
+The UCAR COMET program has some nice pictures of these current systems
+(figure 2). I urge you to go their website and view some of the movies.
+Figure 2 is an important image: it really gives us an idea about how
+these current systems interact, and more importantly it gives us a good
+feel how and where the various currents close. In Figure 2, one can see
+how the FACs tie into the bigger picture -- how they connect the Earth's
+polar ionosphere to both the ring current and the magnetopause current
+system. This picture truly has important implications: for example, to study the
+outermost regions of the magnetosphere---all the way at the magnetopause
+itself, interfaced with the magnetosheath and, ultimately, the solar
+wind---one must also have at least a vague conception of ionospheric
+physics. In fact, you really begin to sense the deep connections going
+on here: the ionosphere is not some independent system, to be studied in
+and of itself, and neither is the magnetosphere; furthermore, the solar
+wind's effect on the magnetopause tells us that, via the FACs, the solar
+wind and the ionosphere must all be in touch with each other, feeding
+and begin fed by each other. This is a truly grand and unified system.
+Learn as much as you can about any and all of it; too often researchers
+will hunker down and focus on one tiny aspect of one sub-system of a
+sub-system of either the ionosphere or magnetosphere. 
+
+From the figure, it should be clear that there are two main FAC current
+systems: one closing at the magnetopause current system, the other in
+the ring current. These FAC systems are known as the region 1 and region
+2 birkeland current systems. That is, the equatorward FACs reaching down into the
+polar ionosphere are Region 2 FACs, while the poleward FACs are the
+Region 1 currents.
+
+At this point in time, it's kind of weird: you hear people referring to
+the ring current without ever mention the ionosphere's role in the ring
+current population and its dynamics. Possibly because of the division of
+geospace labor that is manifested in the separation of the GEM and CEDAR
+communities, systems like these can be studied quite rigorously in vain
+because the focus isn't broad enough. Just like a magnetospheric
+scientist within the GEM community might study the ring current in
+detail without much heed for the ionosphere, folks in the CEDAR
+community can be found discussing the ionosphere with just as much gusto
+and with just as little reference to the ring current.
+
+Ok, ok -- so we've talked up these FACs quite a bit, but what are they?
+Most pictures you find in introductory textbooks on magnetospheric
+current systems show you a great deal about FACs without really telling
+you what is going on (see Figure3). While such a categorical approach is
+not sufficient for fully understanding this current system, it does have
+enough merit to briefly discuss. (Why are these images not sufficient?
+Think about a perfect TV family on a 1950s sitcom: sure, you can learn
+some of the basic ideas about what an American family is---there's a
+brother, mother, children, etc---but seriously: it's not real life.)
+
+You see in figure 3 quite clearly that the Region 1 Birkeland currents
+are the poleward-most FACs touching down in the ionosphere. They
+typically enter the polar ionosphere on the dawnside, cross the polar
+cap region, and leave the ionosphere on the duskside. These currents
+link back to typically tailward regions...
+
+The more equatorward FACs are the Region 2 currents. You will notice
+they have the opposite orientation from the Region 1 currents: they
+touch down on the duskward polar ionosphere, and leave the ionosphere on
+the dawnside. These currents seem to have a more complex structures.
+They come in around your mid-latitudes, ultimately stemming from the
+ring current -- these don't extend far back into the tail like the
+Region 1 system.
+
+In the polar cap region, where in our cartoon picture of the FACs we see
+a horizontal current connecting the FACs at the dawn and dusk side
+ionosphere, we have what are called the Pedersen currents. Pedersen
+currents are defined as currents that flow parallel to the electric
+field and perpendicular to the magnetic field. A possible mnemonic for
+this remeber that PEdersen currents are "Parallel Electric" currents
+(works for me!). You'll also notice horizontal currents in closed loops
+about the touchdown point of the FACs: these are known as Hall currents
+--- that is, currents that flow perpendicular to both the electric and
+magnetic field (my mnemonic: a capital "H" shows a perpendicular
+intersection, and it's conveniently followed by the word "all" giving
+us: Hall currents are "perpendicular all" currents).
+
+
+You'll also notice that via the Pedersen and Hall currents, the Region 1
+and Region 2 FAC systems interact: the ring current is intimately
+connected with the ionosphere, with the magnetopause, with the
+magnetotail (these connections cannot be emphasized enough). 
+
+But enough with the cartoons: what cause all of this? What physically
+allows this system to persist? 
+
+One important component is the variability in the ionospheric
+conductivity. We will talk about this this later, in ChX-SecXX, when we
+talk about the ionosphere in more detail.
+
+For now, let's discuss the Pedersen currents. What causes them? It comes
+down to ionospheric-thermospheric winds: you needs these winds to
+generate the current; if you don't have the winds, you don't have the
+current; if you don't have the current, you do not have the full closure
+on the ring current or mangetopause current systems. And that's kind of
+a big deal! (You cannot just be a "GEM student" and study the ring
+current, or magnetopause currents, or tail currents, without
+understanding, at least a little, about what ionospheric/thermospheric
+winds are and, more importantly, the variability of those winds. This is
+a hot topic in ITM science right now.)
+
+Let's do a quick Ionosphere/Thermosphere 101: to first order --- that
+first term in our Taylor series expansion that describes thermospheric
+winds --- you have the story line given in figure 4. On the left hand
+sun, you'll notice the Sun, or at least a weird arrow representation of
+it. Energy from the Sun heats up the dayside of the Earth, heating up
+the air on the dayside, and causing winds that blow from the dayside in
+the nightward direction. See? To first order, the winds in the
+thermosphere are really, really simple. You've got energy deposition on
+the dayside, which induces a high-pressure cell, and gases flow from
+regions of high pressure to low pressure --- i.e., the heated, higher
+pressure dayside air flows towards the cooler, lower pressure nightside.
+This in turn sets up some air circulation, which is represented in
+figure 4 by the orange curves over the polar region. You can see that
+the circulation is from the dayside to the nightside in the
+polarward-most region, and that this displacement of air on the dayside,
+combined with the addition of air on the nightside, sets up some motion
+at the equatorward flanks of these curves... And so, ultimately, to
+first order, you have this simple 2-cell pattern. We call these the
+thermospheric winds, but you could just as well call them tides, and our
+approximation could be called the first "fundamental" mode of the
+diurnal tide. This is the type of terminology that is used much lower in
+altitude, down in say the troposphere.
+
+So you have the neutral air flow, and it's dragging over the polar caps
+within the same region where we have these ion populations. The neutral
+air is flowing from the dayside to the nightside, bumping into the ions
+(helium, hydrogen, oxygen, nitrogen, electrons)
+along the way, and slowly pushing them in the general direction of the
+neutral flow. But a charged particle moving over the pole behaves very
+differently than a neutral particles moving over the pole: just think
+in terms of vxB (remember the right-hand rule?). Thinking simply in
+terms of vxB, you can see that you will collect positive charge on the
+dawnside and negative charge on the duskside. This creates an electric
+field that goes from the dawnside to the duskside, and this electric
+field actually maps all the way out into the magnetotail and helps
+support what's known as the cross-tail electric field (which extends all
+the way back to the nightside reconnection points in the deep tail
+region). This electric field is called a polarization elelectric field.
+This polarization electric field induces new currents which act to
+redistribute the charge, and thus we've set up the Pedersen current
+("Parallel Electric" currents) that is required for the Region 1
+Birkeland current system.
+
+Figure 5b shows polarization electric fields in white (that is, the
+Pedersen currents) and the induced Hall currents in yellow. The Hall
+current is induced by a variable, non-constant conductivity and
+collision frequency over the
+polar cap, and how these quantities continue to vary in time. Beware:
+when discussing these FAC systems and thermospheric winds, be sure you
+know what each component of the image you are viewing represents, or
+things can get confusing very quickly. Notice how similar figure 5a and
+figure 5b are, and yet note that they are illustrating different
+phenomena. The primary difference you'll notice is that the 2-cell
+pattern is reversed: while in figure 5a we are looking at the 2-cell
+convection of neutral winds, in 5b we are viewing the 2-cell pattern
+representing the Hall currents. The Hall currents run opposite the
+neutral winds; the neutral winds over the polarward-most region blow
+from the dayside to the nightside, while the Hall currents in this
+region flow in the opposite direction, dayward from the nightside.
+
+If a picture is unclear to you, start from first principles: what causes
+what? This is generally a good way to approach any dynamo system, as we
+will see again when we discuss the equatorial ionosphere (ChX-SectXX).
+Put the dynamo together step by step: Sun, heat, high pressure, air flow
+from high pressure to low pressure, a collision-induced charge particle
+drift in the same direction, an induced current via the magnetic Lorentz
+force (qvxB), polarization electric field, induced Pedersent currents,
+and ultimately the Hall currents. Phew!
+
+<Question about coriolis forces... Digression on when and where coriolis
+forces are important.... Might be better put in another section... 40
+percent into the video>
+
+Ring Current Closure
+Figure 6 shows a partial ring current system, which is connected to the
+Birkeland currents, whereas lower in altitude in the equatorial plane
+(i.e., lower in L shell), one find the proper ring current, fully
+wrapping around the Earth, closed within the inner magnetosphere. Why do
+the partial currents stop part way around the Earth, then instead trace
+out the magnetic field and head to the polar ionosphere? The reason is,
+as we go further out in L-shell from the ring current, charged particles
+will actually experience a potential drop that is lower along the
+magnetic field geometry, and closing in the polar ionosphere, then it
+does along the equator, as the ring current does. As you go even further
+out in L, that same potential drop is no longer compelling enough to
+attract the charged particles, and the partial ring currents eventually
+disappear completely leaving only the cross-tail current, extending from
+the dawnside magnetopause to the duskside magnetopause. The transition
+on the nightside, from the ring current, outward in L past the partial
+ring currents, to the region of the cross-tail current is not a clear
+transition. We have methods and principles to help us understand from
+ideal MHD, or more generally from non-ideal MHD, but still: understand
+that it is not clear cut. Certainly the transition from a partial ring
+current, inward in L, to the full ring current is currently an
+interesting and actively researched problem. Note that the FACs
+(Birkeland currents) in figure 6 are Region 2 field-aligned
+currents (remember: Region 2 FACs are associated with the ring current,
+while Region 1's are connected to the magnetopause);
+Region 1 FACs extend even deeper into the tail.
+
+In figure 6b, we've drawn an example of a Region 1 FAC in red. We see
+there is a cross-tail current, extending from the dawnside magnetopause
+to the duskside magnetopause, and that the magnetopause region where the
+the cross-tail current is meeting the magnetopause current system, there
+exists a potential drop largest along the magnetic field vectors,
+heading towards the polar ionosphere. (Note that this figure actually
+makes it look like the ring current on the dayside is very close to the
+dayside magnetopause..... That's just a bad picture, really.)
+
+So that's our FAC system, one of the four dominant current systems
+(magnetopause, cross-tail, ring, FAC) in the magnetosphere. It should be
+re-emphasized that calling these "individual" current systems "systems",
+one is making ambiguous the fact that all the current systems are
+connected and rely on one another for current closure --- that is,
+they're all apart of the same circuit. 
+
+Ionosphere-Thermosphere-Magnetosphere Coupling
+If we're going to talk about the ionosphere, it is at one's own peril to
+not mention the magnetosphere, and likewise for the magnetosphere: the
+ionosphere is one of the magnetosphere's two boundaries -- the other
+boundary being the solar wind at the magnetosheath/magnetopause. It's
+one big, complex system --- and can be looked at from a systems theory
+approach. Those of you associated with CEDAR know
+that there is a real push to study all of these components --- the solar
+wind, the magnetosphere, the ionosphere --- from a systems theory
+approach. For those of you who are engineers, you know that a systems
+theory approach to studying complex systems is a staple of an engineer's
+undergraduate curriculum: system stability, instability, bifurcations,
+etc. 
+
+The Quasi-Math of ITM Coupling: the Steady State Approach
+Fully knowing that it not true, and not even a good approximation, we
+can ask about what this coupling is like in a fictional magnetosphere
+that is in the steady state --- that is, where the magnetic field is not
+varying in time and correspondingly there is only an electrostatic
+electric field (Faraday's differential law of induction):
+\begin{math}
+  \frac{\partial \vec{B}}{\partial t} = - \bigtriangledown \times
+  \vec{E} = 0
+\end{math}
+
+I must repeat: this is not true for the actual magnetosphere-ionosphere
+interaction, and it is not even a good approximation. This is a
+first-order approach and is only good for a fictional magnetosphere. Our
+magnetosphere is most often not in a steady state: the assumption of a
+magnetosphere that does not vary in time is violated all of the time!
+It's kind of wierd: oftentimes, an overly simplistic approach like this
+will be invoked to help explain some phenomenon, e.g., dayside
+reconnection, that is inherently in violation of the steady-state
+assumption. Beware of this kind of thing; question how useful the
+analysis is, how instructive it is to invoke a highly fictionalized
+magnetosphere to explain the much more complex, much more dynamic
+magnetosphere that actually exists. We will discuss such a fictionalized
+magnetosphere, but do not go forth placing much stock in it or using
+these equations to do research with!
+
+So, assuming the magnetic field doesn't vary in time, by Faraday's law,
+we know that the electric field has no curl and, so, the electric field
+can be generated by a scalar potential:
+\begin{math}
+  \vec{E} = -\bigtriangledown \phi
+\end{math}
+
+
+We also can invoke the condition that the electric field is everwhere
+perpendicular to the magnetic field, at least in the region of interest.
+(This is true, for example, if we assume plane waves.)
+
+One result of no magnetic field time derivative is that the magnetic
+flux threading some area, A, is constant:
+\begin{math}
+  \int_{A}{\vec{B}\bullet d\vec{s}} = const
+\end{math}
+
+If you have an idea of the scale length you're interested (for example,
+in the ionosphere, we might be interested in scale length $L_{io}^{2}$
+and in the magnetosphere, we might be interested in sizes on the order
+of $L_{msp}^{2}$), then the constant flux through a surface can be used
+to show:
+
+\begin{math}
+  B_{io}L_{io}^{2} = B_{msp}L_{msp}^{2}
+\end{math}
+
+This can be rewritten as:
+\begin{math}
+  \frac{L_{io}}{L_{msp}} = \sqrt{ \frac{B_{msp}}{B_{io}} }
+\end{math}
+
+These are back-of-the-envelope calculations. In the same manner, we can
+also set up back-of-the-envelope equations for the electric fields in
+the (fictionalized) ionosphere and the (fictionalized) magnetosphere,
+and for the typical charged particle velocities. 
+
+\begin{gather*}
+  \frac{E_{io}}{E_{msp}} = \frac{ \bigtriangleup \phi / L_{io} }{
+  \bigtriangleup \phi / L_{msp} } = \sqrt{ \frac{B_{io}}{B_{msp}} }\\
+  \frac{v_{io}}{v_{msp}} = \frac{ E_{io}/B_{io} }{ E_{msp}/B_{msp} } =
+  \frac{B_{msp}}{B_io} 
+\end{gather*}
+
+

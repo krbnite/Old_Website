@@ -1,0 +1,47 @@
+
+When interpreting vectorial data on sphere, one
+often uses a localized spherical coordinate system, as opposed to a
+static Cartesian system. This is because the local coordinate system is
+more intuitive when discussing and interpreting the data; further more,
+the coordinates have the same meaning everywhere. This is in contrast to
+using a static Cartesian system, where the components at each point on
+there sphere, although along the same axes everywhere, take on different
+meaning. 
+
+For example, imagine the Z axis is defined to point in a direction
+parallel to the rotation axis, the X axis points orthogonally out of the
+middle of North America, and the Y axis complete the orthogonal
+coordinate system. At the North pole, the vertical direction (``up'') is the Z
+direction, but in the middle of North America, ``up'' is in the X
+direction. 
+
+In a local coordinate system, instead of choosing static basis vectors,
+we choose to instead allow the basis vectors to change while holding
+directional concepts constant.
+
+So in spherical coordinates, for one, we have the radial (or vertical)
+component. This means no matter where on the Earth's surface or in its
+atmosphere, when I talk about the vertical drift, you know exactly what
+I'm talking about. Imagine using a Cartesian system and talking about
+the Y drift at multiple locations on the sphere? At each location, it
+refers to a different drift: sometimes vertically up or vertically down,
+sometimes purely horizontal, and other times some mix of the two.
+
+MERIDIONAL (N-S)
+We also have the polar angle component. Note that this is defined in
+reference to background, static Cartesian coordinate system. That said,
+it is not confusing: if the Z axis of the Cartesian system is the
+rotation axis, then the polar angle component is simply the Southward
+component at a point. This polar component in the local system is also
+referred to as the meridional component in many areas of geophysics.
+
+ZONAL (E-W)
+In a local spherical basis, we also have the azimuthal component. This
+component represents the component of the flow parallel to the XY plane
+in the background, static cartesian system. Or, another way of saying
+this is that the azimuthal component is the non-vertical component that
+is also perpendicular to the meridional component. This azimuthal
+component is often called the zonal component in geophysical
+applications.
+
+

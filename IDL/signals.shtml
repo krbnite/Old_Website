@@ -1,0 +1,155 @@
+<HTML>
+
+<HEAD>
+<TITLE>My IDL Libraries</TITLE>
+<meta name="description" content="A list of my IDL Libraries and functions.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="../js/script1.js"></script>
+<script type="text/javascript" src="../js/script2.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</HEAD>
+
+
+<BODY BGCOLOR='white'>
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="../ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+<div id="content">
+	
+	<CENTER>
+		<hr/>
+		Signal Processing
+		<hr/>
+		<TABLE>
+		  <TR>
+				<TD> CorMat </TD>
+				<TD> Compute correlation/covariance matrix of two data vectors.</TD>
+			</TR>
+			<TR>
+				<TD> Correlogram </TD>
+				<TD> ... </TD>
+			</TR>
+			<TR>
+				<TD> CPSD </TD>
+				<TD> Cross-Power Spectral Density of two data vectors </TD>
+			</TR>
+			<TR>
+				<TD> Despike </TD>
+				<TD> Remove spikes from a time series. </TD>
+			</TR>
+			<TR>
+				<TD> DwnSmpl </TD>
+				<TD> Downsample a time series. </TD>
+			</TR>
+			<TR>
+				<TD> ENBW </TD>
+				<TD> Equivalent Noise Bandwidth of a windowing/tapering function. </TD>
+			</TR>
+			<TR>
+				<TD> FFT_Freqs </TD>
+				<TD> Returns the Discrete Fourier Transform frequencies associated with a given data vector and 
+					sampling period. </TD>
+			</TR>
+			<TR>
+				<TD> FFT_Pers </TD>
+				<TD> A simple wrapper functio to FFT_Freqs; returns the DFT periods instead of frequencies. </TD>
+			</TR>
+			<TR>
+				<TD> FillNaN </TD>
+				<TD> Detect a fill NaNs and NaN Islands.</TD>
+			</TR>
+			<TR>
+				<TD> fTaper </TD>
+				<TD> Returns an N-element data window/taper upon request (e.g., Hamming, Hanning, Bartlet, 
+					flat top, etc).</TD>
+			</TR>
+			<TR>
+				<TD> Incregram </TD>
+				<TD> ... </TD>
+			</TR>
+			<TR>
+				<TD> Mk_Wins </TD>
+				<TD> Slices up a time series into n-point overlapping rectangle-windowed subsets; also returns 
+					associated "window time" and running statistics. </TD>
+			</TR>
+			<TR>
+				<TD> NENBW </TD>
+				<TD> Normalzied Equivalent/Effective Noise Bandwidth </TD>
+			</TR>
+			<TR>
+				<TD> PMCurve </TD>
+				<TD> Returns 7 power means for p in {-Inf, -2, -1, 0, 1, 2, Inf}. 
+					Note that p=-Inf is min(data), p=Inf is max(data), p=-1 is the 
+					harmonic mean, p=0 is the geometric mean, p=1 is the arithmetic 
+					mean, and p=2 is root-mean-square. (What is p=-2?) </TD>
+			</TR>
+			<TR>
+				<TD> Probogram </TD>
+				<TD> Returns a contour plot where the x-axis is window time, the y-axis is in
+					the data units, and the color axis is intensity/count. In other words, what I
+					call "probogram" is a sliding histogram. </TD>
+			</TR>
+			<TR>
+				<TD> PSD </TD>
+				<TD> Periodogram or modified-Periodogram estimate of the Power Spectral Density. </TD>
+			</TR>
+			<TR>
+				<TD> PSumSeq </TD>
+				<TD> Partial sum sequence: p[i] = a*(data[0]+...+data[i-1])+data[i], a is in [-1,1].  </TD>
+			</TR>
+			<TR>
+				<TD> SpecFlat </TD>
+				<TD> Determines the flatness of a data vector's power spectra by
+					dividing the geometric mean by the arithmetic mean.
+			</TR>
+			<TR>
+				<TD> SpecPlot </TD>
+				<TD> Contour plot of welch-overlapping modofied peridogram estimates of the PSD. </TD>
+			</TR>
+			<TR>
+				<TD> SpGram </TD>
+				<TD> Same basic thing as SpecPlot. (I have to clean these two up.) </TD>
+			</TR>
+			<TR>
+				<TD> tlDFA </TD>
+				<TD> Detrended fluctation analysis. (This program needs some work!) </TD>
+			</TR>
+			<TR>
+				<TD> tlPeriodogram </TD>
+				<TD> SpecPlot, SpGram, tlPeriodogram?!? (More of the same, really. Clean up!) </TD>
+			</TR>
+			<TR>
+				<TD> ULF_Filter </TD>
+				<TD> A quick, convenient way to digitally-filter geomagnetic time series into
+					a specified Ultra Low Frequency [ULF] band. Moreover, it is generally a very
+					useful, more controllable wrapper function over IDL's DIGITAL_FILTER and 
+					CONVOL functions. </TD>
+			</TR>
+			<TR>
+				<TD> UlfBands </TD>
+				<TD> Returns DFT frequency indices for various ULF bands given a data vector size
+					and sampling interval. </TD>
+			</TR>
+			<TR>
+				<TD> UlfNoise </TD>
+				<TD> Auto-estiamte the noise floor of a time series... Needs lots of work! </TD>
+			</TR>
+			<TR>
+				<TD> ZMS </TD>
+				<TD> Zero Mean Sequence: returns a mean-subtracted time series. </TD>
+			</TR>
+		</TABLE>
+	</CENTER>
+
+
+</div><!--id="content"-->
+</div><!--id="container"-->
+</BODY>
+</HTML>
+
+
+					
+

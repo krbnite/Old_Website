@@ -1,0 +1,78 @@
+<HTML>
+<!--THIS IS MY WEBSITE-->
+<HEAD>
+  <TITLE>Kevin Urban</TITLE>
+  <meta name="description" content="The professional page of Kevin Urban.">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script type="text/javascript" src="js/script1.js"></script>
+	<script type="text/javascript" src="js/script2.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</HEAD>
+
+
+<BODY>
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="ssi/navBar.html"-->
+</DIV>
+
+<div id="content">
+<!-- ------------RECENT WORKS & PICS---------------- -->
+  <DIV id="indexgraphic">
+    <TABLE ALIGN="center" CELLPADDING="5"> <!--width="768"-->
+			<TR>
+				<TD><IMG SRC="images/kdu_abq2.png" width="350" align="left"
+					alt="An image should be here!"></td>
+			</TR>
+		</TABLE>
+	</DIV><!--id="indexgraphic"-->
+
+<!-- ------------EDUCATION & RESEARCH---------------- -->
+  <DIV id="indexmain">
+
+    <TABLE ALIGN="center" CELLPADDING="5"> <!--width="768"-->
+			<TR>
+				<TD><h2><center>Education</center></h2></TD>
+				<TR>
+					<TD><b>Physics, Ph.D. Candidate (2012-2016)</b><br>
+						New Jersey Institute of Technology / Rutgers University<br>
+				</TD></TR>
+				<TR>
+					<TD><b>Applied Physics, M.S. (2010)</b><br>
+					New Jersey Institute of Technology / Rutgers University<br>
+					Thesis: Synoptic variability of a CIR-driven open-closed boundary
+					during solar minimum 
+					<!--(<a href="http://library1.njit.edu/etd/2010s/2010/njit-etd2010-108/njit-etd2010-108.html">html</a>)-->
+				</TD></TR>
+				<TR>
+					<TD><b>Applied Physics, B.S. (2008)</b><br>
+						New Jersey Institute of Technology / Rutgers University<br>
+						Minor: Applied Mathematics<br>
+				</TD></TR>
+				<TR>
+					<TD><h2><center>Background</center></h2></TD>
+				</TR>
+				<TR>
+					<TD><p>I have explored the Earth's ionosphere/magnetosphere system and its interaction with the solar 
+						wind, using methods from time series analysis, statistical modeling, and machine learning applied to
+					 	large swaths of data from ground-based and spaceborne instruments. </p></TD>
+				</TR>
+				<TR><TD> <p><a href="resume.pdf">Resume</a></TR></TD>
+			</TABLE>
+	</DIV> <!--id="indexmain"-->
+
+</DIV> <!--id="content"-->
+
+<!-- ------------LINKS & MISCELLANEOUS---------------- -->
+
+<DIV id="footer">
+		<p><FONT SIZE="2"><b>Contact</b> 
+			me at KayDeeYouTwo AT njit DOT edu <br><i>(fill in the corresponding alphanumerics)</i></FONT>
+</DIV><!--id="footer"-->
+
+<!-- looks like this DIV already ends about 10 lines up -->
+</DIV><!--id="container"-->
+
+</BODY>
+</HTML>

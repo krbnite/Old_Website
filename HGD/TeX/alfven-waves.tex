@@ -1,0 +1,185 @@
+This derivation has something to do w/ Alfven waves: 
+% mainfile: ../hw2.tex
+\textbf{Reproduce the equations from Lecture 4, slides 18 to 19.}
+
+We start with the dispersion relation on slide 17:
+
+\vspace{5mm}
+
+$ -\omega^{2} \vec{V}_{1} +
+(v_{s}^{2}+v_{A}^{2})(\vec{k}\cdot\vec{V_{1}})\vec{k}+(\vec{k}\cdot\vec{v_{A}})[(\vec{k}\cdot\vec{v_{A}})\vec{V_{1}}-(\vec{v_{A}}\cdot\vec{V_{1}})\vec{k}-(\vec{k}\cdot\vec{V_{1}})\vec{v_{A}}]=0$
+
+\vspace{5mm}
+
+We also note that $\vec{V_{1}}$ is a plane wave:
+
+\vspace{5mm}
+
+\begin{center}
+  $\vec{V}_{1}(\vec{r},t) =
+  \vec{V}_{1,0}exp[i(\vec{k}\cdot\vec{r}-\omega t)]$
+\end{center}
+
+\vspace{5mm}
+
+We want to look at situation where $\vec{k}\cdot\vec{B_{0}}=0$. This is
+the same as saying $\vec{k}\cdot\vec{v_{A}}=0$ since the Alfven velocity
+is defined as $\vec{v_{A}}:=\vec{B}/\sqrt{\mu_{0}\rho_{0}}$.
+
+Well this greatly simplifies the stated dispersion relation: the big,
+scary square-bracketed term is multiplied by zero and vanishes!
+
+\vspace{5mm}
+
+\begin{center}
+$-\omega^{2} \vec{V}_{1} + (v_{s}^{2}+v_{A}^{2})(\vec{k}\cdot\vec{V_{1}})\vec{k}=0$
+\end{center}
+
+\vspace{5mm}
+
+Now, to solve for $\vec{V_{1}}$, it just a simple rearrangement of this
+last equation:
+
+\vspace{5mm}
+
+\begin{center}
+$-\omega^{2} \vec{V}_{1} = -(v_{s}^{2}+v_{A}^{2})(\vec{k}\cdot\vec{V_{1}})\vec{k}$
+
+$\vec{V}_{1} = (v_{s}^{2}+v_{A}^{2})(\vec{k}\cdot\vec{V_{1}})\vec{k}/\omega^{2} $
+\end{center}
+
+\vspace{5mm}
+
+Noting that the direction the wave is travelling in is the direction of
+the wave vector, we can write: $\vec{k}||\vec{V}_{1}$. This allows us to
+write:
+
+\vspace{5mm}
+
+\begin{center}
+  $\vec{V}_{1} = (v_{A}^{2}+v_{s}^{2})\frac{kV_{1}}{\omega^{2}}\vec{k}$
+\end{center}
+
+\vspace{5mm}
+
+...which, again becuase of the parallel nature of $\vec{V}_{1}$ and
+$\vec{k}$, reduces to:
+
+\vspace{5mm}
+
+\begin{center}
+  $1 = (v_{A}^{2}+v_{s}^{2})\frac{k^{2}}{\omega^{2}}$
+\end{center}
+\vspace{5mm}
+
+Or:
+
+\vspace{5mm}
+\begin{center}
+  $\frac{\omega}{k}=\sqrt{v_{s}^{2}+v_{A}^{2}}$
+\end{center}
+\vspace{5mm}
+
+For the magnetic field derivations on slide 19, we use equation (***)
+from slide 16:
+\vspace{5mm}
+\begin{center}
+  $\frac{\partial \vec{B}}{\partial t} - \bigtriangledown \times (\vec{V}_{1}
+  \times \vec{B}_{0}) = 0$
+\end{center}
+\vspace{5mm}
+
+We assume that $\vec{B}$ is also a plane wave, and so our differential
+equation becomes algebraic:
+
+\vspace{5mm}
+\begin{center}
+  $\frac{\partial}{\partial t} \mapsto -i\omega$ \\
+  $\bigtriangledown \mapsto i\vec{k}$
+\end{center}
+\vspace{5mm}
+
+Using these mappings, the fact that $\vec{V}_{1}$ is parallel to
+$\vec{k}$ which is perpendicular to $\vec{B}_{0}$, and the trusty "BAC
+CAB" vector triple product rule, our equation
+simplifies:
+
+\vspace{5mm}
+\begin{center}
+  $-\omega \vec{B}_{1} - \vec{V}_{1}(\vec{k}\cdot\vec{B}_{0}) +
+  (\vec{k}\cdot\vec{V}_{1})\vec{B}_{0} = 0$ \\
+  $-\omega \vec{B}_{1} + kV_{1}\vec{B}_{0} = 0$ \\
+  $\vec{B}_{1} = \frac{kV_{1}}{\omega}\vec{B}_{0}$ \\
+
+\end{center}
+\vspace{5mm}
+
+And so: 
+  $B_{1} = \frac{kV_{1}}{\omega}B_{0}$
+
+
+
+
+This derivation also has something to do w/ Alfven waves: 
+% mainfile: ../hw2.tex
+\textbf{For $V_{A}<V_{S}$, compare the shear Alfven wave to the slow
+MHD wave for an arbitrary $\theta$}.  
+
+The dispersion relation for the shear Alfven wave, when $\theta$ is 0,
+reduces to:
+
+\begin{center}
+\begin{math}
+  (\frac{\omega}{k})^{2} = \frac{1}{2}(v_{s}^{2}+v_{A}^{2}) \pm
+  \frac{1}{2}(v_{s}^{2}+v_{A}^{2})
+\end{math}
+\end{center}
+
+The trivial solution is $\omega = 0$. The nontrivial solution:
+$(\frac{\omega}{k})^{2} = (v_{s}^{2}+v_{A}^{2})$ 
+
+If the sound speed in the medium is much smaller than the Alfven speed, then we have the
+dispersion relation for the slow MHD wave:
+
+\begin{center}
+\begin{math}
+  \frac{\omega}{k} = v_{A}
+\end{math}
+\end{center}
+
+So the shear Alfven wave is a generalization of the slow MHD wave to
+arbitrary angle in media where the sound speed is comparable to the
+Alfven speed.
+
+
+
+
+% mainfile: ../hw2.tex
+\textbf{Sometimes I see the Alfven wave speed written as
+$V_{A}=\frac{B}{\sqrt{4\pi\rho}}$ and sometimes as
+$V_{a}=\frac{B_{SW}}{\sqrt{\mu_{0}m_{i}n}}$. Why?}
+
+Lots of things here. First the small stuff:
+
+\begin{center}
+  \begin{enumerate}
+    \item $V_{a}$ and $V_{A}$ are two choices of representation for the same dang
+      thing.
+    \item Specifying $B_{SW}$ means you were reading something about the solar
+      wind. Specifying just B means you could have been reading any number of
+      sources about MHD in general.
+    \item $m_{i}n$ is another way of writing $\rho_{i}$, which is just
+      specifying that the mass density $\rho$ is almost fully described by the
+      ion mass density (as opposed to the electron mass density); in practice
+      then, $\rho$ and $\rho_{i}$ refer to the same thing.
+  \end{enumerate}
+\end{center}
+
+The bigger stuff (probably the stuff you were actually referring to):
+
+\begin{center}
+  \begin{enumerate}
+    \item Gaussian Units: $V_{A}=\frac{B}{\sqrt{4\pi\rho}}$
+    \item SI Units: $V_{a}=\frac{B_{SW}}{\sqrt{\mu_{0}m_{i}n}}$
+  \end{enumerate}
+\end{center}

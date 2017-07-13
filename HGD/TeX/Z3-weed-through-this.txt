@@ -1,0 +1,601 @@
+% mainfile: ../Mag_Iono_2014.tex
+% \textbf{}
+% Ch14: Lower and Middle Atmosphere
+% Lec16-17
+
+
+
+
+
+
+
+
+% 2nd half / Lec17  ------------------ 
+ 
+The coldest place on Earth is in the polar summer mesosphere; and it is
+warmer in the polar winter mesosphere, where the Sun never shines! This
+is not what one would expect. In fact, we see in the low atmosphere in
+the polar winter, we have cold temperatures, but right above, at the
+stratopause, we have a very warm region. Why? One would expect that it
+would be cold from bottom to top. 
+
+To first approximation, the wind field in the lower and middle
+atmosphere can be determined from geostrophy and thermal wind balance.
+And superimposed on that background flow are all the waves: the
+atmospheric tidals waves, the planetary waves, and the gravity waves. 
+
+What do the climatological winds look like? [Fig\_2-2]. We've got our
+eastern flowing winds in the winter hemisphere, and our westward winds
+in the summer hemisphere. In the figure, these winds are called
+"westerlies" and "easterlies" -- remember, the "-ly" terminology means
+"from the," as in an easterly is from the east and a westernly is from
+the west. Some people find this terminology confusing, so we also use
+"westward winds" and "eastward winds." 
+
+In the upper troposphere we see peaks in the contour curves: these are
+the jet streams. If you're interested, look into Hadley cells and the
+Hadley cell circulation. If you have more time, look into eddy cells and
+polar cells too! We don't have too much time, so we will be skipping
+over these topics. 
+
+We will talk about the easterly (westward) peak in the Summer mesospher / lower
+thermosphere, as well as the peak in the high-latitude winter
+hemisphere, from about 30-70 [km]. It is this wind cell that is the
+polar vortex, a dominant player in the dynamics of the thermosphere and
+mesosphere. It is one of the largest atmospheric structures that we ever
+really see throughout the lower, middle, and upper atmosphere system.
+The mid-latitude peak at about 60 [km] altitude is called the polar
+night jet; do not confuse it with the polar vortex. 
+
+At the very end, we will ask ourselves: what creates a cold summer
+mesosphere when the Sun is up 24 hours a day? What creates a warm winter
+stratosphere and mesosphere when the Sun is down 24/7? Why is the
+equatorial lower stratosphere so cool? 
+
+The planetary waves and the gravity waves alter the circulation of the
+lower and middle atmosphere, and indirectly this changes the circulation
+of the thermosphere. [Fig\_2-3; pic w/ arrows]. The purple arrow
+represent the flow of gravity waves, the blue arrows the flow of
+planetary waves, and the yellow arrows the induced circulation. 
+
+
+
+We're going to try to understand some of this circulation from the point
+of view of the gravity waves. Generally, in the winter hemisphere,
+mountain waves, topography, convective cells, frontal structures, jet
+stream instabilities --- all of these things emit gravity waves.
+Remember, gravity waves are the atmospheric buoyancy waves. 
+
+Down at low altitudes, the amplitudes of the generated gravity waves are
+quite small, but as the gravity waves propagate away from teh source and
+upwards, because the density of the atmosphere is dropping off
+exponentially, the wind speed picks up in order to conserve energy. So,
+these waves, as they propagate up through the stratosphere and into the
+mesoaphere become exceedingly large amplitude to the point that,
+typically, the wave packets will counter one of two breaking mechanisms:
+a convective instability where you have convection occurring (i.e., the
+conditions for convective turnover are met --- warmer air under cooler
+air), or you get what is known as a dynamical instability, which as
+applied to the lower and middle atmosphere is synonymous with the
+Kelvin-Helmholtz instability [KHI] --- the wave phases are in opposite
+directions at such magnitudes that there is a shear in the flow and this
+causes the waves to break. 
+
+We are not sure which comes first: does the wave become convectively
+unstable then dynamically unstable? Or vice versa? There is a lot of
+observations that indicate one mechanism over the other and, so,
+fundamentally it's both: both the convective instability and the KH
+instability cause the upward propagating gravity waves to break. It just
+depnds on the background conditions as to which one happens first. At
+the least, this is the best summary of what we know as of 2014.
+
+More on the convective instability:
+The convective instability is, essentially, when you have cooler air
+over warmer air; it's a gradient in which the adiabatic lapse rate
+doesn't allow a parcel to fully expand and cool down as it's displaced
+in altitude. So what happens is that you get constant motion of warmer
+air upwards, and this basically pulls energy away from the wave form. We
+call this a convective instability. So, the gravity wave is propagating
+--- and when you you look at the wave fronts, if you stop time and look
+at the wave structures, you will see that there regions --- phase
+sturctures --- that appear at low altitudes that are of warmer
+temperatures than the phase structures above it. This induces a
+convective circulation. Likewise, you get this with a shear instability.
+If you freeze time, and look at the spatial structure of the wave, you
+would see that you have winds going in the opposite directions in the
+different phases. This is ripe for KHI, a vortex instability some would
+call it. 
+
+In the lower atmosphere, we lump instabilities into convective and
+dynamical. In the upper atmosphere, with plasmas, these terms can mean
+different things. But down low, where there is just neutral gas, a shear
+instability is KHI at its finest. 
+
+As the upward propagating gravity waves meet a condition for
+instability: as they become convectively unstable or they meet the
+conditions for dynamic instabiliity, the wave will start to break. The
+wave will start to overturn and essentially what you get is energy and
+momentum deposition --- transfer from the wave to the mean flow. The
+high-altitude, high-latitude region within the dotted purple curve in
+the winter hemisphere indicates a rough geographic area that we expect a
+lot of gravity waves generated in the lower atmosphere, to be breaking
+and depositing energy into the mesospheric system. This was one of the
+key aspects of connecting what the importance of gravity waves is to
+atmospheric circulation. These waves are depositing energy as they're
+breaking --- they're providing a drag force to the mean flow, that is,
+the otherwise geostrophic flow. That induces a net circulation. If we
+look at just the meridional circulation, that is, just the north-south
+circulation, what it does is it pulls air from lower latitudes and
+pushes it towards the higher latitudes. So, looking at the figure, you
+see the yellow arrows in the winter hemisphere are representing how the air is being pulled from
+the lower latitudes to the higher latitudes, and eventually downwards,
+all because of this gravity-wave breaking. If you could prevent the
+gravity waves from being generated, and so ultimately stop them from
+propagating upwards and breaking, this circulation would not be
+induced. This was a famous result in 1985: the induced circulation in
+the mesosphere can have consequences in the troposphere and in the
+thermosphere. 
+
+In the summer hemisphere, you get a similar structure. You have some
+gravity waves propagating up. What happens with the waves generated by
+topography is that they get filtered out into the mean flow at low
+atltitudes --- this is
+due to their dispersion relation (which we'll get to), which prevents
+them from propagating through a wind reversal. But the gravity waves
+generated by convection are able to propagate past the wind reversal and
+into the middle atmosphere. On the figure, you'll see that these gravity
+waves break a bit higher in altitude than they do in the winter
+hemisphere. The eddy forcing is much more constrained in altitude here
+since the gravity waves that are able to propagate this far are all of
+teh same nature and, thus, all break in a fairly confined region. So,
+although in the winter hemisphere you have this very large area of wave
+breaking, it is distributed --- in the summer hemisphere, all the wave
+break is in one place, not distributed over a large area. This breaking
+induces a circulation that pushes air towards the winter hemisphere.  
+
+So you these regions constantly pulling air over from the summer to the
+winter. Starting in the high latitude summer, we have air being pulled
+upward, it's adiabatically cooling -- that is, it's entering a region of
+lower pressure, a parcel of air is expanding and cooling, and this is
+what creates the cold summer conditions. 
+
+Likewise, on the opposite side of the globe in the summer hemisphere,
+the air is being compressed and forced downward, adiabaticalling -- that
+is, you get heating. So the heating in the stratosphere in the winter
+hemisphere has nothing to do with ozone whatsoever. The heating is
+purely due to dynamics: purely due to a downward flow of air being
+adiabatically compressed, causing local heating. 
+
+When you get into the thermosphere and ionosphere, the consequences of
+these dynamics --- of this circulation just described --- follow into
+these regions. And so you get this interplay of dynamics induced from
+the dynamics of the lower and middle atmosphere competing with the
+plasma dynamics and competing with the solar radiation. It gets really
+ugly. Down below, we do not have to consider plasma dynamics. 
+
+Due to the upward flow in the summer hemisphere, and the adiabatic
+cooling of the air, you get these mesospheric clouds --- sometimes
+called noctilucent clouds, or polar mesospheric clouds. The name "polar
+meospheric cloud" should be avoided since these clouds have been
+observed over Utah, which is certainly not the polar region. 
+
+The clouds in the cold region of the lower stratosphere in the winter
+hemisphere, where there is no sunlight, are called polar stratospheric
+clouds [PSC]. PSCs play a pivotal role in the ozone depletion issue in
+the winter and spring time periods at high latitudes. 
+
+The equatorial lower stratospheric region in the figure with the
+lightning cloud is called intertropical convergence zone. Lots of
+convective activity here. The higher-altitude part of the cloud is
+called an "anvil." Lots of upward motion of air mass, some of it goes
+north, some south, and some just goes up into the mesophere and lower
+thermosphere. 
+
+So what about the planetary waves in the figure?
+Planetary waves, for a long time, were thought to be the wave that was
+heating the warm stratospheric region in the winter hemisphere. The
+theory was that these waves were transporting the heat flux, and
+although this isn't wrong, it is nowhere near the amount of heat induced
+by the adiabatic heating of the downward flowing air from the
+higher-altitude region. Planetary waves interact with the polar vortex
+system, and we will be talking about this more in a moment. In the
+summer hemisphere, the planetary waves barely get out of the
+stratosphere, again due to the dispersion relationship --- they tend to
+break down wherever they encounter a wind reversal. So most of their
+energy is deposited in the tropopause and lower stratospheric system.At
+the low altitudes, these are dominating the dynamics -- the gravity
+waves are just too small at low altitudes.
+
+Bigger than any of the waves is the polar vertex. In the figure, you can
+see the core of this vort centered on the winter pole. The wind is
+increasing as you go outwards from the core. The polar vortex extends
+from about 10-15 [km] in the troposphere up to altitudes of 100+ [km],
+well into the thermosphere. This isn't theory --- you've got empirical
+data going all the way back to the 1980's showing this. It is known that
+the polar vortex goes way into the thermosphere. This thing is a big
+driver of the winter hemisphere. In fact, if anyone does measurements of
+planetary waves or tidal waves above, say, 50 degrees latitude --- if
+they do not take into account the polar vortex, then the study is wrong.
+Throw it in the garbage. It's like trying to study the winter in NJ and
+gauging how people react to the winter, but never mentioning or taking
+into account snow on the ground and snowstorms. If a study above 50
+degrees latitude in the winter hemisphere doesn't
+mention the polar vortex, it is ignoring one of the defining
+characteristics of this region. 
+
+Oddly, some people think the polar vortex is just a stratospheric
+phenomenon --- there are even text books that say this. That's just
+utterly wrong. It goes way into the thermosphere, and we've known this
+for decades. 
+
+<New figure --- one with polar vortex / sudden strat warmings >
+
+Polar Vortex and Sudden Stratospheric Warmings [SSWs]
+When most researchers think of the polar vortex, they think of sudden
+stratospheric warmings. Certainly, there has been interest as of late
+(circa 2014) because of its incursions over the United States and the
+consequential cold temperatures we've had in the mid-West and the North
+East. 
+
+In this figure, we have a period from 1995 (yes, a long time ago); this
+is from an earlier paper of one of the authors [REFERENCE]. We're
+looking at maps looking down at the northern hemisphere; you see maps at
+certain pressures. For example, in the top left, you see a map at 10
+hecto-Pascals [hPa]. Remember, 10 hPa is 10 millibars, which -- if you
+remember from a previous lecture -- corresponds to about 30-kilometers
+altitude --- about the height that balloons pop. (Yes, some of us are
+crazy enough to refer to altitude in terms of pressure. It's to scare
+off the faint of heart.) To the right of the 10 hPa map, you see another
+map at 1 hPa: about 45 km. (Altitude goes up, pressure goes down.)
+
+You can ignore the dots in these figures for now (read the paper if you
+absolutely do not want to ignore the dots). What we want to show is that
+over the period of about four days, you see that the polar vortex cell
+just slowly slides off to the side --- from its eye over northern
+Greenland to Iceland. Subtle meandering typical of the polar vortex. If
+the lower and middle atmosphere for were in thermal balance, the polar
+vortex would stay still and just exist right over the pole. But the
+lower and middle atmosphere are not in thermal balance: they are
+constantly being impacted by various waves, and in particular by
+planetary waves from lower latitudes near the equator, which travel
+poleward and tend to nudge and move the polar vortex around. This
+nudging comes from the gamut of longitudes, at any and all altitudes in
+the lower and middle atmosphere. So everyday the polar vortex, a cyclone
+system, changes a bit. This is typical, quiet, calm behavior of the
+polar vortex. This is why it can shift over the United States --- if
+there is a lot of planetary activity over in the Eurasian sector, this
+would essentially push the polar vortex down towards the United States,
+and lo and behold you would have a period of colder conditions. Again,
+because this is a vortex system, most of the air is locked into the
+vortex system, so you can think of the whole cyclonic blob of potential
+vorticities (in the figure) as transporting the air and dynamics within
+it all over the hemisphere, anywhere it is nudged to. So, say in the
+nortnern hemisphere, this activity is going on starting some time in
+November and going until about April. 
+
+This past winter [2013-14], the polar vortex was quite active --- enough
+so that its news coverage has made it a household term. The polar vortex
+this past winter became displaced from the pole quite a bit. Why would
+the polar vortex be more dispaced towards the United States this year
+than in other years? This is not a trivial question and you can begin to
+come up with all sorts of possibe causes. Before you know it, you can be
+going down a rabbit hole: is this climate change? is this enhanced
+planetary wave activity? is this increased tropical rainfall over in the
+Eurasian sector? And so on and so forth! 
+
+In the next figure showing the polar vortex and SSWs, we show a period
+in 1998 -- January 15, 21, 30, and February 6. Again we have the two different pressure levels, 10 hPa and 1
+hPa, which correspond to about 30 km and 45 km, respectively. Here you
+see the polar vortex system being moved around quite a bit. Notice in
+the 980130 10-hPa map that there is a planetary cell juxtaposed next to
+the polar vortex. That is, notice there is a 2-cell structure in that
+map --- this is a vortex-vortex interaction. These two vortex systems
+are constantly feeding off each other, rubbing against each other,
+interacting. When this interaction gets very intense there are times
+where, say, the planetary wave cell can push the polar vortex cell right
+off the pole and substantially weaken it. Although the planetary is
+small relative to the polar vortex, it's like Joe Fraser vs Mahammed
+Ali, or David vs Goliath. The big guy is big, but not unstoppable: the
+small guy just has to hang in there long enough to wear the big guy
+down. The planetary waves in this case aren't really transporting all
+that much momentum and energy, but they are disrupting the polar vortex
+circulation. This figure is a great example of the planetary waves
+pushing the polar vortex off the pole. 
+
+So what is a sudden stratospheric warming? When the planetary waves
+starts getting highly active and energized by some forcing mechanism,
+specifically at mid-latitudes or tropical latitudes, you can have a SSW.
+This is when the planetary cell that you are studying becomes of
+comparable magnitude to the polar vortex [NEXT FIGURE]. When this
+happens, and other certain conditions are met, we say it's a sudden
+stratospheric warming. 
+
+A word of warning: the "stratospheric" component of the name "sudden
+stratospheric warming" is a bit misleading. SSWs are associated with the
+thermosphere and mesosphere as well as the stratosphere. It's a horrible
+name, unfortunately. These events were first observed using weather
+balloons. It's historical. Even in their definitions, emphasis is on the
+stratosphere. In this day and age, we know the name should include the
+mesophere too, if not the thermosphere/ionosphere. 
+
+There are various ways you can define a SSW. Often these events are
+classified in the zonal mean contex [e.g., Andrews, 1987], which is the
+World Meteorological Organization's definition of SSWs. (The zonal mean
+context means that you are averaging all longitudes over the same
+latitude.) You have an
+assortment of warmings: major warmings, minor warmings, Canadian
+warmings [SEE ASSOCIATED TABLE]. Take warning: this definition is used
+operationally, but it's only half right. Any time you see something
+about the polar vortex or SSWs defined in the zonal mean context, it's
+not the whole story. In reality, SSWs come about via the interaction of
+two vortex systems --- the dynamics between two cells, which is much
+more interesting and complex than looking at the zonal mean. Sure, you
+will come around to about the same answer, but for very different
+reasons. The zonal mean approach is a bit of a cop out. There is still
+debate in the community of how to actually depict the physics of SSWs:
+should we use the zonal mean picture, or use the full-on vorton-vorton
+interaction picture? 
+
+Fundamentally, if you go ahead and push the whole vortex system off to
+the side, it shuts down the downward transport of air mass at the winter
+pole [SEE ANDY'S CARTOON FIGURE FROM BEFORE]. By pushing the vortex
+system off the pole, you are basically shutting down that cell of
+circulation you have in the winter hemisphere in some localized region.
+This is the interesting stuff: when a warming happens, how does the
+entire global circulation change? We do know that when there is a SSW in
+the winter hemisphere, the circulation at the other side of the globe,
+at the summer pole, will change. In the past five years or so, it has
+been shown that the circulation in the upper mesosphere as well as in
+the thermosphere also shuts down. What you have then is a relaxation of
+the characteristics in the thermosphere back to what you would expect
+doing equinoctal time periods [MAYBE EXPLAIN THIS MORE]. The point is,
+the localized warmings in the winter polar region have consequences that
+are quite global in scale, impacting the thermosphere, ionospheric
+scintillation, GPS measurements, satellite drag, and on and on.
+
+These last few paragraphs should make it clear to you that any global
+climate change models that do not go above 20-km altitude are total
+bunk. If you don't have the full atmospheric circulation in your model,
+you are not modeling the real atmosphere. If you only look at altitudes
+up to, say, 15 km --- giving 5 km for a sponge layer --- and double the
+$CO_{2}$ you're simply going to get the wrong answers for the wrong
+reasons. You haven't taken into account the entire global circulation,
+you haven't taken into account the chemistry of the upper atmosphere.
+Basically, a lot of the work from the early 90s were utterly wrong. 
+
+Mesospheric Inversion Layers [MIL]
+A MIL is essentially the occurence of an inversion that you observe in
+the mesosphere. The name describes the phenomenon quite well. [NEW
+FIGURE]. In the figure, you see temperature profiles measured from about
+20-km altitude up to about 100-km altitude. Over sequential time steps
+you see a temperature enhancement in the mesosphere. So, to be clear, an
+inversion layer is a reversal of the temperature gradient, typically
+associated with warmer temperatures than normally you would otherwise
+have. Inversion layers occur all the time in the troposphere. This is
+why some urban areas have lots of smog --- the urban areas are natural
+inversion areas. For example, Lima, Peru, exists in its own natural
+inversion layer. 
+
+In the mesosphere, we typically see two major temperature inversion
+layers -- the lower inversion layer (around 70 km) and the upper
+inversion layer (around 90 km). The higher-altitude inversion layer is
+about 7 km wide, and has a temperature increase from the background state of
+about 25 K. Just below the inversion, you typically have a region of
+cooling, although it is tough to quantify. For the lower-altitude MIL,
+you again have about a 25 K increase in temperature. The width, however,
+is basically unknown --- very hard to quantify. 
+
+We care about MILs because we do not know what causes them. We're also
+interested in MILs because we know they can act as a source for gravity
+waves. On the bottom side of the MIL, the temperature is increasing with
+altitude and so it's convectively stable. However, on the top side of
+the MIL, you have a region where the temperature decreases faster than
+the adiabatic lapse rate. This means that this region is very conducive
+for convective instabilities, and thus these instabilities that result
+can exert a drag on the background wind flow, and contribute to the
+circulation. Furthermore, these instabilities can be a source of gravity
+waves, which then radiate away from the MIL, grow in amplitude, and have
+an impact on other locations. 
+
+[NEW FIGURE]
+
+It is generally accepted that different physical mechanisms generate the
+two different MILs. We think the upper MIL is the result of gravity wave
+or tidal wave interaction -- wave-wave interactions. The lower MIL does
+not seem to have the same temporal characteristics. We think the lower
+MIL is the result of planetary waves breaking and depositing energy in
+the background flow. There is a lot of evidence that suggests that these
+ideas are right... However, it is all still a hot bed of research. For
+example, the gravity wave and tidal wave interactions at the upper MIL;
+we're trying to understand mode-mode mixing and different mode coursing
+[???] of the background conditions. 
+
+[NEW FIGURE --- rive pic of bores]
+
+Mesospheric Bores
+If you have any jokes about bores being bores --- it's all been said
+before. We've had entire Chapman Conferences on bores; certainly any
+joke that could have been made there, was made.
+
+If you're familiar with bores at all, it is probably with undular bores
+typically found in long, narrow water ways. This figure shows the
+typical characteristics of an undular bore in a narrow river.
+Downstream (bottom right), there is a relatively smoothly surfaced body of water.
+Upstream (top left), due to some kind of forcing, water is driven
+downstream quicker than the nominal flow; at the front, you see a shock,
+often described as a hydraulic jump. The shock is a transition region
+between a very smooth, laminar flow to a mixed, chaotic flow. This is
+similar to the bow shock in the magnetosphere [LECTURE ?]. If we made
+this figure into a movie, you would see the bore progress downstream;
+behind it, you would see the trailing waves, which are actually wavelets
+shedding energy from the shocked bore system. 
+
+In the oceans and rivers we have a pretty good handle on bores, however this 
+is not the case in the mesosphere. [NEW FIGURE] When using an all-sky
+camera or a photometer and you look at airglow signatures, for example
+from the 557.7 nm line (oxygen) coming from about 95 km altitude, you
+see these bore structures proceed through your entire field of view. On
+the right image in the figure, on October 15 (of some year!), you see a very
+bright region at the top left of the field of view; in front of it you
+see a relatively dark region (not the black hole in the image, which is
+an artifact from the instrument). This bright region progressed
+southeast from the
+top left to the bottom right of the field of view over the course of
+about 25 minutes. In the same image, you might also note a less intense
+bright region at the bottom right, which we think is a gravity wave.
+Bascially, out of the field of view to the northwest, there was some
+source that generated this gravity wave followed by the mesospheric
+bore. The image on the left of the figure is a time-difference image,
+which enables you to see some of the high frequency content more
+clearly. 
+
+Lots of work going on concerning what creates bores and the role of
+bores. We care about bores because they carry a lot of the same
+signatures and characteristics of gravity waves, only they can transport
+energy much further than gravity waves typically do...in theory. No one
+has really ever staggered all-sky cameras and observed just how far
+these things travel. We think they're able to travel quite far. 
+
+One of things we do not
+have a handle on, which we will get to later, is how variable gravity
+waves are --- what is the intermittency of gravity waves? We do not
+understand the full role gravity waves play in the lower and middle
+atmospheric circulation. 
+
+Various theories have been proposed concerning mesopheric bores. One
+theory is that you have some type of mesospheric inversion layer that
+acts as a duct --- a channel --- that supports bore formation and allows
+waves to be ducted along the MIL. Consequently, you'd expect to see the
+same thing near the lower MIL. Unfortunately, we cannot easily directly
+observe the activity near the lower MIL. At the upper MIL we can use the
+557.7 oxygen line, but for the lower MIL we do not have it so easy ---
+typically we can maybe see the top of the lower MIL using the OH
+emissions in the near infrared. 
+
+Fundamentally, we do not understand how much energy bores contribute and
+how much energy these bores redistribute around the globe. We do not how
+efficient bores are at transporting energy. 
+
+Stratospheric Temperature Enhancements [STEs]: again what we have here
+are enhancements in temperature profiles that no one really understands
+yet. [NEW FIGURE] We tend to see them at high latitudes, although recent
+work has shown that they also appear at mid-latitudes. They are
+typically temperature enhancements in the stratosphere and do not seem
+to be related to mesospheric inversion layer, although they are
+associated with similar dynamics and much of the same intrigue. STEs
+seem to be the result of two planetary wave cells interacting with
+eachother; the two cells interact and, ultimately, lead to a highly
+baroclinic atmosphere --- that is, the pressure and density surfaces do
+not line up. This is a ripe region for instabilities and for extraction
+of energy from the background wind flow. Of course, there are certain
+climatological features of STEs we focus on, but we do not really have a
+good handle on the physical mechanism that causes them. It's definitely
+a work in progress!
+
+One would be remiss to talk about the lower and middle atmosphere
+without talking about the ozone. In particular, we want to discuss a bit
+about the chemistry and dynamics of the ozone. Most of us are aware of
+the issues surrounding the ozone, namely, the ozone hole. Some of us may
+even be aware of various popularized formation mechanisms concerning the ozone hole.
+One could do a whole series of lectures on the ozone hole and even just
+conerning recent developments in our understanding of it. 
+
+We'll focus on this: the ozone hole is a consequence of more than just
+CFCs. There are a lot of players here: the polar vortex, the formation
+of polar stratospheric clouds, and lots of hetergeneous chemistry that
+takes place on the surfaces of those polar stratospheric clouds, which
+convert the CFCs into an ozone-destroying component. 
+
+[NEW FIGURE - Andy's slide of PSCs and ozone loss]
+
+When the ozone hole issue is occurring, most of the interesting stuff is
+occurring in the winter hemisphere at night. So it's in the winter
+stratosphere where the temperatures get very cool, and at these
+temperatures the saturation vapor pressure drops, which causes the
+formation of polar stratospheric clouds [PSCs]. PSCs can also be
+generated by mountain-induced gravity waves. There's been a lot of work
+investigating how much topography contributes to PSC formation in
+contrast to regular old nucleation; still a very active realm of
+research.
+
+The intersting thing about PSCs is that they form a site where
+heterogeneous chemistry can proceed. The way that this can happen is
+that these chlorofluorocarbons [CFCs], as well as a number of other
+chemicals (we'll pick on the CFCs because everyone seems to pick on the
+CFCs), are transported to high altitdudes via Hadley cell and eddy cell
+convection. The PSCs serve as a laboratory where the CFCs can undergo
+chemical processing. The CFCs are converted into a sun-sensitive
+reservoir species such that, in the spring when the sun comes up,
+photochemistry breaks down these reservoir species into chlorine,
+flourine, and bromine (among other compounds), which are now free to
+break down ozone in the region. Normally this isn't a problem: nature
+usually has a back-up in the form of $NO_{x}$ compounds -- that is $NO_{3}$,
+$NO_{4}$, $NO_{5}$. These $NO_{x}$ compounds would normally interact
+with the chlorine, flourine, and bromine, and lock them back up so they
+wouldn't be able to deplete the ozone. However, PSCs do one other
+devious thing: in addition to processing CFCs into compounds which can
+then be broken down into various species that can then break down the
+ozone, PSCs also remove $NO_{x}$ from the atmosphere. So the real
+culprit in the lower and middle atmosphere for ozone removal is not
+exactly CFCs. Please understand this: CFCs do not directly destroy
+ozone; CFCs contain compounds such that, when CFCs are processed in the
+right way via chemistry and sunlight, can be released to destroy ozone.
+But CFCs unto themselves do not destroy ozone. The real mastermind
+behind ozone depletion are these polar stratospheric clouds: they allow
+the criminals (Cl, F, and B) to be released from jail (the CFCs) and
+also remove all the cops (the $NO_{x}$ that would have otherwise
+re-captured the CL, F, adn B). In the arena of public perception, the
+CFCs get the bad rap...
+
+The topics of current research relevant to this are: what mechanism
+forms PSCs? are the conditions for PSC formation improving due to global
+climate change? how does aurorally-generated $NO_{x}$ contribute to the
+processing of CFCs? Randall et al [GET REFERENCE] looks at $NO_{x}$ from
+auroral sources in the lower thermosphere-mesospher and the eventual
+transport of those $NO_{x}$ components down into the stratosphere ---
+that is, he asks the question, "Does the aurora actually help to destroy
+the ozone?" We'll talking about this more when we talk about ionospheric
+work in progress [CHAPTER/LECTURE ?]. 
+
+Another cloud formation hot topic in the middle and upper atmosphere is
+that of mesospheric clouds --- sometimes referred to as noctilucent
+clouds. It is suspected that mesospheric clouds may be a harbinger of
+global change, to wit, it has been suggested that these clouds are now
+being seen more frequently. But it is still unclear if this is due to
+observational bias: are more people just looking for them now than there
+have been in the past? If you look back at [ANDY'S FAMOUS PIC], what's
+believed to be happening is that when you increase green house gas
+concentration, this is associated with increased gravity wave activity,
+which is associated with increased momentum deposition in the middle
+atmosphere, which causes ehanced circulation from the summer to the
+winter hemisphere. So it's believed that the high-altitude region of the
+summer mesosphere (top right of figure) is getting cooler, allowing
+mesospheric clouds to be forming progressively to lower and lower
+latitudes. And this is why these mesospheric clouds are thought to be a
+harbinger of global change --- the clouds unto themselves may not be
+very interesting, but as a tracer of dynamics they're extremely
+interesting. They are an easily tracked impact of a changing climate.
+The other way to track global climate change is to do polar vortex
+work..... [ELABORATE OR DELETE]
+
+We've skipped a lot of phenomena: the northern annual mode (NAM), the
+southern annual mode (SAM), the quasi-biennial oscillation (QBO), the
+semi-annual oscillation (SAO), meteor ablation, meteor deposition,
+sporadic layers associated with plasma injections from the ionosphere.
+We just sampled a few topics.
+
+Research in Progress for the lower and middle atmosphere: we are still
+trying to understand the variability of the base state parameters (the
+winds and the temperatures). Observations between 30-100 km is very
+difficult... Still trying to understand spatial and temporal variability
+of the structures in this region. Why do mesospheric clouds form earlier
+in some years than others? Why is the polar vortex more stable in some
+years and less stable in others? 
+
+Wave propagation, wave breaking, wave-wave interactions,
+parameterization in GCMs, sources of waves, impact on upper atmosphere.
+
+What is the role of gravity waves on the general circulation and on
+synoptic scales?
+
+

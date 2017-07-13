@@ -1,0 +1,119 @@
+% mainfile: ../hw4.tex
+\textbf{In lecture 13, slide 18, an estimate of the ionospheric electric
+field is made. Verify the calculation and list any assumptions.}
+
+The assumptions begin with an electrostatic electric field -- that is
+the curl of the electric field vanishes everywhere, which is just a
+fancy way of saying that the magnetic field is unchanging in time.
+
+This assumption is encapsulated by the following form of Faraday's law:
+
+\begin{gather*}
+  \frac{\partial \vec{B}}{\partial t} = -\bigtriangledown\times\vec{E} = 0
+\end{gather*}
+
+ Coupled with our demand that the electric and magnetic fields must be
+ perpendicular, this amounts to assuming no electromagnetic
+disturbances propagating anywhere! For example, assume plane waves:
+
+\begin{gather*}
+  \frac{\partial \vec{B}}{\partial t} = -i\omega\vec{B}
+  \rightarrow \omega=0\\
+  \bigtriangledown\times\vec{E} = i\vec{k}\times\vec{E}
+  \rightarrow \vec{k} || \vec{E}\\
+  \bigtriangledown\times\vec{B} = i\vec{k}\times\vec{B} =
+  \frac{1}{v_{phase}^{2}} \frac{\partial \vec{E}}{\partial t} =
+  \frac{-i\omega}{v_{phase}^{2}}\vec{E} \\
+  \rightarrow \frac{k}{E}\vec{E}\times\vec{B} = const*\vec{E}\\
+  \rightarrow k=0
+\end{gather*}
+
+Since we assume the the electric and magnetic fields are everywhere
+perpendicular, then k=0 must be true. No wave propagation.
+
+From the ever-present vanishing divergence of the magnetic field and, in
+this case, a time-stationary magnetic field, we know that the magnetic
+flux through an area, A, is constant in time. Say this area, A, is in
+the ionosphere. If we trace the field lines at the boundary of A,
+$\partial A$, out into the magnetosphere, the amount of flux will be
+constant, although the area will have changed. Let's say A is a circle
+whose radius is a characteristic length of the ionosphere, and that its
+mapping into the magnetosphere is approximately circular with a radius
+characteristic of the magnetosphere.
+
+\begin{gather*}
+  \int_{iono}{\vec{B}\cdot d\vec{A}} \quad\approx\quad 
+  2\pi B_{iono}L_{iono}^{2}\\
+  \int_{msph}{\vec{B}\cdot d\vec{A}} \quad\approx\quad 
+  2\pi B_{msph}L_{msph}^{2}
+\end{gather*}
+
+Here, $B_{msph}$ and $B_{iono}$ are the average values of the magnetic
+field in their respective slices of the flux tube. Since we know that
+the total flux is the same in both regions of the flux tube, we then
+know that the average field in the magnetosphere slice of the tube must
+be smaller than the average field in the ionosphere slice to account for
+the larger characteristic length. 
+
+At any rate, we have the equation:
+
+\begin{gather*}
+  B_{msph}L_{msph}^{2} = B_{iono}L_{iono}^{2}
+\end{gather*}
+
+To calculate the electic field, we can compute the change of voltage
+over the change in distance.
+
+\begin{gather*}
+  E_{iono} = \frac{\bigtriangleup \phi}{L_{iono}}\\
+  E_{msph} = \frac{\bigtriangleup \phi}{L_{msph}}
+\end{gather*}
+
+We don't know the potentials, but if we take the ratio, we can put it in
+terms of what we already derived above:
+
+\begin{gather*}
+  \frac{E_{iono}}{E_{msph}} = \frac{L_{msph}}{L_{iono}} =
+  \sqrt{\frac{B_{iono}}{B_{msph}}}
+\end{gather*}
+
+And finally to get the velocity ratios in the lecture slides, use the
+magnitude of Lorentz force equation (assume motion of particle
+perpendicular to magnetic field) and typical MHD assumptions:
+
+\begin{gather*}
+  \vec{F}/q = \vec{E} + \vec{v}\times\vec{B} = 0
+  \rightarrow E = vB
+  \rightarrow v = E/B
+\end{gather*}
+
+Then we can take the ratios and plug in things we know:
+
+\begin{gather*}
+  \frac{v_{iono}}{v_{msph}} =
+  \frac{E_{iono}/B_{iono}}{E_{msph}/B_{msph}} =
+  \frac{E_{iono}}{E_{msph}}\frac{B_{msph}}{B_{iono}} =
+  \frac{B_{msph}}{B_{iono}}\sqrt{\frac{B_{iono}}{B_{msph}}} =
+  \sqrt{\frac{B_{msph}}{B_{iono}}}
+\end{gather*}
+
+To estimate the electric field, assume we know the typical electric
+field value in the magnetosphere, the ratio of the characteristic
+lengths of the magnetosphere and ionosphere, and the typical speed of a
+particle in the magnetosphere:
+
+\begin{gather*}
+  E_{msph} = 0.7 mV/m
+  L_{iono}/L_{msph} = 1/60 \\
+  v_{msp} = 60 km/x
+\end{gather*}
+
+Then we can rearrange the above equations to look like:
+
+\begin{gather*}
+  E_{iono} = \frac{L_{msph}}{L_{iono}}E_{msph}
+  = 60*0.7 [mV/m] = 42 [mV/m]
+\end{gather*}
+
+Hmm... Actually we didn't even need to assume we knew the particle
+velocity in the magnetosphere for that one. 

@@ -1,0 +1,20 @@
+
+Bootstrap helps you deal with browser cross-compatibility. Usually with CSS,
+you have to play games tricking various browsers to behave how you want them
+to. Browsers these days come with anything that has a screen: different
+devices, difference screen sizes, different software...
+
+Bootstrap: one framework, every device. It will automatically scale for any
+device, intelligently designing the proper layout, e.g., on a desktop you
+might have multiple columns of text boxes, whereas on a mobile you will have
+only one column.
+
+Need the bootstrap <link> and the bootstrap <script> from a CDN. Also need
+jQuery.
+
+
+The edX course seems a bit lame. It focuses on using MS Visual Studio... And
+it is slow going... I just want to know why I should use this or not.
+
+This site seems to be cool:
+http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/

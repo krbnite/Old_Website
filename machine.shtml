@@ -1,0 +1,491 @@
+<html>
+<HEAD>
+<title>Machine Learning Notes</title>
+<meta name="description" content="The professional page of Kevin Urban.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="js/script1.js"></script>
+<script type="text/javascript" src="js/script2.js"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ TeX: { extensions: ["cancel.js"] }});
+</script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</HEAD>
+
+<BODY>
+
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+<DIV id="content">
+
+<h2>Note and Thoughts on Andrew Ng's Machine Learning Course</h2>
+
+<p><b>Supervised Learning</b></br>
+Supervised learning is one of the most common types of machine learning. </p>
+
+<p>Say you want to be able to predict the cost of a house 
+by knowing some type of information about that house, e.g., its size in square feet. This could also help you 
+estimate how much you can sell a house for, or if a house you are looking to buy is way overpriced. </p>
+
+<p>First you must collect some data to learn from (a "training set"). It should be 
+enough to notice a trend in a scatterplot: 
+is there a linear-like trend? or maybe it fits better to a quadratic polynomial? Whatever you choose as your fit
+is your predictor, independent of if it is a good predictor or not.</p>
+
+<p>Doing fits to data like this is a type of supervised learning. It is known as regression. One uses
+regression to take a known set of inputs and outputs and extract from that a continuous-valued output
+curve such that predictions can be made (with some associated error, uncertainty, etc).</p>
+
+<p>The housing cost prediction based on the house's size is a problem where we have a continuous input and a 
+continuous output variable. However, not all problems are like this: for example, one might have a continuous
+input (e.g., tumor size) with a discrete, finite output (e.g., is it malignant, yes or no?). This is 
+clearly a different type of problem that linear (or polynomial) regression is simply not designed for.
+What we want, then, in this situation is to understand how the continuous input relates probabilistically
+to the discrete (in this case, binary) output. This type of maching learning is a <b>classification</b> problem.</p>
+
+<p>In my research, this type of machine learning is what we do when trying to predict whether or not a magnetic
+field line in the Antarctic polar cap region is open (merged with the solar wind) or closed (has another footpoint
+in the north). In my 2011 paper, we use two continuous input parameters, Pc5 and Pc6 wave power, which would
+technically make it a multivariate classification problem. In this case, you can imagine a plane, where we have Pc5
+power on the x axis and Pc6 power on the y-axis. Then one could use the color green to represent "open" and
+red to represent "closed," resulting in a tapestry of red and green. On this red-green plane, the machine
+learning algorithm intends to find, for example, a line that splits the two classifications (open, closed) 
+into two regions. (This was "supervised" in that we physically motivated what the answers should
+be; that is, we had the output values by assuming them based on physical explanation; also the 2011
+stuff wasn't really "learning." To do supervised learning, we would need to use compare our two parameters
+to a DMSP data training set, for example, which would tell us whether or not DMSP measured open or 
+closed field lines; then we could use a DMSP test set to see how well we compare with it. That said,
+this assumes the DMSP measurements are true. What we really would be showing is how our measurements predict
+what DMSP says is true, independent of the truthier truth).</p>
+
+<p>If your classification problem involves three parameters, one might imagine a cube with points colored
+by their classification. In the binary classification case, one might hope to fit a planar slice through that 
+cube, optimally cordoning off the two regions of classication probabilistically-speaking. Note that like
+linear regression, finding a nice line in the 2-parameter case or a nice plane in the 3-parameter case is
+the simplest possible scheme and may in fact be overly simple, in which case one must fit higher-order
+multivariate polynomials to properly cordone of the classification regions and result in a good predictor.</p>
+
+<p>Most generally, a classification scheme can have N parameters. For the linearized region identification, 
+this means you would want to fit a (N-1)-dimensional planar slice through the N-dimensional cube. Although
+you can no longer visualize this, the math is basically the same!</p>
+
+<p>What if you had an infinite amount of features? How could you deal with this? More importantly,
+how could your computer deal with this? The trick: support vector machines.
+
+<p>Interestingly, you might have a discrete-valued output, yet regression (i.e., treating the output
+as continuous) is a better choice than classification. For example, imagine an apple tree during an
+earthquake: given the magnitude of the earthquake, how many apples fell from the tree? It is likely
+the number of fallen apples scales in a regression-like fashion proportional to the earthquake 
+magnitude. You might ask, "But what does 7.6 apples mean?" Simple: it can mean 7-8 apples, or if 
+one finds that there is a floor-function bias, it can mean just 7 apples. Each situation is different,
+and given you've done your research, you will likely know how you should interpret it.</p>
+
+<p>Recap:<br/>
+Regression: predict continuous output.<br/>
+Classification: predict discrete output.<br/>
+<hr/>
+
+<p><b>Unsupervised Learning</b></br>
+In supervised learning, we had a data set where we knew the input parameters and the output. That is,
+for example, we wanted to predict the cost of a house based on its size, so we started with a large
+data set of houses where we knew the cost (output value) and the size (input parameter).</p> 
+
+<p>In unsupervised learning, we are not in such a convenient situation: we know the input parameters, but
+we do not know the output value.</p> 
+
+<p>In the 2-parameter case of supervised learning, we had a 2-dimensional parameter space and populated it
+with points from a data set, where each point was colored by the output value for the corresponding parameters.
+In unsupervised learning, we no longer have any indication of the output value: no color-coding, no labeling.
+All we have is a plane with points from our data set. What can we do here? </p>
+
+<p>Well, is there any noticeable structure to the plotted data points, like clustering? Of course, the 
+n-parameter case, "noticeable" means you can make an algorithm to detect such a thing. If you suspect
+an n-dimensional data set might have meaningful clustering going on, you can use a clustering algorithm.
+If you don't suspect there is meaningful clustering, you can still apply a clustering algorithm: if there are
+significant clusters, maybe you've discovered some profound insight!</p>
+
+<p>Clustering algorithms are used for Google News: it scrapes the web for news stories, then 
+is actually able to group them together coherently by topic and event. In genomics, a clustering algorithm
+categorizes people by how similar the genomes are --- that is, we haven't told the algorithm there are 
+different types of people, and we might not even know there are. But the algorithm finds clusters, and
+these clusters are meaningful. Clustering is used for social network analysis: social clusters can be found. 
+Market segmentation: group your customers into different segments by some parameters (purchases, age, etc) so 
+you can better interact with each type of customer: what are they more likely to buy? where are they more likely to shop? etc. Unsupervised learning has even been used in astronomical data analysis for detecting galaxy clustering, 
+star clustering, and so on.</p>
+
+<p>There is more to unsupervised learning than clustering algorithms. For example, there is the "cocktail
+party algorithm."  Basically, given a man
+speaking over a radio playing, this algorithm can almost perfectly isolate the guy's voice from radio
+sounds. Or given n people speaking, recorded by n microphones, this algorithm can very well isolate 
+each speaker. I wonder what such an algorithm would do for magnetometer data. This algorithm is based
+on singular value decomposition, which basically means it is somehow related to empirical orthogonal
+functions, which is something I know about. Furthermore, you need one data stream per thing to isolate, 
+so using one magnetometer time series might not be enough. ......</p>
+<hr/>
+
+<p><b>Univariate Linear Regression</b><br/>
+The basics of any type of machine learning goes like this: <br/>
+Training set \(\rightarrow\) Learning Algorithm \(\rightarrow\) h, some function representing a hypothesis</p>
+
+<p>In other words, we want to be able to predict output values, y, given input variables, x, and so we
+gather a set of data {(x,y)} to train on -- that is, estimate a function on. We then use the estimated
+function -- which we call our hypothesis -- to predict y for any given x: y = h(x).</p>
+
+<p>Our hypothesis takes the input variable(s) and estimates the output variable(s) <br/>
+\(h: \left(\begin{array}{c} info\\we\quad are\\privvy\quad to\end{array}\right) \longrightarrow 
+\left(\begin{array}{c}an\quad estimate\\of\quad info\\we\quad are\quad interested\\in\quad 
+obtaining\end{array}\right)\)  </p>
+
+<p>For univariate linear regression, we have one ("uni-") input variable ("variate") and our hypothesis
+is that the output variable can be estimated from a linear equation of the input variable. That is, we
+assume that the output linearly depends on the input and so we attempt to estimate the best-fit line to
+our training set. Note that we can perform linear regression like this independent of whether or not linearity
+is a good assumption. That is, just because you can estimate a best-fit line to your data does not
+mean your data is modelled well by a line. By hypothesizing linearity, we then use linear regression to generate
+an exact linear hypothesis: a best-fit line to the data that we hypothesize explains the data well.</p>
+
+<p>Notation<br/>
+The training set consists of m input-output pairs, (x,y). The ith pair of the training set is denoted
+\((x^{(i)},y^{(i)})\). When assuming a linear hypothesis will explain the data well, one is assuming
+that the output is related to the input like: \(h_{\theta}(x) = \theta_{0}+\theta_{1}x\). Linear regression, then, 
+is estimating the parameter pair \((\theta_{0} , \theta_{1})\) 
+to give a line that fits the training set well. But what 
+constitutes "well"? One technique that is often used is called "ordinary least squares" estimation. There
+are many refinements and generalizations of ordinary least squares, such generalized least squares, 
+iteratively reweighted least squares, and total least squares. There are other types of methods used
+for linear regression as well, such as maximum-likelihood estimation, Bayesian linear regression, 
+principle component regression --- among others. As one might expect, each method has its strengths
+and weaknesses and the best method is often dependent on the data set and what the data scientist
+want to do.</p>
+
+<p>Side note: Andrew Ng thinks that "hypothesis" might not be the best word for the function produced by a
+learning algorithm, but I disagree: the function produced by a learning algorithm is very much
+a hypothesis whose verity can be measured! For example, if you have one parameter and your
+output curve looks like a parabola (quadratic function), but your learning algorithm is simple
+linear regression, then essentially what you are doing is saying: "I hypothesize that this
+data can be explained functionally by a linear equation of the input parameter." Further experimentation
+(e.g., on test sets) would show you that the hypothesis isn't very good. Furthermore, you can then
+propose a new hypothesis: "I hypothesize that the output is quadratically-dependent on the input."
+After performing quadratic regression on the training set, further experimentation on test sets
+will show that the quadratic hypothesis is superior to the linear hypothesis, giving better estimates
+of output values more of the time. This literally means that of two hypotheses, one is demonstrably
+better, just as in any area of science where one is testing between two hypotheses.</p>
+<hr/>
+<p><b>Cost Function</b><br/>
+The cost function will allow us to fit the best possible straight line to the data...
+We use the square-error cost function. (This is one of many.)
+
+<hr/>
+<p><b>Gradient Descent </b> <br/>
+The goal of gradient descent is to minimize a function. How a function is minimized, however,
+depends on the initial parameter estimation: in other words, the gradient descent algorithm
+find local minima.</p> 
+
+<p>One might fret about this: how can we be assured that a global minimum was achieved?
+Given a linear hypothesis with only one parameter (e.g., \(h_{\theta}(x)=\theta_{1}x\)),
+one is easily assured a global minimum when using the square-error cost function because this
+is finding the minimum of a parabola. In fact, when using both parameters, the square-error
+function again has only one minimum (becasuse it is a "convex function"). 
+But, in general, things are not so straightforward.
+For simple cases, one might know enough about the data to select good starting parameters
+for the algorithm. In cases where less is known about the data, one might have to iterate
+the algorithm over the parameter space in some way.
+
+
+
+<p>The gradient, as per usual, is easily turned into a directional derivative via dotting it with
+unit vectors. This is the same as saying: if I move in some direction, how much will this function
+I'm sampling change? And for gradient descent, we really want to know: which direction do I have
+to move in right here, right now to achieve the most change? There will be two collinear directions:
+one way along the line will give the best net positive change, and the opposite way will give the
+best net negative change --- this is the direction we want.
+
+<p>This will find us a local minimum, but often we want to find the global minimum. This means
+that we will have to apply the algorithm with multiple initial conditions.
+
+<p>Algorithm<br/>
+repeatUntilConvergence {<br/>
+&nbsp;&nbsp; for j in [0,1]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \(temp_{j} := \theta_{j}
+  -\alpha\frac{\partial}{\partial\theta_{j}}J(\theta_{0},\theta_{1})\)<br/>
+&nbsp;&nbsp; \(\theta_{0}=temp_{0}\)<br/>
+&nbsp;&nbsp; \(\theta_{1}=temp_{1}\)<br/>
+&nbsp;&nbsp; checkForConvergence()<br/>
+}<br/>
+\(\alpha\) controls the gradient descent step size... (Ng calls it "learning rate"). The learning rate
+shouldn't be too small bc convergence will take a long time, but if it is too big, the algorithm
+can fail to converge and possibly even diverge. Notice that \(\alpha\) can be left constant (if a
+good \(\alpha\) is chosen) since the corrections will become smaller and smaller due to the 
+derivative term continuously approaching zero.
+
+<p>Batch gradient descent: each step of gradient descent uses all m training examples; that is,
+we look at the entire training batch. There are other version of gradient descent that look at 
+smaller subsets of the training set at a given time.</p>
+
+<p>Another way of minimizing the cost function is using the normal equations (see below). But this method
+does not scale well as your data sets get bigger and bigger. This however is closely related
+to what we do in physics: the normal modes are the principle components -- i.e., principle axes
+in for a rotating body, for example.</p>
+
+<p> The temp vars are important because the parameters must be simultaneously updated; more specifically,
+you are only descending the gradient if you are updating the parameters simultaneously, independent
+of if the wrong algorithm also gets you to a local optimum or not.</p>
+
+<p>Note that gradient descent is inherently dependent on choice of cost function. That is, given
+a choice of cost function, we attempt to minimize it and find the best parameters for our model. 
+This is independent of whether or not we chose a good cost function for our data set.</p>
+
+<hr/>
+
+<p>(Side Note: This stuff vaguely reminds me of writing down lagrangians...  
+That is, the cost function is kind of like a lagrangian. In the case Ng is doing, the 
+"Lagrangian" has only a potential term: the cost function is dependent only on the 
+parameters (not their derivatives) and is akin to a square potential, like in the case of a 
+spring.  My guess, then, is that the reason there is no kinetic term is because we are 
+inherently assuming that the parameters are fixed over time. The gradient descent algorithm
+finds the path of least resistance, like water flowing down a hill, basically describing
+the path a ball would take down the given n-dimensional hill.
+
+<p>When using <a href="http://en.wikipedia.org/wiki/Lagrangian_mechanics">Lagrangians in physics</a>, 
+we find an extremal curve: that is, the equations of motion
+are those that minimize the total derivative of the Lagrangian...
+\(\frac{d}{dt}\mathscr{L} = \frac{\partial\mathscr{L}}{\partial q}\frac{dq}{dt} +
+\frac{\partial\mathscr{L}}{\partial\dot{q}}\frac{d\dot{q}}{dt} + {\frac{\partial\mathscr{L}}{\partial t}}
+= \left(\frac{\partial\mathscr{L}}{\partial q} 
+- \frac{d}{dt}\frac{\partial\mathscr{L}}{\partial\dot{q}}\right)\dot{q} =0\)<br/>
+...by default, it is assumed/prescribed that \(\frac{\partial\mathscr{L}}{\partial{t}}=0\)
+
+<p>The total derivative (often called the Lagrangian derivative) has the 
+\((q,\dot{q})\)-space gradient built into it like so:<br/>
+Let \(x=[q,\dot{q}]=[q_{1},...q_{n},\dot{q}_{1},...,\dot{q}_{n}]\)<br/>
+\(\frac{d}{dt}\mathscr{L} = \frac{\partial\mathscr{L}}{\partial{x}}\frac{dx}{dt} 
++\frac{\partial\mathscr{L}}{\partial{t}}
+= \dot{x}\cdot\nabla\mathscr{L} + \frac{\partial\mathscr{L}}{\partial{t}}\) )
+<hr/>
+
+<p><b>Gradient Descent for Univariate Linear Regression</b> <br/>
+<hr/>
+
+<p><b>Mutiple Linear Regression</b></br>
+Multiple linear regression refers to a scalar-valued linear equation of multiple predictor variables.
+Multivariate linear regression refers to a vector-valued linear equation.
+Multivariate multiple linear regression, then, refers to a vector-value linear equation of multiple predictor
+variables.
+
+When not doing linear regression, this is the difference between a scalar function of one variable (simple 
+linear regression), a scalar function of multiple variables (multiple linear regression), 
+a vector function of one variable, and a vector function of multiple variables (i.e., a vector function
+of a vector, i.e., vectorial output given vectorial input).
+
+Anyway, Ng covers "multiple linear regression," but calls it "multivariate linear regression." 
+Apparently, many authors mix up the words, so it is not a big concern. However, traditionally
+in statistics, a multivariate analysis has to do with multiple dependent variables on a signle
+indpendent variable, and so multivariate regression was originally reserved for this type of 
+situation. That said, whatever. Whether you hear someone talking about multiple or multivariate
+regression, you simply know there are going to be vector involved: either the feature/predictor
+space is multidimensional, the target/value space is multidimensional, or both. Don't get hung
+up on being overly pedantic. 
+
+<p><b>Gradient Descent for Multivariate Linear Regression</b> <br/>
+Hypothesis: &nbsp; \(h_{\theta}(x)=\theta^{T}x=\theta_{0}+\theta_{1}x_{1}+\cdots+\theta_{n}x_{n}\), </br>
+&nbsp;&nbsp;&nbsp;&nbsp; where \(x=\left[\begin{array}{c} x_{0}\\ \vdots\\ x_{n}\end{array}\right],
+\theta=\left[\begin{array}{c} \theta_{0}\\ \vdots\\ \theta_{n}\end{array}\right] \in\mathbb{R}^{n+1}\)
+and \(x_{0}\equiv 1\)<br/>
+<br/>
+Cost Function: &nbsp; \(J(\theta)=\frac{1}{2m}\sum_{i=1}^{m}\left(h_{\theta}(x^{(i)})-y^{(i)}\right)^{2}\)
+
+<p>Algorithm<br/>
+repeatUntilConvergence {<br/>
+&nbsp;&nbsp; for j in [0,1,...,n]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \(temp_{j} := \theta_{j}
+  -\alpha\frac{\partial}{\partial\theta_{j}}J(\theta_{0},\theta_{1})\)<br/>
+&nbsp;&nbsp; for j in [0,1,...,n]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \(\theta_{j}=temp_{j}\)<br/>
+&nbsp;&nbsp; checkForConvergence()<br/>
+}<br/>
+
+<p>Given our nomenclature, a linear hypothesis, and the square-error cost function, we have:<br/>
+repeatUntilConvergence {<br/>
+&nbsp;&nbsp; for j in [0,1,...,n]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \(temp_{j} := \theta_{j}
+-\frac{\alpha}{m}\sum_{i=0}^{m}\left( h_{\theta}(x^{(i)})-y^{(i)}\right)x_{j}^{(i)} \)<br/>
+&nbsp;&nbsp; for j in [0,1,...,n]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \(\theta_{j}=temp_{j}\)<br/>
+&nbsp;&nbsp; checkForConvergence()<br/>
+}<br/>
+
+<hr/>
+<p><b>Feature Scaling (aka data normalization)</b><br/>
+<a href="https://en.wikipedia.org/wiki/Feature_scaling">wiki page</a></p>
+
+<p>The idea is to ensure each feature takes on a similar range. For example,
+if we are measuring solar wind speed and magnetic field magnitude, the
+speed is on the order of 500,000 [m/s] and the magnitude might be 0.00000001 [T]. 
+This would result in highly skewed contours of the cost function in the parameter space, 
+which can cause the gradient descent algorithm to take a very long time to converge
+on the minimum. For example, the learning rate, \(\alpha\), might be too big along one
+parameter axis and too small along the other parameter axis.
+More comparable units would be 0.5 [Mm/s] and 10 [nT]. However, the better way to
+do it is to max-normalize each variable: speed/max(speed), magFld/max(magFld). (This
+is akin to choosing a vector learning rate...)</p>
+
+<p>In general, when feature scaling we want to put each variable somehwere close to the range [-1,1].
+That is, you don't want values in a range much bigger or much smaller than this, like [-100,300]
+or [-0.002,0.003]. </p>
+
+<p>In addition to max-normalizing, there is what Ng call mean-normalzing, which is what 
+I would call mean subtraction. That is, it is often best to implement the gradient
+descent algorithm with max-normalized, zero mean sets. There are other choices that 
+work as well, e.g., you can z-score the training set: mean-subtract and divide by the standard deviation.
+Another way is mean-subtracting and dividing by the range (i.e., max-min).</p>
+<hr/>
+
+<p><b>Polynomial Regression</b><br/>
+It turns out that polynomial regression can be rewritten as multiple linear regression. For example,
+if you have one feature, x, and think a cubic polynomial would be fit the data, your hypothesis
+looks like: <br/>
+\(h_{\theta}(x)=\theta_{0}+\theta_{1}x+\theta_{2}x^{2}+\theta_{3}x^{3}\)<br/><br/>
+This equation can simply be rewritten as a linear regression on three variables:<br/>
+\(h_{\theta}(x)=\theta_{0}+\theta_{1}x_{1}+\theta_{2}x_{2}+\theta_{3}x_{3}\)<br/><br/>
+
+<p>Note that feature scaling is an essential component of this type of analysis to
+work with a gradient descent method.</p>
+
+<p>In addition to integer-valued polynomials, one might use fractiona-valued polynomials as
+well. For example, the square root often has the characteristics of the quadratic, but is
+monotonically increasing, which might be a more realistic characteristic for your data set then
+the quadratic, which is not necessarily going to monotonically increase.</p>
+
+<p>It should be clear that you have a choice of how to define features. That is, just because
+you have data on the number of bathrooms in a house doesn't mean the cost of the house is simply
+linearly related to this number: you might instead think it has a quadratic or cubic dependence, etc.
+There are algorithms that help you decide this, e.g., ____</p>
+
+<hr/>
+
+<p><b>The Normal Equation</b><br/>
+This equation gives the optimal parameters, \(\theta\), analytically. No
+need for feature scaling when using the normal equation. The advantage over
+gradient descent is that there is no need to figure out what \(\alpha\) should
+be and that there is no need to iterate. However, gradient descent works well,
+even for a large amount of features (millions of features!), whereas
+for the normal equation, you have to compute an inverse of an (n+1)x(n+1) matrix,
+which becomes slow for large n (computational time is of the order of \(n^{3}\)).
+Ng says he inverts up to ~10,000x10,000 matrices. Bigger than that, he uses
+gradient descent.</p>
+
+<p>\( X\theta = y \longrightarrow X^{T}X\theta = x^{T}y \longrightarrow \theta = (X^{T}X)^{-1}X^{T}y\)
+
+<hr/>
+<p><b>Classification</b><br/>
+We need to classify an event when it is either this or that, negative or positive, up or down, etc.
+In my work, I often want to know if high-latitude geomagnetic field line is open or closed. All of
+these sets are isomorphic to \(\mathscr{Z}_{2}\)={0,1}. Oftentimes in machine learning, the "0" class is 
+called the "negative class" and the "1" class is called the "positive class."</p>
+
+<p>Classification often refers to this binary problem, but can also refer to "multi-class" classification,
+which is the term often reserved for classification sets that are isomorphic to \(\mathbb{Z}_{n},\quad
+n\in\mathbb{Z}\).</p>
+
+<p>Even though this is clearly not a linear regression problem, that does not stop one 
+from going ahead and performing a linear regression analysis anyway. The algorithm itself
+does not know it is a bad idea and will output a hyptothesis function for you with no complaints.
+If linear regression is used, one additional step is necessary: development of a threshold
+for rebinning the hypothesis function into a binary set. For example, \(\{y=1: h_{\theta}(x) \ge 0.5\}\)
+and \(\{y=0: h_{\theta}(x) \lt 0.5\}\).
+Note, however, that linear regression only has a chance of working for the nicest of classification 
+problems, e.g., outliers in the training set can give a poor regression line.  
+In general, applying linear regression to a classification problem isn't a good idea.</p>
+
+A good idea is "logistic regression." Despite this algorithm being a classification algorithm,
+it is called regression. Deal with it. (Given that the logistic function is a continuous
+mapping, this makes sense, despite it being used for classification.)
+
+
+<hr/>
+<p><b>Logistic Regression: Hypothesis Representation</b><br/>
+A nice thing about logistic regression is that it output values only between 0 and 1.</p>
+
+<p>Remember for linear regression that our hypothesis took on the following form:<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; \(h_{\theta}(x)=\theta^{T}x\)</p>
+
+<p>For logistic regression, we generalize the form of a hypthesis, which can be applied more
+generally:<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; \(h_{\theta}(x)=g(\theta^{T}x)\)</p>
+
+<p>For logistic regression, we use the logistic function (also called the sigmoid function):<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; \(g(z)=\frac{1}{1+e^{-z}}\)</p>
+
+<p>Combining the two equations, we have the logistic hypothesis:<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; \(h_{\theta}(x)=\frac{1}{1+e^{-\theta^{T}x}}\)</p>
+
+<p>To a physicist, this is the 
+<a href="https://en.wikipedia.org/wiki/Fermi%E2%80%93Dirac_statistics#Fermi.E2.80.93Dirac_distribution">
+Fermi-Diract distribution</a>! It represents a thermal equilibrium system
+of fermionic particles (particles that obey the Pauli Exclusion Principle and have half-integer spin), 
+like electrons.</p>
+
+<p>The interpretation is the same as that with fermions, really: the logistic hypothesis represents
+the probability that y=1 given x, parameterized by\(\theta\): <br/> 
+&nbsp; &nbsp; &nbsp; &nbsp; \(h_{\theta}(x)=\mathbb{P}(y=1\mid x;\theta)\)</p>
+
+<p>If the question asks if a tumor is malignant or not, the 
+logistic hypothesis estimates the probability that it is malignant. With fermions, we ask about
+a specific quantum state and the Fermi-Dirac distribution tells the probability that a fermion
+occupies that state.</p>
+
+<p>As with linear regression, using the logistic hypothesis, we must use a training set to 
+estimate the parameters, \(\theta\). The learning algorithm to do this for linear regression
+was the gradient descent: will this work for parameter-fitting a logistic function? The
+logistic function itself has optima only at \(\pm \infty\), so it is not well suited, but
+one might take the logarithm of the logistic function, Taylor expand it, and try fitting that...</p>
+
+<hr/>
+<p><b>Logistic Regression: Linear Decision Boundary</b><br/>
+Notice that for \(\theta^{T}x\ge 0\), \(0.5\le y \le 1\), and that \(\theta^{T}x\lt 0\), \(0\le y\lt 0.5\).
+In other words, we need not look at the logistic function itself to know which class an input falls into,
+but only the sign on the inner product of the parameter and input vectors. Furthermore, given a proper
+estimation of the parameter vector (which we have not yet talked about for logistic regression), we
+then have a constraint equation on n unknowns, which gives us a (n-1)-dimensional hyperslice through
+an n-dimensional space, separating it into two regions representing our two classes. For example, given two
+input features, the hyperslice is a line cutting through a plane.
+
+<hr/>
+<p><b>Logistic Regression: Nonlinear Decision Boundary</b><br/>
+When looking at linear regression, we found out that polynomial regression (and, in fact, 
+any function of features) can be rewritten as a linear regression problem.  
+What is important is that (1) we acknowledged that the output is not always linearly 
+dependent on the input, but (2) that the methods of linear regression apply equally well
+to nonlinear dependencies.</p>
+
+<p>Again, for logistic regression, we have the case where the argument of the logistic function
+has nonlinear depencies. This situation is no different than the linear regression one if we realize
+that in linear regression the input argument is the same as the output --- that is, the function that
+maps the inner product of the parameter and input vectors is the identity function. </p>
+
+<p>In other words, we always have the following situation:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; \( output = h_{\theta}(x) = f(\theta^{T}x)\)</p>
+
+</p>In linear regression, f is the identity function, while in logistic regression f is the logistic
+function. This is important because it emphasizes that, structurally, we have the same problem 
+that we did with linear regression when we were concerned about nonlinear dependencies --- and all
+we had to do there was treat each nonlinear dependence as a separate linear variable. </p>
+
+
+<p>EXAMPLE:
+</p>
+
+<p>What is crazy cool about this is that in our re-mapped n-dimensional space, we can still think
+of our decision boundary as a (n-1)-dimensional hyperslice cutting it in half, while we also
+have the nonlinear perspective available to us to in the k-dimensional space (\(k\lt n\)).</p>
+
+</div><!--content-->
+</div><!--container-->
+
+
+</BODY>
+</HTML>

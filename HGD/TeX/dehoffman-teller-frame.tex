@@ -1,0 +1,41 @@
+% mainfile: ../hw3.tex
+\textbf{For MHD shock waves, why is $\left[\vec{u_{t}}\right] ||
+\left[\vec{B_{t}}\right]$?}
+
+I'm not sure if this is true for all frames, but for the
+deHoffman-Teller frame it is.
+
+The dHT frame is defined such that $\left| \vec{u_{1}} \times
+\vec{B_{1}}\right| =
+0$. From the Rankine-Hugoniot relations for MHD, we can then immediately
+write down $\left| \vec{u_{2}} \times \vec{B_{2}}\right| = 0$.
+
+By property of the cross product, what we've just said is that in the
+dHT frame, the magnetic field and the plasma flow are parallel to each
+other in both regions delimited by the shock --- that is, the upstream
+magnetic field is parallel to the upstream flow and the downstream
+magnetic field is parallel to the downstream flow.
+
+Since the two quantities are parallel in both domains they are found in, we
+need only consider the unit vectors, $\vec{d_{1}}$ and $\vec{d_{2}}$,
+associated with the directions of these quantities in each domain.
+
+From here, it is obvious that the relationship $\left[\vec{u_{t}}\right] ||
+\left[\vec{B_{t}}\right]$ holds. Simply rewrite each quantity in terms
+of it's (unitless) unit vector, $\vec{d}$.
+\begin{center}
+\begin{math}
+  \left[ \vec{B} \right] = \left[ \vec{B_{t}} + \vec{B_{n}} \right] ||
+  \left[ \vec{d_{t}} + \vec{d_{n}} \right] || \left[
+  \vec{u_{t}}+\vec{u_{n}} \right] = \left[ \vec{u} \right]
+\end{math}
+\end{center}
+
+The relationship is hidden in there, but it's there:
+\begin{center}
+  \begin{math}
+    \left[ \vec{B_{t}} \right] || \left[ \vec{d_{t}} \right] || \left[
+    \vec{u_{t}} \right]
+  \end{math}
+\end{center}
+

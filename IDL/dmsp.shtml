@@ -1,0 +1,54 @@
+<HTML>
+
+<HEAD>
+<TITLE>My IDL Libraries</TITLE>
+<meta name="description" content="A list of my IDL libraries and functions.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="../js/script1.js"></script>
+<script type="text/javascript" src="../js/script2.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</HEAD>
+
+
+<BODY BGCOLOR='white'>
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="../ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+<div id="content">
+	
+	<CENTER>
+		<hr/>
+		<b>DMSP Library</b>
+		<TABLE BORDER="1">
+		  <TR> 
+				<TD>DMSP_SOCB</TD>
+			</TR>
+			<TR>
+				<TD>get_southern_dmsp_docb</TD>
+			</TR>
+			<TR>
+				<TD>get_southern_dmsp_nocb</TD>
+			</TR>
+			<TR>
+				<TD>Sotirelis_Ellipse_OCB</TD>
+			</TR>
+			<TR>
+				<TD>Sotirelis_Spline_OCB</TD>
+			</TR>
+		</TABLE>
+	</CENTER>
+
+</div><!--id="content"-->
+</div><!--id="container"-->
+
+</body>
+</html>
+
+
+					
+
+
+

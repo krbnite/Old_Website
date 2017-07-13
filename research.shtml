@@ -1,0 +1,145 @@
+<html>
+<HEAD>
+  <title>Descriptions of my research.</title>
+  <meta name="description" content="The professional page of Kevin Urban.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script type="text/javascript" src="js/script1.js"></script>
+  <script type="text/javascript" src="js/script2.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</HEAD>
+
+<style type="text/css">ol{margin:0;padding:0}p{margin:0}.c2{line-height:1.0;text-indent:0pt;text-align:justify;direction:ltr}.c0{color:#000000;font-size:11pt;font-family:Arial}.c3{color:#000000;font-size:11pt;font-family:Times New Roman}.c1{color:#800000;font-size:12pt;font-family:Verdana}.c4{color:#800000;font-size:12pt;font-family:Arial}.c5{background-color:#ffffff}
+</style>
+
+<BODY class="c5">
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+
+<div id="content">
+<p class="c2"><span class="c1">Department of Physics and Astronomy, Siena College</span></p>
+<p class="c2"><span class="c1">Consultant / Research Scientist</span></p>
+<p class="c2"><span class="c1">September 2011 - Present</span></p>
+<p class="c2"><span class="c0">&nbsp;</span></p>
+<p class="c2"><span class="c3">
+
+<p class="c2"><span class="c0">-----------------------------------------------------------------------</span></p>
+
+<p class="c2"><span class="c1">Center for Solar-Terrestrial Research, New Jersey Institute of Technology (NJIT)</span></p>
+<p class="c2"><span class="c1">Consultant / Research Scientist</span></p>
+<p class="c2"><span class="c1">September 2010 - August 2011</span></p>
+<p class="c2"><span class="c0">&nbsp;</span></p>
+<p class="c2"><span class="c3">
+At the Center for Solar-Terrestrial Research, I have investigated various issues under the 
+umbrella of "space weather." Most of my research has been concerned with how to characterize the 
+state of the magnetosphere via knowledge of its open-closed boundary (OCB)---that is, the boundary 
+between lower-latitude closed terrestrial field lines and field lines in the polar cap regions that 
+have been reconnected to the interplanetary magnetic field (IMF). During geomagnetic events, the 
+OCB can vary in both size and shape; the extent of this variability is a vital component of space 
+weather research and modeling.</span></p>
+<p class="c2"><span class="c0">&nbsp;</span></p>
+<p class="c2"><span class="c3">
+In order to monitor the OCB and study the magnetosphere, I utilize large data sets gathered at 1-Hz 
+by a high-latitude network of fluxgate magnetometers. Lanzerotti et al [1999] demonstrated that 
+spectral analysis of a fluxgate's data (on the dayside) yields information specifying when/if the 
+OCB crossed the fluxgate. My work has been to extend this analysis to the nightside 
+and ultimately develop a scheme that continuously determines if the fluxgate is equatorward of, poleward of, or on
+the OCB. By employing a strategically-designed network topology spanning a range of high geomagnetic latitudes
+and magnetic local times, in this way we are able to isolate the structure and dynamics of the OCB before and during various
+geomagnetic conditions, such as during the passage co-rotating interaction region (CIR) or coronal mass
+ejection (CME).
+<p class="c2"><span class="c0">&nbsp;</span></p>
+
+<p class="c2"><span class="c0">-----------------------------------------------------------------------</span></p>
+
+<p class="c2"><span class="c1">Department of Mathematical Sciences, NJIT </span></p>
+<p class="c2"><span class="c1">Research with Denis Blackmore</span></p>
+<p class="c2"><span class="c1">2008 - Present</span></p>
+<p class="c2"><span class="c0">&nbsp;</span></p>
+<p class="c2"><span class="c3">
+Dr. Blackmore and I are currently investigating topics in fractional calculus and fractional 
+differential equations with an eye towards applications to field theories in physics. We hope to 
+finish up significant portions of our investigations over the coming months and are working towards 
+publishing these results before I leave for my PhD studies.</span></p>
+<p class="c2"><span class="c3">&nbsp;</span></p>
+<p class="c2"><span class="c3">
+Presently, I have authored two papers with Dr. Blackmore, one of which is now in press in the 
+Journal of Mechanics of Materials and Structures and another which has been submitted Condensed 
+Matter Physics. The paper in press is the first of many in an ongoing investigation into the 
+dynamical behavior of &nbsp;various configurations of granular particles subject to gravity and a 
+sequence of small, periodically applied taps using an approximate continuum model developed by Dr. 
+Blackmore in previous work. This model, which comprises an in&#64257;nite-dimensional dynamical 
+system and is now known as a BSR field, is studied with a focus on nonlinear wave type behavior. 
+Tying together our work on granular flow dynamics and fractional field theories, we will be looking 
+into fractionalized versions of the BSR field. The paper submitted to Condensed Matter Physics 
+(&ldquo;Integrability Analysis of Regular and Fractional BSR Fields&rdquo;) is our first step in 
+this direction. </span></p><p class="c2"><span class="c4">&nbsp;</span></p>
+<p class="c2"><span class="c0">&nbsp;</span></p>
+
+<p class="c2"><span class="c0">-----------------------------------------------------------------------</span></p>
+
+<p class="c2"><span class="c1">Center for Solar-Terrestrial Research, NJIT </span></p>
+<p class="c2"><span class="c1">Graduate Research Assistant</span></p>
+<p class="c2"><span class="c1">September 2008 - August 2010</span></p>
+<p class="c2"><span class="c0">&nbsp;</span></p>
+<p class="c2"><span class="c3">
+High above the earth&rsquo;s lower and middle atmosphere there exists a spread of dynamical 
+conditions characterizing what has become known as space weather. In the manner that 
+&ldquo;weather&rdquo; refers to the evolving state of the troposphere, the phrase &ldquo;space 
+weather&rdquo; denotes the state of the near-space environment&mdash;often referred to as 
+geospace&mdash;which includes the ionosphere and magnetosphere. Depending on context, space weather 
+also refers to the state of the earthward flowing solar wind and conditions at the surface of the 
+sun. </span></p><p class="c2"><span class="c3">&nbsp;</span></p>
+<p class="c2"><span class="c3">A corotating interaction region (CIR) is a distinct type of solar 
+wind configuration and one of the primary drivers of space weather. When a CIR crosses paths with 
+the earth&rsquo;s magnetosphere, inherent Alfvenic structures within it cause the magnetosphere to 
+undergo vigorous oscillations and deformations. During most phases of solar activity there is little 
+hope in isolating the exact nature of this interaction. Fortunately, the year 2008 marked a 
+historically quiet period of solar activity. Dr. Andrew Gerrard and I took this opportunity to 
+clearly distinguish the spectral signature of the CIR and isolate its impact on the magnetosphere 
+by using the PENGUIn AGOs network of ground-based magnetometers on the Antarctic continent; the 
+data was subsequently analyzed using a host of programs/techniques developed in both MATLab and 
+IDL.</span></p>
+<p class="c2"><span class="c0">&nbsp;</span></p><p class="c2"><span class="c0">&nbsp;</span></p>
+
+<p class="c2"><span class="c0">-----------------------------------------------------------------------</span></p>
+
+<p class="c2"><span class="c1">Department of Physics, NJIT </span></p>
+<p class="c2"><span class="c1">Undergraduate Research Assistant (Dr. Andrew Gerrard)</span></p>
+<p class="c2"><span class="c1">January 2008 - August 2008</span></p>
+<p class="c2"><span class="c0">&nbsp;</span></p>
+<p class="c2"><span class="c3">As an undergraduate working for Dr. Gerrard, much of my time was dedicated familiarizing myself with geomagnetism, plasma physics, the magnetosphere, and the solar-terrestrial interaction. It was also a time of developing my programming skills in languages such as MATLab, IDL, and Unix. More importantly, I managed and helped initiate the geomagnetism research efforts for Dr. Gerrard and the Center for Solar-Terrestrial Research. This came in many forms including assisting in the installation of a fluxgate magnetometer in Jenny Jump State Forrest in Hope, NJ; interfacing our instrument with an on-site computer; and developing public outreach efforts, such as public lectures and educational materials for the astronomy museum at Jenny Jump (e.g., a real-time graphical display of the magnetometer data being recorded nearby and two posters describing the geomagnetic field, the fluxgate magnetometer, and a brief history of magnetism).</span></p>
+<p class="c2"><span class="c0">&nbsp;</span></p>
+
+<p class="c2"><span class="c0">&nbsp;</span></p><p class="c2"><span class="c0">-----------------------------------------------------------------------</span></p>
+
+<p class="c2"><span class="c1">Observational Cosmology Laboratory, NASA, Goddard Space Flight Center </span></p>
+<p class="c2"><span class="c1">Intern</span></p>
+<p class="c2"><span class="c0">&nbsp;</span></p>
+<p class="c2"><span class="c3">My team developed a proposal for an instrument to measure the polarization pattern and black body spectrum of the cosmic microwave background and thereby test the predictions of inflationary physics. Specifically, the instrument was designed to detect a unique signal produced by theoretical gravity waves that are predicted to have been excited during the proposed inflationary epoch. I programmed simulations concerned with how the instrument would collect and interpret data while in orbit and revolving about its own axis.</span></p><p class="c2"><span class="c3">&nbsp;</span></p>
+<p class="c2"><span class="c3">&nbsp;</span></p>
+
+<p class="c2"><span class="c0">-----------------------------------------------------------------------</span></p>
+
+<p class="c2"><span class="c1">Heliophysics Division, NASA, Goddard Space Flight Center</span></p>
+<p class="c2"><span class="c1">Intern</span></p>
+<p class="c2"><span class="c3">&nbsp;</span></p>
+<p class="c2"><span class="c3">During my time at NASA in 2006, I was intimately involved with various programming efforts, including website design (HTML, javascript) and data management (Unix, Python), for the &quot;International Heliophysical Year,&rdquo; a scientifically motivated international effort to understand the processes and phenomena governing the interconnections between the sun, planetary magnetospheres, the interplanetary medium, and the interstellar medium. </span></p>
+
+
+<p class="c2"><span class="c3">&nbsp;</span></p>
+<p class="c2"><span class="c3">&nbsp;</span></p>
+<p class="c2"><span class="c3">&nbsp;</span></p>
+
+
+</div><!--id="content"-->
+<div id="footer">
+	This is not a famous quote.
+</div><!--id="footer"-->
+
+</div><!--id="container"-->
+</body>
+</html>

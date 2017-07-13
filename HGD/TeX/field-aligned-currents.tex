@@ -1,0 +1,104 @@
+From Cheryl Huang [2004]:
+* Vasyliunas [1970] showed that FACs flow into or out of the ionosphere
+whenever gradients of the magnetospheric plasma pressure, p, are not aligned
+with gradients in magnetic flux tube volume, $\xi=\int{\frac{ds}{B}}$: 
+$ j_{\par} = -\frac{B_{m}}{2B_{e}}\vec{b_{e}}\vdot\left[
+\nabla\times\nabla \int{\frac{ds}{B}} \right] $
+-- where \vec{b_{e}} is a unit vector along Earth's magnetic field at the 
+   equator ($B_{e}$) and $B_{m}$ is the magnetic field at the top of the
+ionosphere
+-- sooo, in the inner magnetosphere near the dusk (dawn) meridians where
+$\nabla\xi$ is mostly radial, we expect FACs into (out of) the ionosphere in
+the evening (morning) sector due to the eastward (westward) pressure
+gradients
+
+* up to the 1970s, the existence of FACs were hotly debated (for a historical
+summary, see: Dessler [1984]: The evolution of arguments regarding the
+existence of field-aligned currents; for the papers that established the
+existence of FACs: Ijima and Potemra [1976, 1978]; predicted to exist by
+Birkeland, I beleve -- see: Egeland [1984]: Kristin Birkeland, the man and the
+scientist)
+
+* Ijima and Potemra [1976,1978] established that global distributions of FACs
+indeed exist; the currents were named Region 1 [R1] and Region 2 [R2] FACs. 
+*R1 currents are found near the poleward boundary of the auroral oval; the R1
+currents flow into the ionosphere on the dawnside and out on the duskside
+* R2 currents are equatorward of the R1 currents and have opposite polarities:
+they flow into the ionosphere on the duskside and out on the dawnside
+
+
+Issues and debates surrounding FACs
+-- much of this is ripped directly from Cheryl's paper
+* What are the physical requirements and implications for FACs as the agents
+responsible for the coupling of the ionosphere to the  magnetosphere?
+Vasyliunas [1970] used force balance and current continuity to show that FACs
+are the consequence of mislalignments between plasma pressure gradients and
+flux tube volume gradients in the magnetosphere (eq'ns shown above)
+ -- tidbit: the RCM model implements Vasyliunas' prescription
+* Ohm's law dictates that FACs control distributions of electric potential in
+the ionosphere; indirectly, through magnetic mapping, they also control
+electric field distributions in the magnetosphere
+* Ground signatures of FACs: Fukushima [1976] developed a theorem
+demonstrating that if FACs close through poloidal currents flowing in a
+uniformly-conducting ionosphere, magnetic perturbations at ground level
+exactly cancel and, thus, no ground signatures of the FACs are produced
+(Fukushima's theorem)
+
+
+empirical formual for specifying fac distributions
+richmond and kamide [1988] developed an empirical approach to specify fac and
+ionospheric potential distributions using ground- and space-based data; these
+ empirical formulas were refined and developed, ultimately culminating in what
+is known as assimilative mapping of ionospheric electrodynamics [amie] (cite:
+richmond [1992]). amie inverts magnetic perturbations observe by mid-to-high
+latitude ground stations to specify equivalent ionospheric currents. however,
+these inversions are limited... raeder et al [2001] argued that translating
+equivalent currents into realistic electric field estimates requires precise
+knowledge about the distribution of ionospheric conductances. this concern can
+be remedied a bit, though, since ionospheric conductances can be derived given
+knowledge of solar ultraviolet radiances [wallis and budzinski, 1981] and the
+fluxes of energetic particles precipitating from the magnetosphere [robinson
+et al, 1987]. however, given an accurate description of ionospheric
+conductances, there is still the issue of fukushima's theorem: that
+perturbations produced by facs and poloidal closing currents exactly cancel on
+the ground. this means that, inherently, amie is vulnerable to underestimating
+fac intensities and ionospheric electric fields!
+
+
+
+Analyzing FACs using DMSP spacecraft
+Since DMSP are polar-orbiting, sun-synchronous satellites, if we assume the
+field-aligned current sheets are spread azimuthally, then at the DMSP altitude
+of ~840 km, if there are such field-aligned current sheets in the vicinity of
+the 2100/0900 or 1800/0600 geographic local time meridians, the particular
+DMSP spacecraft can be thought to pass through the sheet at normal incidence.
+In spacecraft-centered coordinates (X: nadir-directed, Y: velocity-directed,
+Z: XxY), this means that the FAC is directed approximately along X (i.e., if
+passing through a R2 FAC at 0600, the current is in the -X direction headed
+towards the magnetosphere; if passing the R1 FAC at 0600, the FAC is in the +X
+direction headed down into the ionosphere).
+* two governing equations for analyzing combined SSM and SSIES data are
+Ampere's law and current continuity:
+(i) $j_{\par}=\frac{1}{\mu_{0}}
+\left[\nabla\times\delta\vec{B}\right]_{\par}$
+(ii) $\frac{\partial{j_{\par}}}{\partial{s}} =
+-\nabla_{\perp}\vdot\vec{j}_{\perp}$
+-- s represents an infinitesimal distance along the field line
+* in the ionosphere, the current density perpendicular to the Earth's
+magnetic field $\vec{B}_{E}$ is
+$\vec{j}_{perp}=\sigma_{P}\vec{E}-\sigma_{H}(\vec{E}\times\vec{b})$
+-- where the sigmas are the Pedersen and Hall conductivities, $\vec{b}$
+is a unit vector along $\vec{B}_{E}$
+* we can integrate the current continuity equation, (ii), from the
+satellite location to the bottom of the ionosphere (along the field
+line, I think) to get:
+$j_{\par}=\nabla_{\perp}\vdot\vec{I}_{\perp} =
+\nabla_{\perp}\vdot\left[\Sigma_{P}\vec{E}-\Sigma_{H}(\vec{E}\times\vec{b})\right]$
+-- the capital sigmas are the Pedersen and Hall conductances
+
+In the spacecraft-centered coordinates for a DMSP satellite, $j_{\par}$ can be
+written $j_{X}$ and $j_{\perp}$ can be written $j_{Y}$.
+
+
+
+

@@ -1,0 +1,90 @@
+
+
+
+
+
+
+
+
+
+
+LaTeX does not handle UTF-8 out of the box, so it does not support languages with 
+unrecognized characters, e.g., German. XeLaTeX helps with this: to use the XeLaTeX engine, you must
+also use the {fontspec} package (connects to the OS fonts)... Might not be important for me
+since I am not writing multi-lingually... Some people suggest to just use the {inputenc} package
+with the UTF-8 option; other people say this is not the most flexible option...
+
+
+Document details:
+Title: \title{My Awesome Title}
+Author: \author{Kevin Urban}
+Date: \date{\today} % can manually write a date as well
+Then, to make title: \maketitle
+ -- to make it a title page, use \pagebreak or \newpage (w/ \clearpage)
+
+
+Add a numbered section: \section{The magic of science}
+Add a numbered subsection: \subsection{Interesting Stuff}
+ -- non-numbered (sub)sections are simply done like: \(sub)section*{}
+
+
+Table of Contents: \tableofcontents
+
+
+Page Numbers:
+* title page and TOC probably shouldn't count as page numbers
+Suppress page number on a page:  \thispagestyle{empty}
+(Re)Set the counter on for next page: \setcounter{page}{1}
+* So on title page:
+  \maketitle
+	\thispagestyle{empty}
+	\setcounter{page}{1}
+	\newpage
+
+* to have roman numbers for front matter:  \pagenumbering{roman} % after title page
+* then to have aracbic numbers for main content:  \pagenumbering{arabic}  % after TOC
+
+
+Keybindings:
+* with pdflatex, if you want special symbols, you can create easy-to-remember key bindings for them 
+   (keyboard mappings)
+* with xelatex (and {fontspec}), you should be able to directly enter special symbols right into
+   your TeX file (making it feel more like a modern document processor, like MSWord); with xelatex,
+	 unicode is understood
+* More important:  keybindings can also have functionality associated with them
+  -- for example, you can make it such that whenever you type in {, it automatically
+	   writes {} and puts your cursor in the middle
+* basically, key bindings give TeXShop a vim-like feel to it
+
+
+
+Renew Command:
+* allows you to redefine a pre-existing command
+* \renewcommand{\commandWeWantToChange}{whatWeWantToChangeItTo}
+
+
+New Command: \newcommand{newCommandsName}{functionality}
+* e.g.,  
+  \newcommand{main}{\par\noindent\hspace*{0pt}\ignorespaces}
+-- \par: new paragraph
+-- \noindent: no indentation
+-- \hspace*{0pt}:  horizontal space of 0 (lines it up on left margin)
+-- \ignorespaces: ignore spaces
+* More complex command with functionality
+    \newcommand{\explanation}[1]{%
+      \begin{adjustwidth}{50pt}{40pt}
+        #1
+      \end{adjustwidth}
+ --  [1] represents the intput to this command
+ -- #1 is where the input gets placed (similar to bash scripting where the var reference is $)
+ -- the adjustwidth environment comes from {changepage}
+
+
+\leftandright{textOnLeft}{textOnRight}
+ * everything is in bold, so you might use \textmd{notBoldText}
+
+\textbullet -- a nice dot to separate text
+\, -- add some space
+\vspace{arg} -- accepts pos and neg numbers
+
+

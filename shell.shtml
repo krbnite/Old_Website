@@ -1,0 +1,182 @@
+<html>
+<HEAD>
+<title>The Shell Environment</title>
+<meta name="description" content="The professional page of Kevin Urban.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="js/script1.js"></script>
+<script type="text/javascript" src="js/script2.js"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ TeX: { extensions: ["cancel.js"] }});
+</script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</HEAD>
+
+<BODY>
+
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+<DIV id="content">
+
+<h2>The Bash Environment</h2>
+<p><b>Learn/remember from examples</b></p>
+<p>* some good stuff in my old 
+<p>Cool or overkill? Bash+Sed+R+IDL: I include these scripts because 
+someone can potentially learn a lot from them, namely me since they have
+a lot going on. They're good references for when I forget stuff. </p>
+
+<p>I was going through a period a few years ago where I wanted to stay
+in the Bash shell --- make it my command center --- and take only
+the things I wanted from various places, like R and IDL, via batch
+processing. This was a nerdy endeavor in that it establishes nerd cred,
+which is cool I guess... But it was a silly ideal in that it is ultimately
+not the right way to interact with data! It is damn near impossible to do interactive 
+analysis like this. I do not recommend it, at least not for day-to-day
+data analysis. </p>
+<ul>
+	<li><a href="http://www.kevin-urban.com/Bash/initSiteInfo.html">initSiteInfo</a></li>
+	<li><a href="http://www.kevin-urban.com/Bash/get_IGRF.html">get_IGRF.bash</a></li>
+	<li><a href="http://www.kevin-urban.com/Bash/imoget.html">imoget.bash</a></p></li>
+</ul>
+
+
+
+
+<p>Easily pipe things into R:</p>
+<pre>
+rvs () { r --vanilla --slave; }
+rvs2 () { rvs | awk '{$1=""; print $0}' | sed 's/ //' ; }
+* I have both functions for now b/c I'm not yet sure how predictable the behavior of rvs2 is; that said, rvs2 takes away the "[1]" stuff that R spits out with its output; the sed part is necessary b/c the awk part leaves a preceding space before the output.
+</pre>
+
+
+<p>Cool way to rename a bunch of files</P>
+<pre>
+ls *pdf | cut -c 6- | awk '{print "mv plots"$1" "$1}' | bash
+
+I accidentally shipped a lot of plots to a parent folder of plots b/c I forgot to include "/" after "plots" --- so all my files were named plots****.pdf. The above command helped quickly rename them all to what I wanted them to be called (i.e., removed "plots" from each name).
+</pre>
+
+
+
+<hr/>
+<p><b>AWK</b><br/>
+
+<pre>
+AUTOMATING REPETITIVE BASH COMMANDS
+# Make some empty files to play with using TOUCH
+touch junk1 junk2 junk3 junk4
+# Even better, we can employ the SEQ utility to do this
+touch `seq -f "junk%g" 5 9`
+# List just the filenames using LS
+ls junk*
+  junk1 junk2 junk3 junk4 junk5 junk6 junk7 junk8 junk9
+# Using MKDIR, make sure the ~/flotsam/jetsom directory exists; if not, make it
+mkdir -p ~/flotsam/jetsom
+# PIPE the LS output into AWK and use it to prepare bash MV commands
+ls junk* | awk '{print "mv "$0" ~/flotsam/jetsom/"$0".txt"}'
+  mv junk1 ~/flotsam/jetsom/junk1.txt
+  mv junk2 ~/flotsam/jetsom/junk2.txt
+  mv junk3 ~/flotsam/jetsom/junk3.txt
+  mv junk4 ~/flotsam/jetsom/junk4.txt
+  mv junk5 ~/flotsam/jetsom/junk5.txt
+  mv junk6 ~/flotsam/jetsom/junk6.txt
+  mv junk7 ~/flotsam/jetsom/junk7.txt
+  mv junk8 ~/flotsam/jetsom/junk8.txt 
+  mv junk9 ~/flotsam/jetsom/junk9.txt
+# Finally, we want to actually execute these commands: so PIPE them into "BASH"
+ls junk* | awk '{print "mv "$0" ~/flotsam/jetsom/"$0".txt"}'
+# Prove to yourself that they're gone w/ LS --- nothing is left in the current folder
+# Prove to yourself that they've moved to ~/flotsam/jetsom
+ls ~/flotsam/jetsom
+  junk1 junk2 junk3 junk4 junk5 junk6 junk7 junk8 junk9
+# Now erase all the files using RM and the flotsam/jetsom directory; this tutorial is over!
+rm -r ~/flotsam
+</pre>
+
+Made a "imo-glat-glon" file:
+(1) Copied list from INTERMAGNET website: 
+http://www.intermagnet.org/imos/imotblobs-eng.php
+(2) Pasted it into a txt file w/ mVim
+mvim list-of-IMOs.txt
+<paste>
+(3) The "imo-glat-glon" file resulted from Awking the proper columns and getting rid of degree symbols with Sed:
+awk 'BEGIN{FS="\t"}{print $1, $4, $5}' list-of-IMOs.txt | sed 's/°//g' > imo-glat-glon.txt
+(4) This final result was then pasted to the bottom my imo_coords.pro IDL procedure (currently working on today), which self-references to get coordinates of the user's choosing (any subset of glat, glon, mlat, mlon, l, site).
+
+<hr/>
+<p><b>WGET</b><br/>
+<ul>
+	<li>DL zipped file from web to current directory:<br/>
+	wget zippedFileURL</li>
+	<li>DL image from web to current directory:<br/>
+	wget imageURL</li>
+	<li>Use WGET to obtain all files on FTP site: <br/>
+	wget -r -nH --cut-dirs=2 --no-parent --reject="index.html*" ftpAddress</li>
+</ul>
+
+<p> Some explanation: <br/>
+-r:  recursively retrieve from directory<br/>
+-nH:  no host directories: disable generation of host-prefixed directories on local machine; i.e., no URL name in directory names on your machine<br/>
+--cut-dirs=2:  when saving to local machine, cut out the first two directory names after the host name<br/>
+--no-parent:  do not ever *ascend* to the parent directory when downloading recursively; this is useful since it guarantees only files below a selected hierarchy will be downloaded<br/>
+--reject="pattern":  used to specify comma-separated lists of file name suffixes or patterns to accept or reject. Note that if any of the wildcard characters, *, ?, [ or ], appear in an element the list, it will be treated as a pattern, rather than a suffix.
+
+<hr/>
+<p><b>FFMPEG and ImageMagick</b><br/>
+ImageMagick: convert a directory on gifs to pngs (necessary for making movies w/ FFMPEG)<br/>
+<center>mogrify -format png *.gif </center></p>
+
+<p>FFMPEG: Make movie from directory of images, 1-second frames<br/>
+<center>ffmpeg -framerate 1 -pattern_type glob -i '*.png' -c:v libx264 -pix_fmt yuv420p MCM_2013.mp4</center></p>
+
+
+
+<hr/>
+<p><b>Compression Stuff</b><br/>
+<ul>
+	<li> Get the contents out of fileName.tar.gz:<br/>
+	gunzip fileName.tar.gz<br/>
+	tar -xvzf fileName.tar</li>
+</ul>
+
+
+<hr/>
+<h2>Example: Scraping a website and cleaning up the data: Awk, Sed, Wget</h2>
+<p>This example demonstrates how knowing the basics of Awk, Sed, and Grep can come in handy 
+for on-the-fly data clean up. I make no claim that this is the most efficient way of doing
+things --- I'm sure some guru can do it in one line. The point is to quickly get results, so
+it is worth sacrificing some cool points for efficiency. You can always learn more; don't get
+caught up trying to be perfect!</p>
+
+<p>In this example, I quickly get a bunch of data from Fundamental Technologies, the 
+data host for the RBSPICE instrument on the Van Allen Probes space mission.</p>
+
+<p>1. Get a list of the data file links you want to download from FunTech<br/>
+<center>wget rbspiceX.ftecs.com/Level_Z/dataType/YYYY/ --default-page="YYYY-dataType-links.html"</center><br/>
+--- this will save the HTML of the page you've selected as YYYY-dataType-links.html<br/>
+--- X \(\in\) {a,b}, Z \(\in\) {0,1,2,3}, YYYY \(\in\) {2012, 2013, 2014, ...}, and dataType is dependent on chosen level Z, e.g., dataType{Z=2} \(\in\) {ESRHELT, ESRLEHT, TOFxEH, TOFxEnonH, TOFxPHHELT, TOFxPHLEHT}<br/>
+--- this data file lists all data links on one line separated by &lt;br&gt; tags</p>
+
+<p>2. Clean up the HTML file into a list of links to the data files on the FunTech website<br/>
+<center>awk 'BEGIN{RS="<br>"}/^A.+cdf$/{sub(/A HREF=\"/,""); sub(/\">rbsp.+/,""); print}' YYYY-dataType-links.html > YYYY-dataType-links.txt</center></p>
+
+<p>3. Begin downloading listed data files from FunTech<br/>
+<center>wget --input=YYYY-dataType-links.txt --base=http://rbspiceX.ftecs.com/</center></p>
+
+
+
+
+
+</div><!--content-->
+</div><!--container-->
+
+
+</BODY>
+</HTML>
+
+

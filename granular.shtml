@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+  <title>Granular Flow</title>
+	<meta name="description" content="The professional page of Kevin Urban.">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script type="text/javascript" src="js/script1.js"></script>
+	<script type="text/javascript" src="js/script2.js"></script>
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"> </script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</HEAD>
+
+<BODY>
+<DIV ID="container">
+
+	<DIV ID="nav">
+		<!--#include virtual="ssi/navBar.html"-->
+	</div>
+
+	<DIV id="content">
+		<p>Why is granular flow a hot topic? It's a matter of categorization, really: from a pragmatic, engineering standpoint, things like solids and fluids are relatively understood. But what about substances that behave both like solids and fluids? <a href="https://youtu.be/51C7vEAVbxk?t=1m10s">Mudslides</a>, <a href="https://youtu.be/IlzT6VjXw-E?t=2s">avalanches</a>, <a href="https://youtu.be/ouAUo9jVtAU?t=2m6s">vibrating sand</a>!
+
+<!-- ####################### 2014 ####################### -->
+			<h2>2014</h2>
+			<DIV id="subcontent1">
+				<p><a href="http://www.sciencedirect.com/science/article/pii/S0167278914000189">
+					Analysis, simulation and visualization of 1D tapping via reduced dynamical models</a></p>
+				<p><u>Abstract</u>: A low-dimensional center-of-mass dynamical model is devised as a simplified 
+				means of approximately predicting some important aspects of the motion of a vertical column comprised
+			 	of a large number of particles subjected to gravity and periodic vertical tapping. This model is 
+				investigated first as a continuous dynamical system using analytical, simulation and visualization 
+				techniques. Then, by employing an approach analogous to that used to approximate the dynamics of a 
+				bouncing ball on an oscillating flat plate, it is modeled as a discrete dynamical system and analyzed
+			 	to determine bifurcations and transitions to chaotic motion along with other properties. The predictions
+			 	of the analysis are then compared--primarily qualitatively--with visualization and simulation results of 
+				the reduced continuous model, and ultimately with simulations of the complete system dynamics.</p>
+			</DIV><!--id="subcontent1"-->
+			<p>Here are pics and GIFs I made in R using {ggplot2}.</p>
+			<p>Click an image to see GIF movie.</p>
+			<table align="center">
+				<tr>
+					<td><a href="video/R__gamma-var_restitution-0.8.gif"><img src="images/gran_phase1.png" width="100%"/></td></a>
+					<td><a href="video/R__gamma-var_restitution-0.99.gif"><img src="images/gran_phase2.png" width="100%"/></td></a>
+					<td><a href="video/R__restitution-var_gamma-0.8.gif"><img src="images/gran_phase3.png" width="100%"/></td></a>
+					<td><a href="video/R__restitution-var_gamma-2.2.gif"><img src="images/gran_phase4.png" width="100%"/></td></a>
+				</tr>
+			</table>
+
+
+
+<!-- ####################### 2013 ####################### -->
+			<h2>2013</h2>
+			<DIV id="subcontent1">
+				<p><a href="http://scitation.aip.org/content/aip/proceeding/aipcp/10.1063/1.4811931">
+					Dynamical systems model and discrete element simulations of a tapped granular
+					column</a></p>
+				<p><u>Abstract</u>: We present an approximate dynamical systems model for the mass center trajectory 
+				of a tapped column of N uniform, inelastic, spheres (diameter d), in which collisional energy loss 
+				is governed by the Walton-Braun linear loading-unloading soft interaction. Rigorous analysis of the model, 
+				akin to the equations for the motion of a single bouncing ball on a vibrating plate, reveals a parameter 
+				$$\gamma = 2a\omega^{2}(1+e)/g$$ that gauges the dynamical regimes and their transitions. 
+				In particular, we find bifurcations
+				from periodic to chaotic dynamics that depend on frequency \(\omega\), amplitude a/d of the tap. Dynamics predicted 
+				by the model are also qualitatively observed in discrete element simulations carried out over a broad range 
+				of the tap parameters.</p>
+			</DIV><!--id="subcontent1"-->
+
+
+<!-- ####################### 2012 ####################### -->
+			<h2>2012</h2>
+			<DIV id="subcontent1">
+				<p><a href="http://dspace.nbuv.gov.ua/handle/123456789/32127">
+					Integrability analysis of regular and fractional Blackmore-Samulyak-Rosato fields</a></p>
+				<p><u>Abstract</u>: Blackmore-Samulyak-Rosato (BSR) fields, originally developed as a 
+				means of obtaining reliable continuum approximations for granular flow dynamics in terms of 
+				relatively simple integro-differential equations, can be used to model a wide range of physical 
+				phenomena. Owing to results obtained for one-dimensional granular flow configurations, it has 
+				been conjectured that BSR models of fields with perfectly elastic interactions are completely 
+				integrable infinite-dimensional Hamiltonian systems. This conjecture is proved for BSR models 
+				in one space dimension, and analogues of BSR fields involving fractional time derivatives are 
+				briefly investigated.</p>
+
+			</DIV><!--id="subcontent2"-->
+
+
+<!-- ####################### 2011 ####################### -->
+    <h2>2011</h2>
+		<DIV id="subcontent1">
+			<p><a href="http://msp.org/jomms/2011/6-1/p06.xhtml">
+				Tapping Dynamics of a Column of Particles and Beyond</a></p>
+			<p><u>Abstract</u>: The dynamics of a vertical stack of particles subject to gravity and a sequence of small, 
+			periodically applied taps is considered. First, the motion of the particles, assumed to be identical,
+		 	is modeled as a system of ordinary differential equations, which is analyzed with an eye to observing 
+			connections with finite-dimensional Hamiltonian systems. Then, two approaches to obtaining approximate
+		 	continuum models for large numbers of particles are described: the long-wave approximation that yields 
+			partial differential equations and the BSR method that employs integro-partial differential models. These 
+			approximate continuum models, which comprise infinite-dimensional dynamical systems, are studied with a 
+			focus on nonlinear wave type behavior, which naturally leads to investigating links to infinite-dimensional
+		 	Hamiltonian systems. Several examples are solved numerically to show similarities among the solution properties
+		 	of the finite-dimensional (lattice-dynamics), and the approximate long-wave and BSR continuum models. 
+			Extensions to higher dimensions and more general dynamically driven particle configurations are also sketched.
+		</DIV><!--id="subcontent1"-->
+
+				Some images I made in MatLab...
+
+			<table align="center">
+				<tr>
+					<td><img src="images/gran_swirlyMix.png" width="450"/></td>
+					<td width="450">This was the coolest contour image I produced! Look at the breath-taking structure. But alas, the equations I used to model the finite difference computations off of had a few things very unphysical about them. Since it didn't make it to the paper, I figured it would make it to my website :-p
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Text here.
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/gran_tapping-pics.png"/></td>
+				</tr>
+			</table>
+
+
+			</DIV><!--id="content"-->
+
+
+		<DIV ID="footer">
+			STUFF...
+		</DIV><!--id="footer"-->
+	</DIV><!--id="container"-->
+
+</body>
+</html>
+

@@ -1,0 +1,116 @@
+<html>
+<HEAD>
+<title>IMOGET</title>
+<meta name="description" content="The professional page of Kevin Urban.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ TeX: { extensions: ["cancel.js"] }});
+</script>
+</HEAD>
+
+<BODY>
+
+
+
+
+
+<pre>
+Getting INTERMAGNET data via FTP
+IMCHECK: tells user what files exist in INTERMAGNET database
+
+#!/bin/sh
+# insert your username and password
+usr=usrName; pswd='p@ssw0rd!'; website='ftp.intermagnet.org'
+
+# $1 =  {(s)econds,(m)inutes}
+# $2 = {(d)efinitive, (p)rovisional, (q)uasi-definitive, (v)ariation}
+# $3 = 'yyyymmdd' (for all doms, do yyyymm)
+# $4 = {site name(s)}; 3-letter (lower case) site names, e.g., api; if nothing is entered, all sites
+
+if [ "$1" == "--help" ];  then 
+  echo "\tIMCHECK HELP:\n\tIMCHECK will let you know what INTERMAGNET files exist for given fields."
+  echo "\tFields are 1: resolution {s,m}; 2: type {d,p,q,v}; 3: date yyyymm[dd]; [4: site]"
+  exit 1
+fi
+
+echo
+
+##################################################
+#### Parse date: yyyymmdd -> yyyy, mm, dd     ####
+##################################################
+# NOTE: var definitions must have NO space adjacent to equal sign, lest UNIX interprets as a command
+year=$(echo $3 | cut -c 1-4)
+month=$(echo $3 | cut -c 5-6)
+dom=$(echo $3 | cut -c 7-8)
+site=$4
+
+##################################################
+#### Convert $1 to actual directory listing   ####
+##################################################
+case "$1" in
+  s)
+    rez="second";;
+  m) 
+    rez="minute";;
+  *)
+    echo "Invalid 1st Field: choose from {s,m}"
+    exit 1
+esac
+
+##################################################
+#### Convert $2 to actual directory listing   ####
+##################################################
+case "$2" in
+  d)
+    type="definitive";;
+  p)
+    type="provisional";;
+  q)
+    type="quasi-definitive";;
+  v)
+    type="variation";;
+  *)
+    echo "Invalid 2nd Field: choose from {d,p,q,v}"
+    exit 1
+esac
+
+##################################################
+#### Check if user wants all doms (i.e. check if dom is null string)
+##################################################
+if [ -z "$dom" ]; then dom=*; fi
+
+##################################################
+#### Check if user wants all sites (i.e., check if $4 is null)
+##################################################
+if [ -z "$site" ]; then site=*; fi
+
+##################################################
+#### Construct Path
+##################################################
+# Need dblquotes so bash recognizes special chars
+path2data="$rez/$type/IAGA2002/$year/$month/$site$year$month$dom*"
+
+echo "Presenting available INTERMAGNET data in: \n $path2data"
+
+##################################################
+#### Time to FTP
+##################################################
+ftp -niA << END_SCRIPT > output.txt
+open $website
+user $usr $pswd 
+ls $path2data
+bye
+END_SCRIPT
+
+# I save the contents in a file output.txt AND print to screen
+echo; echo "Available sites (given input fields):"
+awk '{print $9}' output.txt | cut -c 1-3 | awk 'BEGIN {ORS=", "} {print $1}'; 
+echo
+
+echo; echo "Available dates...."
+</pre>
+
+
+</BODY>
+</HTML>

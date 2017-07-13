@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<HTML >
+<HEAD>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</HEAD>
+
+<BODY>
+
+<h1>Reference: Magnetohydrodynamic Equations</h1>
+* ideal MHD: fluid is regarded as a perfect electrical conductor
+* ideal MHD: usually considered isentropic: Ds/Dt=0
+* there is the "kinematic approximation" to ideal MHD which makes ideal MHD even
+  ideal-ier: it prescribes a velocity field and assumes the magnetic field will
+	not modify this field through the Lorentz force (hard to say when this approximation
+	is believable...)
+
+
+<Center>
+	<hr/>
+	<Table cellpadding="2">
+		<TR>
+			<TD>\(\rho\quad\)</TD><TD> mass density</TD>
+			<TD>\(\mathbf{v}\quad\)</TD><TD>bulk fluid flow ("center of mass frame")</TD>
+			<TD>\(D_{t}=\partial_{t}+\mathbf{v}\cdot\nabla\)</TD> 
+			<TD>Lagrangian derivative (aka: convective derivative, material derivative, total derivative)</TD>
+		</TR>
+		<TR>
+			<TD>\( \mathbf{j}\)</TD><TD>current density</TD>
+			<TD>\( \mathbf{B}\)</TD><TD>magnetic field</TD>
+			<TD>P</TD><TD>Pressure</TD>
+		</TR>
+		<TR>
+			<TD>\(\nu\)</TD><TD>viscosity coefficient</TD>
+			<TD>\(\mathbf{E}\)</TD><TD>electric field</TD>
+			<TD>\(\mathtt{\varepsilon}\)</TD><TD>specific internal energy</TD>
+		</TR>
+		<TR>
+			<TD>\(\mathscr{E}\)</TD><TD>Total Energy Density</TD>
+			<TD>\(\gamma=C_{P}/C_{v}\)</TD><TD>adiabatic index (aka ratio of specific heats)
+			<TD>\(C_{x}\)</TD><TD>The specific heat at constant x (e.g., \(x=P=Pressure\))</TD>
+		</TR> 
+		<TR>
+			<TD>\(\epsilon\)</TD><TD>electric permittivity</TD>
+			<TD>\(\mu\)</TD><TD>magnetic permeability</TD>
+			<TD>c</TD><TD>speed of light in vacuum</TD>
+		</TR>
+		<TR>
+			<TD>\(\sigma\)</TD><TD>conductivity</TD>
+			<TD>\(\eta=\frac{1}{\mu\sigma}\)</TD><TD>magnetic diffusivity</TD>
+			<TD>n</TD><TD>number density</TD>
+		</TR>
+		<TR>
+			<TD>\(v_{A}\)</TD><TD>Alfven speed</TD>
+			<TD>\(c_{s}\)</TD><TD>Sound speed</TD>
+			<TD>\(\partial_{t}\)</TD><TD>Eulerian time derivative (partial time derivative)</TD>
+		</TR>
+		<TR>
+			<TD>\(\Pi\)</TD><TD>Total Pressure (pressure + magnetic pressure)</TD>
+			<TD>\(\beta\)</TD><TD>Plasma beta = pressure / magnetic pressure</TD>
+	</Table>
+	<hr/><br/>
+
+
+
+
+
+<h2>Full Set </h2>
+	<Table border="1">
+		<TR>
+			<TH>Eqn Name</TH><TH>MKS</TH><TH>CGS</TH><TH>Notes (in MKS)</TH>
+		</TR>
+		<TR>
+			<TD> Mass Continuity (aka Conservation of Mass) </TD>
+			<TD> $$\partial_{t}\rho+\nabla\cdot\left(\rho\mathbf{v}\right)= 0$$ </TD>
+			<TD> $$\partial_{t}\rho+\nabla\cdot\left(\rho\mathbf{v}\right)= 0$$ </TD>
+			<TD>The rate of change of mass in a volume is due solely to the
+			divergence of mass fluxes (aka momentum density, or just momentum when 
+			speaking loosely) through the surface of the volume. </TD>
+	  </TR>
+		<TR>
+			<TD>Cauchy Momentum (aka Euler's Equation, aka Newton's 2nd Law)</TD>
+			<TD>$$\rho D_{t}\mathbf{v} = \mathbf{j}\times\mathbf{B} - \nabla{P} -\nabla \Phi_{G} 
+				+ \nu\nabla^{2}\mathbf{v}$$</TD>
+			<TD></TD>
+			<TD>
+				<ul>
+					<li>Oftentimes the fluid is considered inviscid (\(\nu = 0\)) and so the viscous force
+					drops out. </li>
+					<li>The graviational term can often be ignored since contributions from within
+					the plasma region are often negligible compared to sources outside (e.g., the mass of 
+					the ionosphere versus the mass of the Earth below it); when the self-gravitating terms
+					are negligible, the gravity term is decoupled from the fluid equations.</li>
+					<li>\(D_{t}\) is the convective derivative: \(D_{t} = \partial_{t}+\mathbf{v}\cdot\nabla\)</li>
+				</ul>
+			</TD>
+		</TR>
+		<TR>
+			<TD>Equation of State</TD>
+			<TD>$$D_{t}\left(P\rho^{-\gamma}\right)=0$$</TD>
+			<TD></TD>
+			<TD>
+				<ul>
+					<li>The equation of state is prescribed and can be a weak point in a model.</li>
+				  <li>Often the ideal gas law is used, but with caution and foresight that it is a 
+				built in potential source of error: \(P=\frac{NRT}{V}=nk_{B}T=\rho(\gamma-1)\epsilon\), 
+				where N is the number of moles and R is the gas constant.</li>
+				<li>The equation of state
+			  allows one to relate state variables like pressure, temperature, and mass density. 
+			  Pressure,\(P\), and mass density,\(\rho\), are often considered the most useful to
+			 	keep track of, while, e.g., temperature and entropy are regarded as functions of 
+				pressure and mass density and can be derived from the equation of state if necessary.</li>
+			</ul>
+		</TD>
+		</TR>
+		<TR>
+			<TD>Gauss' Law </TD>
+			<TD>$$\nabla\cdot\mathbf{E}=\mathfrak{q}/\epsilon=0$$</TD>
+			<TD>$$\nabla\cdot\mathbf{E}=4\pi\mathfrak{q}$$</TD>
+			<TD>Typically, Gauss' law would be written \(\nabla\cdot\mathbf{E}=\mathfrak{q}/\epsilon\), 
+				where \(\mathfrak{q}\) is the electric charge density. However, in MHD, the fluid is
+				considered quasi-neutral. That is, although are isolated charges on the smallest scales,
+				at the MHD scale, these charges balance out to zero.</TD>
+		</TR>
+		<TR>
+			<TD>Gauss's Law for magnetic fields</TD>
+			<TD>$$\nabla\cdot\mathbf{B}=0$$</TD>
+			<TD>$$\nabla\cdot\mathbf{B}=0$$</TD>
+			<TD>The magnetic field is always nonconservative (aka solenoidal).</TD>
+		</TR>
+		<TR>
+			<TD>Faraday's Law</TD>
+			<TD>$$\nabla\times\mathbf{E}=-\partial_{t}\mathbf{B}$$
+				<TD>$$\nabla\times\mathbf{E}=-\frac{1}{c}\partial_{t}\mathbf{B}$$
+			<TD>Often written \(\partial_{t}\mathbf{B}=-\nabla\times\mathbf{E}\).</TD>
+		</TR>
+		<TR>
+			<TD>The Maxwell-Ampere Law</TD>
+			<TD>$$\nabla\times\mathbf{B}=\mu\mathbf{j}+\frac{1}{c^2}\partial_{t}\mathbf{E}$$</TD>
+			<TD>$$\nabla\times\mathbf{B}=\frac{\mu}{4\pi}\mathbf{j}+\frac{1}{c}\partial_{t}\mathbf{E}$$</TD>
+			<TD>For emphasis on time evolution, this can be rewritten:
+				<center>\(\partial_{t}\mathbf{E}= c^{2}\nabla\times\mathbf{B} - \mu c^{2}\mathbf{j}\)</center>
+				<p>Furthermore, in most applications \(\partial_{t}\mathbf{E}/c^2
+				 \sim 0\) and so this becomes Ampere's law,
+				\(\nabla\times\mathbf{B}=\mu\mathbf{j}\)</p></TD>
+		</TR>
+		<TR>
+			<TD>Ohm's Law</TD>
+			<TD>$$\mathbf{j}=\sigma\left(\mathbf{E}+\mathbf{v}\times\mathbf{B}\right)$$</TD>
+			<TD></TD>
+			<TD>This can be shown to be zero (or nearly zero) under certain conditions. When this is
+				the case, Ohm's law sometimes comes in disguise as \(\mathbf{E}=-\mathbf{v}\times
+				\mathbf{B}\)</TD>
+		</TR>
+		<TR><TD colspan="4">More on the Equation of State</TD></TR>
+		<TR>
+			<TD colspan="4">
+				<ul>
+					<li>In absence of non-adiabatic heating (e.g., viscous dissipation) and cooling
+					(e.g., radiation, conduction), Ds/Dt=0 (s: specific entropy); that is, fluid
+					elements then undergo reversible thermodynamic changes, preserving their entropy
+					(this is not always a good assumption, e.g., shocks violate this).</li>
+					<li>Polytropic gas: an ideal gas with constant \(C_{v}\), \(C_{p}\), \(\gamma\), 
+					and mean molecular weight.</li>
+					<li>Polytropic index, n: \(\gamma = 1 + \frac{1}{n}\)</li>
+					<li>Equipartition of energy for classical gas with N DOFs per particle gives 
+					\(\gamma=1+\frac{2}{N}\)</li>
+					<li> classical monatomic gas w N=3: polytropic w gamma=5/3, n=3/2</li>
+					<li> specific internal energy, e = P/(gamma-1)rho</li>
+					<li> barotropic: fluid whose denisity is a function of pressure only</li>
+					<li> ideal, isentropic gas: P=(cs^2)rho (cs=const=isothermal sound speed)</li>
+					<li> isentropic, polytropic: P=Krho^gamma</li>
+					<li> incompressible fluid: Drho/Dt=0, implying \nabla\cdot\mathbf{v}=0</li>
+					<li> can be found formally by taking limit gamma->inf</li>
+					<li> incompressibility eliminates acoustic phenomena </li>
+					<li>ideal gas law not valid at very high densities </li>
+				</ul>
+			</TD>
+		</TR>
+	</Table>
+</CENTER>
+<br/>
+<br/>
+
+
+
+
+
+<CENTER><h2>Conservative Form </h2></CENTER>
+<p>In addition to seemingly missing variables, one might be stumped occasionally
+when seeing the MHD equations written in a way that seems alien. Of course, which presentation
+of the equations looks alien 
+depends on which book or set of notes you studied first. Above I wrote the equations
+in non-conservative form. Many people do. Here I write the equations in conservative form.
+Again, many people do. Know both. They're equivalent. It is just a matter of taste. What is
+nice about the conservative form is that it emphasizes the nonlinear or tensorial nature
+of some of the quantities.</p>
+<p>Conservation laws are written in the following form (a la <a href="https://www.cfa.harvard.edu/~namurphy/Lectures/Ay253_02_ConservationLaws.pdf">slides</a> by Nick Murphy):
+<CENTER>\(\partial_{t}(stuff)+\nabla\cdot(\)flux of stuff\()=0\)</CENTER>
+<p>Source and sink terms, if any, would go on the right-hand side. If "stuff" is a scalar,
+then the "flux of stuff" is a vector. If "stuff" is a vector, then the "flux of stuff" is a 
+dyadic tensor. If this equation is satisfied for a quantity, then that quantity is locally 
+conserved.</p><br/>
+	<CENTER>
+	<Table border="1">
+		<TR>
+			<TH>Eqn Name</TH><TH>MKS</TH><TH>CGS</TH><TH>Notes</TH>
+		</TR>
+		<TR>
+			<TD> Mass Continuity </TD>
+			<TD> $$\partial_{t}\rho+\nabla\cdot\left(\rho\mathbf{v}\right)= 0$$ </TD>
+			<TD></TD>
+			<TD>The rate of change of mass in a volume is due solely to the
+			divergence of mass fluxes (aka momentum density, or just momentum when 
+			speaking loosely) through the surface of the volume. </TD>
+	  </TR>
+		<TR>
+			<TD>Momentum Conservation</TD>
+			<!-- have to re-check the pressure term -->
+			<TD>$$ \partial_{t}\left(\rho\mathbf{v}\right) + \nabla\cdot\left[
+				\rho\mathbf{v}\mathbf{v}-\mathbf{B}\mathbf{B}+\tilde{P^{*}} \right] = 0 $$</TD>
+			<TD></TD>
+			<TD> The rate of change of momenum in a volume is due to the divergence
+			of non-viscous stress on the surface of the volume. 
+			<font size="1">\(\tilde{P^{*}}=P^{*}\mathbb{1}\), where \(\mathbb{1}\) is the identity matrix
+			and \(P^{*}\) is the total pressure (plasma/gas pressure + magnetic pressure).</font></TD>
+		</TR>
+		<TR>
+			<TD>Energy Conservation</TD>
+			<!-- am I writing pressure term right?-->
+			<TD>$$ \partial_{t}\mathscr{E} + \nabla\cdot\left[
+				\left(\mathscr{E}+{P^{*}}\right)\mathbf{v}-\mathbf{B}\left(
+				\mathbf{B}\cdot\mathbf{v}\right) \right] = 0 $$</TD>
+			<TD></TD>
+			<TD>The rate of change of total energy density in a volume is due to the divergence
+				of energy flux through the surface of the volume.</TD>
+		</TR>
+		<TR>
+		<TR>
+			<TD>Magnetic Flux Conservation</TD>
+			<TD>$$\partial_{t}\mathbf{B} + \nabla\times\mathbf{E}=0 \\
+			 \nabla\cdot\mathbf{B}=0$$</TD>
+			<TD></TD>
+		 <TD>The flux through a surface is proportional to the electric field at
+			 the boundary of that surface. If the simple form of Ohm's law is applicalbe
+			 where \(\mathbf{E}=-\mathbf{v}\times\mathbf{B}\), then this equation is: 
+		   \(\partial_{t}\mathbf{B} - \nabla\times\left(\mathbf{v}\times\mathbf{B}\right)
+		   = 0\)</TD>
+		</TR>
+
+		<TR>
+			<TD>The Maxwell-Ampere Law</TD>
+			<TD>$$\partial_{t}\mathbf{E}= c^{2}\left(\nabla\times\mathbf{B} - \mu\mathbf{j}\right)$$</TD>
+			<TD></TD>
+			<TD>More often written \(\nabla\times\mathbf{B}=\mu\mathbf{j}+\frac{1}{c^{2}}
+				\partial_{t}\mathbf{E}\). Furthermore, in most applications \(\frac{1}{c^2}
+				\frac{\partial\mathbf{E}}{\partial t} \sim 0\) and so this becomes Ampere's law,
+				\(\nabla\times\mathbf{B}=\mu\mathbf{j}\)</TD>
+		</TR>
+		<TR>
+			<TD colspan="4">An equation of state is also necessary, as well a choice of Ohm's law.</TD>
+	</Table>
+</CENTER>
+	<br/><br/>
+
+
+	<CENTER><h2>Eulerian Set vs Lagrangian Set</h2></CENTER>
+	Above I mixed derivatives in the equations at my convenience. However, in fluid dynamics, one
+	often finds the equations written using either the Lagrangian (convective view point) or the
+	Eulerian (stationary view point) derivative in isolation. This is to emphasize the physical meaning
+	of the equations set up in one reference frame or another. I think this possibly mucks up the equations
+	since Faraday's law and the Maxwell-Ampere law are not typically written in a Lagrangian way.
+
+	<p>To be clear:</p>
+	<ul>
+		<li>Eulerian View: observer fixes eye on a volume element of space; parameters
+		  are derived with respect to this location as fluid moves through it.</li>
+		<li>Lagrangian View: observer fixes eye on a volume element of fluid, which
+		  moves through space (this is the "fluid's point of view"); parameters are 
+			derived with respect to this moving fluid element.  </li>
+	</ul>	
+	<CENTER>
+		<!-- In MKS units -->
+	<Table border="1">
+		<TR>
+			<TH>Eqn Name</TH><TH>Eulerian</TH><TH>Lagrangian</TH><TH>Notes</TH>
+		</TR>
+		<TR>
+			<TD> Mass Continuity (aka Conservation of Mass) </TD>
+			<TD> </TD>
+			<TD></TD>
+			<TD></TD>
+	  </TR>
+		<TR>
+			<TD>Cauchy Momentum (aka Euler's Equation, aka Newton's 2nd Law)</TD>
+			<TD></TD>
+			<TD></TD>
+			<TD></TD>
+		</TR>
+		<TR>
+			<TD>Equation of State</TD>
+			<TD></TD>
+			<TD></TD>
+			<TD></TD>
+		</TR>
+		<TR>
+			<TD>Gauss' Law (electric fields)</TD>
+			<TD></TD>
+			<TD></TD>
+			<TD></TD>
+		</TR>
+		<TR>
+			<TD>Gauss's Law (magnetic fields)</TD>
+			<TD></TD>
+			<TD></TD>
+			<TD></TD>
+		</TR>
+		<TR>
+			<TD>Faraday's Law</TD>
+			<TD></TD>
+			<TD></TD>
+			<TD></TD>
+		</TR>
+		<TR>
+			<TD>The Maxwell-Ampere Law</TD>
+			<TD></TD>
+			<TD></TD>
+			<TD></TD>
+		</TR>
+		<TR>
+			<TD>Ohm's Law</TD>
+			<TD></TD>
+			<TD></TD>
+			<TD></TD>
+		</TR>
+	</Table>
+</CENTER>
+<br/>
+	<!-- also include set of linearized MHD equations and links to LMHD page -->
+
+
+
+<CENTER><h2>Reduced Set </h2></CENTER>
+<p>Oftentimes it appears as if the MHD equations are missing a few key variables. Specifically, 
+	one might wonder what happened to the electric field, the current density, and sometimes
+	even the pressure. These quantities have not disappeared! Given certain
+	experimentally verifiable or reasonably applicable conditions, the number of independent
+	variables in the full set of equations is reduced. One may still use the full set, but 
+	it becomes easier and more tractable to reduce the set of equations by solving for some of
+	the variables in terms of the other variables. At any stage then (usually at the end of any
+	derivations), one may rewrite the full
+	set of equations from the reduced set using the conditional equations prescribed at the 
+	onset of the problem.</p>
+	
+	<p>There are a few conditions that are widely applicable in MHD applications: the low-frequency 
+	approximation (changes in the electric field are small relative to other parameters of the plasma), 
+	the inviscid fluid approximation (the plasma is nothing like molasses), and the adiabatic equation
+  of state (the plasma 	
+	is considered inviscid&mdash;that is, to have zero viscosity&mdash;and so the viscosity term in
+	Newton's second law drops out.</p>
+	<b>Starting Assumptions</b>
+	<font size="1">
+	<Table>
+		<TR>
+			<TD>Low Frequency Approximation</TD>
+			<TD>$$\frac{1}{c^{2}}\partial_{t}\mathbf{E} = 0 \\
+				\rightarrow \nabla\times\mathbf{B}=\mu\mathbf{j}$$</TD>
+			<TD> In ideal gas dynamics, this is always an assumption.</TD>
+		</TR>
+		<TR>
+			<TD>Inviscid Fluid</TD>
+			<TD>$$\nu = 0 $$</TD>
+			<TD> </TD>
+		</TR>
+		<TR>
+			<TD>Ohm's Law</TD>
+			<TD>$$\mathbf{j} = \sigma\left(\mathbf{E}+\mathbf{v}\times\mathbf{B}\right) = 0 \\
+				\rightarrow \mathbf{E}=-\mathbf{v}\times\mathbf{B}	$$</TD>
+			<TD>Simple 1-fluid form of Ohm's law</TD>
+		</TR>
+	</Table>
+  </font>
+	<b>The reduced equations</b>
+	<CENTER>
+	<Table border="1">
+		<TR>
+			<TD> Mass Continuity (aka Conservation of Mass) </TD>
+			<TD> $$\partial_{t}\rho+\nabla\cdot\left(\rho\mathbf{v}\right)= 0$$ </TD>
+			<TD>The rate of change of mass in a volume is due solely to the
+			divergence of mass fluxes (aka momentum density, or just momentum when 
+			speaking loosely) through the surface of the volume. </TD>
+	  </TR>
+		<TR>
+			<TD>Cauchy Momentum (aka Euler's Equation, aka Newton's 2nd Law)</TD>
+			<TD>$$\rho D_{t}\mathbf{v} = \mathbf{j}\times\mathbf{B} - \nabla{P} + \nu\nabla^{2}\mathbf{v}$$</TD>
+			<TD>Oftentimes the fluid is considered inviscid (\(\nu = 0\)) and so the viscous force
+				drops out. \(D_{t}\) is the convective derivative: \(D_{t} = \partial_{t}+\mathbf{v}\cdot\nabla\)
+				</TD>
+		</TR>
+		<TR>
+			<TD>Equation of State</TD>
+			<TD>$$D_{t}\left(P\rho^{-\gamma}\right)=0$$</TD>
+			<TD>The equation of state is prescribed and can be a weak point in a model. 
+				Often the ideal gas law is used, but with caution and foresight that it is a 
+				built in potential source of error: \(P=\frac{NRT}{V}=nk_{B}T=\rho(\gamma-1)\epsilon\), 
+				where N is the number of moles and R is the gas constant.</TD>
+		</TR>
+		<TR>
+			<TD>Gauss' Law (electric fields)</TD>
+			<TD>$$\nabla\cdot\mathbf{E}=0$$</TD>
+			<TD>Typically, Gauss' law would be written \(\nabla\cdot\mathbf{E}=\mathfrak{q}/\epsilon\), 
+				where \(\mathfrak{q}\) is the electric charge density. However, in MHD, the fluid is
+				considered quasi-neutral. That is, although are isolated charges on the smallest scales,
+				at the MHD scale, these charges balance out to zero.</TD>
+		</TR>
+		<TR>
+			<TD>Gauss's Law (magnetic fields)</TD>
+			<TD>$$\nabla\cdot\mathbf{B}=0$$</TD>
+			<TD>The magnetic field is always nonconservative (aka solenoidal).</TD>
+		</TR>
+		<TR>
+			<TD>Faraday's Law</TD>
+			<TD>$$\partial_{t}\mathbf{B} = -\nabla\times\mathbf{E}$$</TD>
+			<TD>More often written \(\nabla\times\mathbf{E}=-\partial_{t}\mathbf{B}\).</TD>
+		</TR>
+		<TR>
+			<TD>The Maxwell-Ampere Law</TD>
+			<TD>$$\partial_{t}\mathbf{E}= c^{2}\left(\nabla\times\mathbf{B} - \mu\mathbf{j}\right)$$</TD>
+			<TD>More often written \(\nabla\times\mathbf{B}=\mu\mathbf{j}+\frac{1}{c^{2}}
+				\partial_{t}\mathbf{E}\). Furthermore, in most applications \(\frac{1}{c^2}
+				\frac{\partial\mathbf{E}}{\partial t} \sim 0\) and so this becomes Ampere's law,
+				\(\nabla\times\mathbf{B}=\mu\mathbf{j}\)</TD>
+		</TR>
+		<TR>
+			<TD>Ohm's Law</TD>
+			<TD>$$\mathbf{j}=\sigma\left(\mathbf{E}+\mathbf{v}\times\mathbf{B}\right)$$</TD>
+			<TD>This can be shown to be zero (or nearly zero) under certain conditions. When this is
+				the case, Ohm's law sometimes comes in disguise as \(\mathbf{E}=-\mathbf{v}\times
+				\mathbf{B}\)</TD>
+		</TR>
+	</Table>
+</CENTER>
+<br/><br/>
+
+<hr/>
+<h2>Plasma Regimes</h2>
+Plasmas are extremely complex, so approximations are often made to study plasmas in simplified settings.
+For a given set of approximations, a "plasma regime" is defined where those approximations hold valid.
+
+<ul>
+	<li>Unmagnetized Plasma: a plasma where there is no background magnetic field (i.e., no "guide field"); 
+	for \(\mathbf{B}=\mathbf{B_{0}}+\mathbf{B_{1}}\), where \(\mathbf{B_{0}}\) is considered the
+	equilibrium (or mean, or background) field, and \(\mathbf{B_{1}}\) is considered the magnetic
+	fluctuations of the plasma, an unmagnetized plasma has \(\mathbf{B_{0}}=0\).
+	</li>
+	<li>Electrostatic Plasma: plasmas for which the assumption of no inductive electric fields
+	is valid (that is, where \(\partial_{t}\mathbf{B} = -\nabla\times\mathbf{E} = 0\)).</li>
+	<li>Low Frequency Approximation: assume that the displacement current in the Maxwell-Ampere
+	law can be neglected (\(\partial_{t}\mathbf{E}/c^{2} \approx 0\)).
+
+
+
+
+<hr/>
+Some good learning sources:
+<ul>
+	<li><a href="http://how.gi.alaska.edu/ao/plasma/index.html#content">AO's Fundamentals of Plasma Physics</a>
+	</li>
+	<li><a href="http://how.gi.alaska.edu/ao/msp/index.html#list">AO's Magnetospheric Physics</a>
+	</li>
+	<li><a href="http://how.gi.alaska.edu/ao/adv_plasma/index.html#content">AO's Advanced Plasma Physics</a>
+	</li>
+	<li><a href="https://www.cfa.harvard.edu/~namurphy/Lectures/">Nick Murphy's Lecture Notes</a>
+	</li>
+	<li><a href="http://www.damtp.cam.ac.uk/user/gio10/afd.html">Gordon Ogilvie's Lecture Notes</a>
+	</li>
+</ul>
+
+</BODY>
+</HTML>

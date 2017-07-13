@@ -1,0 +1,103 @@
+% mainfile: ../hw3.tex
+\textbf{Estimate typical proton and electron gyro-radii and bounce
+period for a 100-keV particle.}
+
+Let $q := |electron charge|$. Then we can write down the electron and
+proton gyroradii:
+  \begin{align*}
+    r_{p} = \frac{m_{p}v_{{p}}}{qB} \\
+    r_{e} = \frac{m_{e}v_{{e}}}{qB}
+  \end{align*}
+
+More generally in radiation belt physics, attention must be paid to the
+relativistic forms of such equations since particle speeds are often
+relativistic. The equation then take the form:
+
+\begin{align}
+  r_{p} = \frac{p_{{p}}}{qB} \\
+  r_{e} = \frac{p_{{e}}}{qB}
+\end{align}
+
+We know the kinetic energy, so we can find the momentum in the relativistic
+setting by the following equation relating kinetic energy and momentum:
+
+\begin{align}
+  p =\frac{1}{c} \sqrt{(E_{k}^{2}+mc^{2}) - m^{2}c^{4}}
+\end{align}
+
+
+We can compute these values for an electron and proton and plug them
+into equations (15)-(16):
+
+\begin{gather*}
+  m_{e} \approx 0.51 \quad[MeV/c^{2}] \\
+  m_{p} \approx 938 \quad[Mev/c^{2}] \\
+  p_{e} =\sqrt{ (0.1+0.51)^{2} - (0.51)^{2} } \quad[MeV/c] =
+  0.335 \quad[MeV/c]  \\
+  p_{p} =\sqrt{ (0.1+938)^{2} - (938)^{2} } \quad[MeV/c] = 13.7
+  \quad[MeV/c] \\
+  r_{e} = \frac{0.335 [MeV/c]}{qB} \\
+  r_{p} = \frac{13.7 [MeV/c]}{qB}
+\end{gather*}
+
+The dipole approximation for the geomagnetic field is good enough for
+close enough trapped energetic particles. The equation is given by:
+
+\begin{align}
+  B = \frac{B_{0}}{R^{3}}\sqrt{1+3sin^{2}\lambda}\\
+\end{align}
+
+$B_{0}$ is reference value of Earth's field at the surface; a typical
+number is 30,000 [nT]. R is given in Earth radii, i.e., $R=r/R_{E}$. The
+angle, $\lambda$, represents latitude.
+
+To crunch a number we will look at particles passing through the
+equatorial plane at $L=2$, which corresponds to $r=2$ and $\lambda=0$.
+This gives us a magnetic field strength of 3750 [nT].
+
+Units: 
+\begin{gather*}
+1 T = \frac{kg}{C*s}\\
+1 eV = q \frac{kg*m^{2}}{C*s^{2}}
+\end{gather*}
+So...
+
+\begin{gather*}
+  r_{e} = \frac{p_{p}}{qB} = \frac{0.335*10^{6}*q
+  [\frac{kg*m^{2}}{C*s^{2}}]}{(3750*10^{-9})(3*10^{8})q
+  [\frac{kg*m}{C*s^{2}}]}\\
+  \quad\quad = \frac{0.335}{3*3750}10^{7}[m] = 298  [m]\\
+  \\
+  r_{p} = \frac{13.7*10^{6}q
+  [\frac{kg*m^{2}}{C*s^{2}}]}{(3750*10^{-9})(3*10^{8})q
+  [\frac{kg*m}{C*s^{2}}]}\\
+  \quad\quad = \frac{13.7}{3*3750}10^{7} [m] = 1.22*10^{4} [m]
+\end{gather*}
+
+Given the nature of these being estimates, let's just say that the
+electron gyradius out around $L=2$ in the equatorial plane is about 300
+[m] and the proton gyroradius is a cool 10 [km]. 
+
+\textbf{The Bounce Periods}
+
+Assuming an equatorial pitch angle and L shell, and having values for
+earth's radius, the particle energy, and the particle mass, we can
+approximate the bounce period with the following equation (source:
+http://how.gi.alaska.edu/ao/msp/chapters/chapter5.pdf):
+
+\begin{gather*}
+  \tau_{b}\approx \frac{LR_{E}}{\sqrt{E/m}}(3.7-1.6sin\alpha_{eq})
+\end{gather*}
+
+We will say that $L=2$ and $\alpha_{eq}=45^{\circ}$. Then:
+
+\begin{align*}
+  \tau_{b,e} = \frac{2*6371
+  [km]}{\sqrt{0.1c^{2}/0.51}}(3.7-\frac{1.6}{\sqrt{2}})\\
+  \approx 0.25 [s]
+   \\
+   \tau_{b,p} = \frac{2*6371
+   [km]}{\sqrt{0.1c^{2}/938}}(3.7-\frac{1.6}{\sqrt{2}})\\
+  \approx 1000 [s] \\
+  \approx 16.7 [min]
+\end{align*}

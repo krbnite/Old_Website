@@ -1,0 +1,105 @@
+<html>
+<HEAD>
+<title>Fractional Calculus</title>
+<meta name="description" content="The professional page of Kevin Urban.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="js/script1.js"></script>
+<script type="text/javascript" src="js/script2.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</HEAD>
+
+<BODY>
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+<DIV id="content">
+	<p>I still have to write something here!
+
+	<p>Here is a paper I helped work on where we (albeit only slightly) touch upon ideas centered around fractional calculus / fractional differential equations / etc: <a href="download/regAndFracBSRfields.pdf">Integrability Analysis of Regular and Fractional BSR Fields</a>. This paper has more to do with some work I helped out on in the way of <a href="granular.html">granular tapping dynamics</a>.
+
+	<hr>
+	<h2>Various References</h2>
+
+	<h3><u>Books</u></h3>
+	<CENTER>
+		<TABLE width=90% border="1">
+			<TR><TD>
+					Oldham, Keith B., and Jerome Spanier. 1974. <a href="http://books.google.com/books?id=yh68AAAACAAJ&dq=the+fractional+calculus&hl=en&ei=sGtcTNjCOML-8AbYz4mzAg&sa=X&oi=book_result&ct=book-thumbnail&resnum=1&ved=0CDEQ6wEwAA" target="_blank">The Fractional 
+						Calculus: 
+						Theory and Applications of Differentiation and Integration to Arbitrary 
+						Order.</a> Dover Publicatons.
+			</TD></TR>
+
+		<TR><TD>
+<p>Podlubny, Igor. 1998. <a href="http://books.google.com/books?id=K5FdXohLto0C&printsec=frontcover&dq=fractional+differential+equations&hl=en&ei=TGxcTMP0EoOB8gbKjKmNAg&sa=X&oi=book_result&ct=result&resnum=1&ved=0CDMQ6AEwAA#v=onepage&q&f=false" target="_blank">Fractional Differential Equations.</a> Vol. 198. Mathematics in Science and Engineering. Academic Press.
+		</TD></TR>
+
+
+		<TR><TD>
+				<p>West, Bruce, Mauro Bologna, and Paolo Grigolini. 2003. <a href="http://books.google.com/books?id=EgyTpQZOga0C&printsec=frontcover&dq=physics+of+fractal+operators&hl=en&ei=FW1cTN_MOML98Aaj0_joCA&sa=X&oi=book_result&ct=book-thumbnail&resnum=1&ved=0CC0Q6wEwAA#v=onepage&q&f=false" target="_blank">Physics of Fractal Operators.</a> Institute for Nonlinear Science. Springer.
+		</TD></TR>
+	</TABLE>
+</CENTER>
+
+
+<h3><u>Journal Papers</u></h3>
+<CENTER>
+	<TABLE width=90%>
+		<TR><TD>
+				<p>Agrawal, Om. 2002. <a href="http://www.sciencedirect.com/science?_ob=MImg&_imagekey=B6WK2-46MJTGS-T-1&_cdi=6894&_user=687447&_pii=S0022247X02001804&_orig=search&_coverDate=08%2F01%2F2002&_sk=997279998&view=c&wchp=dGLzVlb-zSkWb&md5=a35df283969e8a83917de1d9174281a4&ie=/sdarticle.pdf" target="_blank">Formulation of Euler-Lagrange equations for fractional variational problems.</a> Journal of Mathematical Analysis and Applications 272, no. 1: 368-379.
+		</TD></TR>
+
+		<TR><TD>
+				<p> Baleanu, Dumitru, and Om. P. Agrawal. 2006. <a href="http://www.springerlink.com/content/hpu61h8m32656683/fulltext.pdf" target="_blank">Fractional Hamilton formalism within Caputo's derivative.</a> Czechoslovak Journal of Physics 56, no. 10/11: 1087-1092.
+		</TD></TR>
+
+		<TR><TD>
+				<p>Baleanu, Dumitru, and Sami I. Muslih. 2005. <a href="http://iopscience.iop.org/1402-4896/72/2-3/003/pdf/physscr_72_2-3_003.pdf" target="_blank">Lagrangian Formulation of Classical Fields within Riemann-Liouville Fractional Derivatives.</a> Physica Scripta 72: 119-121.
+		</TD></TR>
+
+		<TR><TD>
+				<p>Baleanu, Dumitru, and Tansel Avkar. 2004. <a href="http://arxiv.org/pdf/math-ph/0405012v1" target="_blank">Lagrangians with linear velocities within Riemann-Liouville fractional derivatives.</a> http://arXiv.org/abs/math-ph/0405012v1
+		</TD></TR>
+
+		<TR><TD>
+				<p>Jumarie, Guy. 2008. <a href="http://www.sciencedirect.com/science?_ob=MImg&_imagekey=B6TJ4-4T32DYH-1-1&_cdi=5300&_user=687447&_pii=S0960077908003020&_orig=search&_coverDate=08%2F30%2F2009&_sk=999589995&view=c&wchp=dGLbVtb-zSkWb&md5=63fbce7d18dbac23dea7d35bcd3129dc&ie=/sdarticle.pdf" target="_blank">From Lagrangian mechanics fractal in space to space fractal Schrödinger’s equation via fractional Taylor’s series.</a> Chaos, Solitons & Fractals 41, no. 4: 1590-1604.
+		</TD></TR>
+
+		<TR><TD>
+				<p>Laskin, Nikolai. 2000. <a href="http://www.sciencedirect.com/science?_ob=MImg&_imagekey=B6TVM-40S7B2D-18-52&_cdi=5538&_user=687447&_pii=S0375960100002012&_orig=search&_coverDate=04%2F17%2F2000&_sk=997319995&view=c&wchp=dGLbVtb-zSkWb&md5=20892e64489419c167d4efc1b777e189&ie=/sdarticle.pdf" target="_blank">Fractional quantum mechanics and Levy path integrals.</a> Physics Letters A 268, no. 4-6: 298-305.
+		</TD></TR>
+
+		<TR><TD>
+				<p>Lohe, M. A. 2006. <a href="http://www.sciencedirect.com/science?_ob=MImg&_imagekey=B6VN0-4K4DCG7-F-1&_cdi=6164&_user=687447&_pii=S0034487706800133&_orig=search&_coverDate=02%2F28%2F2006&_sk=999429998&view=c&wchp=dGLbVzb-zSkWA&md5=41b068b5e4c432d863e8e3c59ff6045f&ie=/sdarticle.pdf" target="_blank">An algebraic formulation of quantum mechanics in fractional dimensions.</a> Reports on Mathematical Physics 57, no. 1: 131-145.
+		</TD></TR>
+
+		<TR><TD>
+				<p>Rabei, Eqab M., et al. 2007. <a href="http://www.sciencedirect.com/science?_ob=MImg&_imagekey=B6WK2-4K428WM-3-1&_cdi=6894&_user=687447&_pii=S0022247X06004525&_orig=search&_coverDate=03%2F15%2F2007&_sk=996729997&view=c&wchp=dGLbVtz-zSkzS&md5=cfd30747147e0da49a89fff98e47caea&ie=/sdarticle.pdf" target="_blank">The Hamilton formalism with fractional derivatives.</a> Journal of Mathematical Analysis and Applications 327, no. 2: 891-897.
+		</TD></TR>
+
+		<TR><TD>
+				<p>Rocco, Andrea, and Bruce J. West. 1999. <a href="http://www.sciencedirect.com/science?_ob=MImg&_imagekey=B6TVG-3W1Y662-1G-4F&_cdi=5534&_user=687447&_pii=S0378437198005500&_orig=search&_coverDate=04%2F01%2F1999&_sk=997349996&view=c&wchp=dGLzVtb-zSkWA&md5=412ab43e01f74f1372c38e625543f411&ie=/sdarticle.pdf" target="_blank">Fractional calculus and the evolution of fractal phenomena.</a> Physica A: Statistical and Theoretical Physics 265, no. 3-4: 535-546.
+		</TD></TR>
+
+		<TR><TD>
+				<p>Srivastava, H. M., and R. K. Saxena. 2001. <a href="http://www.sciencedirect.com/science?_ob=MImg&_imagekey=B6TY8-428DM2K-1-1&_cdi=5612&_user=687447&_pii=S0096300399002088&_orig=search&_coverDate=02%2F15%2F2001&_sk=998819998&view=c&wchp=dGLzVlb-zSkzV&md5=c4ae0ec16ed50395199d0df3ae6e84b0&ie=/sdarticle.pdf" target="_blank">Operators of fractional integration and their applications.</a> Applied Mathematics and Computation 118, no. 1: 1-52.
+		</TD></TR>
+
+		<TR><TD>
+				<p>Tarasov, Vasily E. 2008. <a href="http://www.sciencedirect.com/science?_ob=MImg&_imagekey=B6TVM-4RPM7RC-1-1&_cdi=5538&_user=687447&_pii=S037596010800090X&_orig=search&_coverDate=04%2F21%2F2008&_sk=996279982&view=c&wchp=dGLzVzb-zSkzS&md5=9df91c88b065c9c45985609e3aee2401&ie=/sdarticle.pdf" target="_blank">Fractional Heisenberg equation.</a> Physics Letters A 372, no. 17: 2984-2988.
+		</TD></TR>
+
+		<TR><TD>
+				<p>Tarasov, Vasily E. 2008. <a href="http://www.sciencedirect.com/science?_ob=MImg&_imagekey=B6WB1-4SB7TXF-2-1&_cdi=6697&_user=687447&_pii=S0003491608000596&_orig=search&_coverDate=11%2F30%2F2008&_sk=996769988&view=c&wchp=dGLzVlz-zSkWA&md5=ef4bf7d98db729d30839ecc4b76c2d59&ie=/sdarticle.pdf" target="_blank">Fractional vector calculus and fractional Maxwell's equations.</a> Annals of Physics 323, no. 11: 2756-2778.
+		</TD></TR>
+	</TABLE>
+</CENTER>
+
+</div><!--id="content"-->
+</div><!--id="container"-->
+
+</body>
+</html>

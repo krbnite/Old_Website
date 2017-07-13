@@ -1,0 +1,99 @@
+<html>
+<HEAD>
+<title>Data Science Resources</title>
+<meta name="description" content="The professional page of Kevin Urban.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="js/script1.js"></script>
+<script type="text/javascript" src="js/script2.js"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ TeX: { extensions: ["cancel.js"] }});
+</script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</HEAD>
+
+<BODY>
+
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+<DIV id="content">
+
+<h2>Data Science Learning Resources</h2>
+
+<p>Jump in blindfolded:<br/>
+<ul>
+	<li><a href="https://www.kaggle.com/competitions">Kaggle Competitions</a></li>
+	<li><a href="http://www.drivendata.org/competitions/">DrivenData Competitions</a></li>
+</ul></p>
+
+<hr/>
+<p>Courses (w/ lecture videos, etc):<br/>
+<ul>
+	<li><a href="https://class.coursera.org/datasci-002">Introduction to Data Science</a> (U-Washington)</li>
+	<li><a href="https://www.coursera.org/course/mmds?utm_medium=email&utm_source=other&utm_campaign=notifications.auto.pTbC-DB-EeW9ZyIAC00HEQ">Mining Massive Data Sets</a> (Stanford)</li>
+	<li><a href="https://class.coursera.org/neuralnets-2012-001">Neural Networks for Machine Learning</a>(U-Toronto)</li>
+	<li><a href="https://class.coursera.org/algo-008">Algorithms: Design and Analysis (Part 1)</a>(Stanford)</li>
+	<li><a href="https://class.coursera.org/pgm-003">Probabilistic Graphical Models</a>(Stanford)</li>
+	<li><a href="https://www.coursera.org/course/networksonline?utm_medium=email&utm_source=other&utm_campaign=notifications.auto.C6JwMzCAEeWm9iIAC7Pn1A">Social and Economic Networks</a>(Stanford)</li>
+	<li><a href="http://www.computervisiontalks.com/tag/machine-learning-class-10-701/page/2/">Machine Learning</a>
+	(Computer Vision Talks)</li>
+	<li><a href="http://work.caltech.edu/lectures.html">Learning From Data</a> (CalTech)</li>
+	<li><a href="https://lagunita.stanford.edu/courses/Engineering/db/2014_1/about"> Databases</a> (Stanford)</li>
+	<li><a href="http://cs109.github.io/2014/">Data Science</a> (Harvard 2014)</li>
+	<li><a href="http://blogs.ischool.berkeley.edu/i290-abdt-s12/">Analyzing Big Data with Twitter</a> (Berkeley)</li>
+	
+</ul></p>
+
+<hr/>
+<p>E-books / Courses w/out Video
+<ul>
+	<li><a href="http://harvarddatascience.com/2013/05/05/harvard-stat-221-statistical-computing-and-visualization-all-lectures-online/">Data Science</a> (Harvard 2013)</li>
+	<li><a href="http://www.cs171.org/2015/syllabus/">Visualization</a> (Harvard);
+	<i>focuses on JavaScript</i></li>
+	<li><a href="http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb">Probabilistic Programming and Bayesian Methods for Hackers</a></li>
+	<li><a href="http://karpathy.github.io/neuralnets/">Hacker's Guide to Neural Networks</a></li>
+</ul>
+
+<hr/>
+<p>Visualization Blogs</p>
+<ul>
+	<li><a href="http://flowingdata.com/">Flowing Data</a></li>
+	<li><a href="http://infosthetics.com/">Infosthetics</a></li>
+	<li><a href="http://www.visualcomplexity.com/vc/">Visual Complexity</a></li>
+</ul>
+
+
+<hr/>
+<p>Loosely-related courses (w/ Video!)
+<ul>
+	<li><a href="http://ocw.mit.edu/courses/sloan-school-of-management/15-s50-poker-theory-and-analytics-january-iap-2015/index.htm">Poker Theory & Analytics</a>(MIT)</li>
+</ul></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!--content-->
+</div><!--container-->
+
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<HTML >
+<HEAD>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+</HEAD>
+
+<BODY>
+
+<h1>Reference: Maxwell's Equations (UNITS: MKS)</h1>
+Maxwell's equations come in many forms, which can seem unrelated or alien to the newcomer. 
+For example, one might 
+see Faraday's law written for circuits one day, for magnetofluids the next, and then again 
+in the context of general relativity. 
+
+<p>Furthermore, although the equations are often written 
+in the MKS system of units, they are just as frequently written in the CGS system of units,
+resulting in similar looking equations with different coefficients (in the relativistic setting,
+one might find other systems of units being employed as well, like the natural units). </p>
+
+<p>Note that Maxwell's equations, in general (even the microscopic set), do not fully explain electromagnetic 
+phenomena. They are but an approximation, despite being an overwhelmingly amazing approximation for most
+applications. A refinement of Maxwell's equations comes from Quantum Electrodynamics. One might see 
+the relevant QED equations referred to as Maxwell's equations from time to time; in this case, 
+what is typically called
+Maxwell's equations might then be referred to as the classical Maxwell equations. The QED 
+equations are overkill for most applications since quantum deviations from the classical Maxwell equations
+are very small on everyday application scales, but they are included on this page to be thorough.</p>
+
+<p>The reference pages
+on Maxwell's equations are simply meant to put a bunch of this stuff all on one place, and to give
+some notes on how to convert one set into another set, etc. </p>
+
+<p>This page looks at the differential (localized) formulation of Maxwell's equations.
+For the ingegral (regional) forumulation, see <a href="">this page</a>.</p>
+
+<p>This page does not look at QED, GR, or mathier representations (e.g., differential forms, geometric
+algebra, etc) than vector calculus. 
+
+
+<h2>Microscopic Media</h2>
+<p>These equations are sometimes referred to as Maxwell's equations in vacuum, or more often than not just
+"Maxwell's equations." They take into account the total charge and total current in a system, including
+any and all of the shennanigans and complications at the atomic scale. This set of equations can 
+theoretically be used for everything, although this would not be an easy way to do things (the "macroscopic"
+equations given below define two auxillary fields that approximate the information resulting from the 
+shennanigans and complications at the atomic level, reducing the complexity of the equation set).
+
+<h2>Macroscopic Media</h2>
+<p>The "mascropic Maxwell equations" are also known as "Maxwell's equations in matter." These reduce 
+to the "microscopic Maxwell equations" (the more familiar form of Maxwell's equations) in a vacuum or a linear, isotropic material.</p>
+
+<p>The macroscopic decompose the total charge and total current into free and bound charges and currents:
+$$ \mathfrak{q} = \mathfrak{q}_{f}+\mathfrak{q}_{b} \\
+\mathbf{j} = \mathbf{j}_{f}+\mathbf{j}_{b} $$ </p>
+   
+<p>This allows for easier computation of the dynamically evolving fields, but at the cost
+   of introducing two auxillary fields \(\mathbf{D} and \mathbf{H}\), often called the 
+	 "displacement field" and the "magnetizing field," respectively. Then, depending on the
+	 material under study, phenomenological equations called the constitutive relations are
+	 determined to relate the auxillary fields to the fundamental fields (often times, the 
+	 fields are linearly related by a tensor, or even just a scalar).</p>
+
+	 <p>The constitutive relations are empirical formulations of the auxillary fields.</p>
+
+<CENTER>
+	<Table border="1">
+		<TR>
+			<TD>Gauss' Law</TD><TD>$$ \nabla\cdot\mathbf{D} = \mathfrak{q}_{f}$$</TD>
+		</TR>
+		<TR>
+			<TD>Gauss' Law for Magnetic Fields</TD>
+			<TD>$$ \nabla\cdot\mathbf{B}=0$$</TD>
+		</TR>
+		<TR>
+			<TD>Faraday's Law</TD>
+			<TD>$$\nabla\times\mathbf{E} = -\partial_{t}\mathbf{B}$$</TD>
+		</TR>
+		<TR>
+			<TD>Maxwell-Ampere Law</TD>
+			<TD>$$\nabla\times\mathbf{H}=\mathbf{j}_{f}+\partial_{t}\mathbf{D}$$</TD>
+		</TR>
+		<TR>
+			<TD colspan="2"><b>The Auxiallary Field Definitions</b></TD>
+		</TR>
+		<TR>
+			<TD>Displacement Field</TD>
+			<TD>$$\mathbf{D}=\epsilon_{0}\mathbf{E}+\mathbf{\mathscr{P}}$$</TD>
+		</TR>
+		<TR>
+			<TD>Magnetizing Field</TD>
+			<TD>$$\mathbf{H}=\frac{1}{\mu_{0}}\mathbf{B}-\mathbf{\mathscr{M}}$$</TD>
+		</TR>
+		<TR>
+			<TD colspan="2"><b>Free and Bound Sources</b></TD>
+		</TR>
+		<TR>
+			<TD>Total Charge</TD>
+			<TD>$$\mathfrak{q} = \mathfrak{q}_{f}+\mathfrak{q}_{b}$$</TD>
+		</TR>
+		<TR>
+			<TD>Total Current</TD>
+			<TD>$$\mathbf{j} = \mathbf{j}_{f}+\mathbf{j}_{b}$$</TD>
+		</TR>
+		<TR>
+			<TD>Bound Charge</TD>
+			<TD>$$\mathfrak{q}_{b} = -\nabla\cdot\mathbf{\mathscr{P}}$$</TD>
+		</TR>
+		<TR>
+			<TD>Bound Current</TD>
+			<TD>$$\mathbf{j}_{b} = \nabla\times\mathbf{\mathscr{M}}+\partial_{t}\mathbf{\mathscr{P}}$$</TD>
+		</TR>
+		<TR>
+			<TD colspan="2"><b>Constitutive Relations</b></TD>
+		</TR>
+		<TR>
+			<TD>Non-Dielectric, Non-magnetic Materials</TD>
+			<TD>$$\mathbf{D}=\epsilon_{0}\mathbf{E} \\ 
+				\mathbf{H}=\frac{1}{\mu_{0}}\mathbf{B} $$ </TD>
+		</TR>
+		<TR>
+			<TD>Isotropic, Linear Materials</TD>
+			<TD>$$\mathbf{D}=\epsilon\mathbf{E} \\ 
+				\mathbf{H}=\frac{1}{\mu}\mathbf{B} $$ </TD>
+			
+		</TR>
+	</Table>
+	For more info on the constitutive relations, see the <a href="http://en.wikipedia.org/wiki/Constitutive_equation#Electromagnetism">wiki page</a>.
+</CENTER>
+
+<h2>Gauge Field Representation</h2>
+
+<h2>Wave Representation</h2>
+
+<h2>Plane Wave Representation</h2>
+
+<h2>Relationship to the integral formulation</h2>
+In single variable calculus, you might have learned the fundamental theorem of calculus (hopefully). 
+At one point, you may have also heard about Green's theorem on the plane. In vector calculus, you
+might have learned of the divergence theorem. These are all really the same thing: instances of 
+Stoke's theorem. (Lots of terms being thrown around here, but that's because history evolves from
+many perspectives.)
+
+
+<br/>
+<hr/>
+<h2>Resources</h2>
+<p><a href="http://www.ece.rutgers.edu/~orfanidi/ewa/ch01.pdf">
+	Ch1: Maxwell's Equations" </a>from Electromagnetic Waves and Antennas by Sophocles J. Orfanidis.<br/>
+This opening chapter designed for a Rutgers course on electromagnetic waves and antennas
+is an amazing recap of almost an entire undergraduate-level EM Book.
+
+</BODY>
+</HTML>

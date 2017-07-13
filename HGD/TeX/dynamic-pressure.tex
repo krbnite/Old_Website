@@ -1,0 +1,36 @@
+% vim:tw=72 sw=2 ft=tex spell spelllang=en
+% mainfile: ../hw1.tex
+\textbf{SWEPAM data is often used to find the solar wind dynamic pressure. How is the dynamic pressure calculated?}
+
+On the spot, one may compute the "dynamic pressure per unit mass" by multiplying the number density by the
+square of the solar wind bulk velocity ($n V^{2}$).
+If the composition of the solar wind is
+well known, one can compute the actual dynamic pressure. Alternatively,
+one can compute the, e.g., proton dynamic pressure ($m_{p} n V^{2} =
+\rho V^{2}$). Since protons make
+up most of the solar wind you might even go ahead and call that the
+solar wind's dynamic pressure, especially in an off-the-cuff,
+back-of-the-envelope type setting.
+
+Pressure has units of force per area, which is \begin{math}
+\frac{kg*m}{s^{2}}/m^{2} \end{math}. With some algebraic manipulation we
+see that pressure is an
+energy density 
+\begin{math} \frac{kg*m^{2}}{s^{2}}/m^{3} \end{math}. This last set of
+  units can be rewritten again to get the form we used above,
+  $(\frac{kg}{m^{3}})(\frac{m^{2}}{s^{2}})$, which tells us that dynamic
+  pressure is some kind of "kinetic energy density" of the solar wind. It should be noted that another possible definition of dynamic pressure
+may be found in the literature, although not often used in space
+physics, $\frac{1}{2} \rho V^{2}$, which is exactly how you'd expect a
+kinetic energy density to look.
+
+
+SWEPAM provides the bulk solar wind observations for the Advanced
+Composition Explorer, recording properties of the solar wind such
+as number density, the bulk flow velocity, and temperature. \citep{McComas1998}.
+SWEPAM measures both electrons and ions. The instrumentation has Ulysses
+heritage (literally Ulysses spare parts), although refinements were
+made. 
+
+You can check out some real-time solar wind dynamic pressure
+observations at http://www.swpc.noaa.gov/SWN/. 

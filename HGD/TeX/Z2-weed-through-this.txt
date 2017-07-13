@@ -1,0 +1,270 @@
+% mainfile: ../Mag_Iono_2014.tex
+% \textbf{}
+% Ch12: Substorms
+% lec 14
+
+The substorm is one of the major types of events that happens in the
+magnetosphere. We know that it has to do with some type of storage of
+energy, then the subsequent release of that energy. We will discuss the
+three typical phases of a substorm; note that these phases are not
+necessarily distinct for all events. 
+
+First the phase names: growth, expansion, recovery. 
+
+The growth phase is the energy accumulation phase. The time scale of the
+growth phase can vary widely, depending on what we think to be the
+loading conditions, which we suspect is associated with the solar wind.
+
+The expansion phase is almost always observable. Arguably, the expansion
+phase is the best understood of all the phases, while at the same time
+one can poke a lot of holes in our understanding of this phase, which we
+will cover in this chapter.
+
+The recovery phase sometimes doesn't seem to exist -- or, at the least,
+it isn't observed on the instruments dedicated to observing this kind of
+thing. Sometimes though your typical substorm only has the first two
+phases, and sometimes this might not be because the observing instrument
+simply couldn't detect it --- you've got the solar wind constantly
+driving this process, and it doesn't conveniently stop doing this so
+that we can be assured to record a recovery phase! 
+
+If you ever go picking through the literature on substorms over the past
+several decades, you will surely see references to auroral substorms and
+magnetospheric substorms, sometimes as if they are two distinct
+phenomena. At one point, yes, a lot of people thought these two phrases
+corresponded to two distinct phenomena. Particularly in the 70s and even
+in the 80s, you had researchers going to great pains trying to
+distinguish between these two types of substorms...ultimately, to no
+avail since we now understand that
+they're essentially the same thing --- two parts of one whole. It simply
+depends on how the substorm is being observed. In
+hindsight this is pretty easy to see. 
+
+The classic picture we use to talk about the auroral substorm comes from
+Akasofu [REFERENCE!!!]. This picture focuses on what images of the
+aurora look like during the different phases of a substorm. This is how
+substorms were initially thought about --- via their auroral signatures.
+Nowadays there seems to be a more large-scale magnetospheric view of
+substorms. The rift between ground-based observations and space-based
+observations of substorms has slowly closed and, now, with missions like
+THEMIS [Time History of Events and Macroscale Interaction during
+Substorms], substorms are largely studied from from multiple sets of
+spacecraft data. 
+
+Akasofu's substorm sequence of images are akin to what
+you would see in data from an all-sky imager, looking up; each image is a "zenith
+view." You can picture yourself sitting right on the magnetic pole,
+looking straight up; you see the auroral oval. As time goes on, you see
+the beginning of the growth phase (in the picture, it says this phase is
+on the order of 0-5 minutes, however these days we would more likely
+quote this phase at 30-60 minutes). At some point, some new behavior is
+seen: a westward travelling surge of auroral brightness; you are now
+viewing the expansion phase. This auroral signature is quite apparent in
+the all-sky data; it is the signature of the expansion phase. The surge
+eventually begins to break up, marking the start of the recovery phase. 
+
+The growth phase is actually fairly
+difficult to see in ground-based observations, so in the 60s when this
+was the primary way of observing substorms, things wereren't always so
+clear. With the advance of technology, the use of spacecraft, and so on,
+we now have a much better understanding of each phase, and some
+understanding concerning the physical mechanisms responsible for each
+phase. We can reconcile what is seen in spacecraft data with what the
+ground-based observer sees. Essentially though, we still have no
+definitive theory of the substorm: there are still competing models,
+utilizing different physical mechanisms, that seemingly fit tidy with
+observations...or perhaps with our lack of observations. Missions like
+THEMIS attempt to get simultaneous observations along the magnetotail
+and, in conjunction with ground-based all-sky and magnetometer data,
+distinguish between the competing models. So far though, the jury is
+still out [circa 2014].
+
+The magnetospheric substorm is one of the biggest, unresolved problems
+in magnetospheric physics. One might lump magnetic reconnection into
+this category as well, but magnetic reconnection is an unresolved in
+plasma physics in general. By the end of this chapter, we will make the
+argument that the magnetospheric substorm, too, is not simply a
+magnetospheric issue, but one of plasma physics in general. You see
+"magnetospheric substorm" processes, for example, on the Sun. 
+
+In the 90s and early 2000s, there used to be all sorts of debates and
+contentions concerning the different aspects of substorms. In fact, it
+was so contentions, and sometimes bitter, personal arguments, that there
+was good reason for younger researchers at the time to just stay out of
+it and focus their abilities on other, less obviously controversial
+issues. Maybe even today one could argue that the substorm problem is
+not really a good place for a young researcher --- a graduate student,
+say --- to pick up and start. It is a contentious topic with folks who
+have spent their whole careers arguing for one paradigm over andother,
+and it gets heated and personal. Arguments are great, discussions are
+great, yea, but if you can't go out for a beer afterwards, something is
+wrong with you or your colleagues. 
+
+That said, a young researcher has to know about substorms, and
+understand what is understood about them. While working on other topics,
+who knows, the formerly young, now-aging (and more importantly, now
+tenured or secured in a research job) researcher might suddenly have
+stumbled upon observations or ideas that are relevant and ripe for the
+substorm problem. And, finger's crossed, by that time all the old
+curmudgeons are retired.
+
+We'll cover what we know right now [2014]. If you're reading this book
+in 10 years (and if we haven't updated it), don't come to us yelling
+that we have everything ass-backwards. We might. But this is what we
+know now. We are presenting the popular consensus, but we certainly do
+not hope to indoctrinate anyone. Who knows, the popular consensus might
+be right, but then again --- it might be wrong. This is still research
+in progress. Take it all with a grain of salt!
+
+With that said, let's cover in more details what is currently known
+about the different phases of the substorm.
+
+The substorm starts off with a growth phase. Typically whenever we study
+a substorm, or the activity associated with a substorm, retrospectively,
+we almost always find the growth phase associated with a southward
+turning of the interplanetary magnetic field [IMF] -- the magnetic field
+in the solar wind. But, wait a minute? Doesn't this sound a lot like the
+condition we listed for the onset of a magnetic storm? Essentially,
+whenever you have a CME or CIR, or what have you, you typically see a
+southward turning of the IMF, and we suspect this induces the dayside
+reconnection, which allows the solar wind plasma to enter into the
+magnetosphere. Yes, this is very similar to the magnetospheric storm,
+but with substorms you do not have to have any type of shock event
+associated with the growth phase. That is, for a substorm, any southward
+turning the IMF will do; there doesn't have to be an associated increase
+in field strength, or density, and the southward turning needn't be
+prolonged. For a storm, the southward turning is typically on much
+larger time scales. [SEE FIGURE -- isolated substorm vs magnetic storm]
+[WHAT CAUSES THE "FLICKER-LIKE" SOUTHWARD TURNINGS OF THE IMF THAT ARE
+RESPONSIBLE FOR SUBSTORMS? --ANDY COULDN'T CLEARLY ANSWER. As far as
+substorms are concerned, this is just an initial condition.]
+
+What we think happens is, when there is a southward turning of the IMF,
+dayside reconnection is able to occur. This reconnection process on the
+dayside allows magnetic flux and any associated plasma to be removed
+from the dayside and dragged into the lobes of the magnetosphere. Thus
+this growth phase is often considered to be a loading phase. The
+southward directed IMF, essentially frozen into the quickly passing
+solar wind, becomes merged with the dayside magnetopause, which then is
+dragged tailward into the lobes. The lobes become storage space for
+magnetic energy --- that is, the magnetic flux in the lobe region
+accumulates during this period, growing stronger in intensity. 
+
+Typical duration for the growth phase is accepted to be between 30-60
+minutes these days. It used to be considered much shorted based on the
+idea of the auroral substorm, when we only had ground-based
+instrumentation and could only observe the auroral component of the
+growth phase. 
+
+In addition to the southward turning of the IMF, one also sees changes
+in ionospheric convection associated with the substorm growth phase. Not
+only does the magnitude of the ionospheric convection increase, but it
+also changes its structure spatially. [NEW FIGURE -- ionospheric
+convection]. On the left of the figure, we have the typical picture of
+ionospheric convection during normal, non-substorm periods. We talked
+about this in [CHAPTER ???]. Basically, during normal conditions, you
+have the Pedersen currents (current parallel to the electric field)
+going from the dawnside to the duskside, and you have the thermospheric
+winds, and the thermospheric dynamo [SEE CHAPTER ??? FOR FULL
+DESCRIPTION / DESCRIBE A LITTLE BETTER HERE]. During a substorm,
+oftentimes you will see the Pedersen currents increase dramatically, and
+you will see a distortion of the flow lines associated with that. So
+your Hall currents, your Pedersen currents -- they're all changed. Thus,
+your field aligned currents are all different, and this is very easily
+observed from the ground, particularly with incoherent scatter radars
+[ISRs] and Super DARN systems [Dual Auroral Radar Network]. 
+
+Other observations associated with substorms include: 
+
+* an increase in the
+size of the polar cap and an equatorial expansion of the trapping
+boundary. Essentially, because you have more dayside reconnection going
+on, you have more flux entering into the polar cap region, and so the
+polar cap swells, progressing equatorward. So, the open-closed boundary
+unto itself swells equatorward. 
+
+* a slow increase of the magnitude of the magnetic field in the
+magnetotail lobe region. 
+
+* Intensification of the field-aligned current, both into and out of the
+ionosphere. This is implied by the increase in the Pedersen currents
+mentioned above. If you are driving a stronger Pedersen electric field,
+there is going to be an increased component of the current, both from
+Hall and Pedersen aspects, and if you have one part of a circuit that is
+trying to increase its current, then you will ultimately flood the rest
+of your current system (your circuit) with current as well. Circuits
+101: you cannot have a pile-up of current anywhere. So you have these
+enhanced FACs to the tail and to the ring current.
+
+* The stretching of the near-Earth magnetic field at about 6-15 $R_{E}$
+from a dipolar to a more tail-like geometry. That is, instead of having
+a geomagnetic geometry with a nice dipole-like structure, the structure
+of the magnetic field begins deforming, as if the field lines are being
+pulled anti-sunward, away from the Earth. This is often referred to as
+"pinching" or "stretching" of the magnetic field. It is argued that this
+is the primary way that magnetic energy is being stored, by the this
+deformation of the geomagnetic field structure to a higher energy state
+than its typical ground state. To put a system into a higher energy
+state, work has to be done on that system --- and this goes for any
+system, whether you're studying thermodynamic systems, quantum
+mechanical systems, or the geomagnetosphere. For the geomagnetosphere,
+the work done to put the system into a higher energy state comes is by
+the solar wind. And so, similar to picking a rock off the ground and
+giving it potential energy, which becomes kinetic once you decide to
+drop the rock, the geomagnetosphere, due to newly enhanced and
+manifested current systems, is "lifted" into a higher potential energy
+state, which will ultimately "snap" back to its ground state when the
+conditions causing this can no longer support it.
+
+* Formation and expansion of a thin near-Earth current sheet, which
+begins rapidly thinning toward the end of the substorm growth phase. The
+dramatic amount of thinning is a good marker for the end of the growth
+phase and the beginning of the expansion phase. 
+
+When you look at the complete model of what we think a substorm is
+doing, that complete model actually requires all seven different observations 
+to be observed. But oftentimes it just so happens that one of these
+seven substorm-associated events is not observed. There are times during
+a substorm growth phase where only a couple of these events are
+observed. So this list of events shouldn't be thought of as a logical
+"and" statement: you do not need condition 1 AND condition 2 AND
+condition 3, and so on, to have observed a substorm growth phase.
+Rather, it is more like a logical "OR" statement: 1 OR 2 OR 3 OR 4, and
+so on and so forth. 
+
+A lot of researchers are trying to reconcile the current picture of a
+substorm with questions concerning why you may or may not see some of
+these events associated with the substorm growth phase. For example, if
+you do not see an increase in ionospheric convection --- an increase in
+the FACs --- well, is it still a substorm? What is the entire process of
+the substorm growth phase that allows for the FACs to increase, or not?
+There are papers out there that cite all seven of these conditons, but
+not necessarily all at the same time, so any model really ought to be
+able to account for not only all of these events occurring at once, but
+for times when not all of these events occur at once, or some of them
+not at all. 
+
+Tail dynamics during the growth phase -- the "stretching" of the
+near-Earth field lines -- 
+
+With the cross-polar cap potential and the approximate dayside
+reconnection rate, one can estimate the convection in the
+plasma sheet that is required if a steady-state transport of magnetic
+flux is to occur. If we take a typical cross-tail voltage and a typical 
+electric field that is observed in the cross-tail region, we can then use 
+a map of the magnetic field, e.g., a Tsyganenko model, to compute what the 
+$\vec{E}\times\vec{B}$ drifts are. For example, $0.5 [mV/m]$ is a very 
+typical for a cross-tail electric field. Given we're in the equatorial
+plane (the electric field is in this plane, while the magnetic field is
+perpendicular to it, giving us a drift in towards the Earth), and using an appropriate magnetic field model, the computed
+$\vec{E}\times\vec{B}$ drifts take on velocities exceeding 500 [km/s].
+Simply put, this is not observed. Something is wrong here, and it's easy
+to identify: during a substorm process, we are not in a steady state. So
+the starting assumptions here were invalid. 
+
+The absence of such high-velocity plasma flows have to do with
+constraints on magnetospheric convection. 
+
+----- NOT DONE YET!
+
+ 

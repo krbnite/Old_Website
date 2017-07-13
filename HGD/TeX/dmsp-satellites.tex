@@ -1,0 +1,81 @@
+
+DMSP satellite are 3-axis stabilized spacecraft that fly in circulat,
+sun-synchronous, polar (inclination $98.7^{\circ}$) orbits at an
+altitude of $\sim840$ km. The geographic local times of the orbits are
+near the 1800/0600 (F11, F13) or the 2100/0900 (F12, F14, F15) local
+time meridians. The offset between the geographic and geomagnetic poles
+means that the DMSP fleet samples a wide range of magnetic local times
+over the course of a day. 
+
+* the ascending nodes of DMSP orbits are on the dusk side of Earth; this
+means that in the evening sector, the DMSP satellites move northwest; in
+the morning sector, the satellites move southeast
+ -- mental help: looking down on the Earth's north geographic pole, west is clockwise
+ and east is counter clockwise
+
+ * each DMSP satellite carries a suite of instruments to measure (1) fluxes
+ of auroral particles (Special Sensor J4 [SSJ4]) and (2) densities,
+ temperatures, and drift motions of ionospheric ions and electrons
+ (Special Sensor for Ions, Electrons, and Scintilations [SSIES]). Later
+ DMSP spacecraft (ge F12, I think) carry magnetometers as well (Special
+ Sensor for Magnetic Fields [SSM])
+
+
+The SSJ4 Sensors
+* mounted on the top surfaces of DMSP satellites to measure fluxes of
+down-coming electrons and ions in 19 logarithmically spaced energy steps
+between approximately 30 eV and 30 keV (see Hardy et al, 1984)
+* a full spectrum is compiled every second
+* on F15, fluxes of ions with energy below 1 keV are unavailable
+
+The SSIES Sensors
+* consists of spherical Langmuir probes mounted on 0.8 m booms to
+measure densities and temperatures of ambient electrons
+* has three different sensors mounted on a conducting plate facing the
+ram direction: (1) the ion traps, which measure the total ion densities;
+(2) ion drift meters, which measure horizontal ($V_{H}$) and vertical
+($V_{V}$) cross-track components of plasma drifts; and (3) retarding potential 
+analyzers [RPAs], which measure ion temperatures and in-track components of 
+plasma drift ($V_{\par}$)
+* see Rich and Hairston, 1994
+* shapes of RPA current-voltage sweeps can be used to determine the
+masses of contributing ion species
+* b/c of relatively small uncertainties about spacecraft potentials, RPA
+estimates of $V_{\par}$ often have large error bars
+* the drift meters measure $V_{H}$ at 6 Hz
+* F11 has a noisy tape recorder, which limits the usefulness of it data
+
+SSM Sensors
+* triaxial fluxgate magnetometers are mounted on the bodies of the F12-F14
+spacecraft
+* the mag on F15 is mounted on a 5-m boom, reducing its susceptibility
+to spacecraft-generated contamination
+* magnetic vectors are samples at 12 Hz
+* 1-second averages are calculated as
+$\delta\vec{B}=\vec{B}_{meas}-\vec{B}_{IGRF}$
+* data are presented as $\delta{B_{x}}$, $\delta{B_{y}}$, and
+$\delta{B}_{z}$ in spacecraft-centered coordinates, where the X- and
+Y-axes point toward spacecraft nadir and along the velocity vector,
+respectively; the Z-axis compltes the right-hand system
+
+
+Analyzing DMSP data
+* two governing equations for analyzing combined SSM and SSIES data are
+Ampere's law and current continuity:
+(i) $j_{\par}=\frac{1}{\mu_{0}}
+\left[\nabla\times\delta\vec{B}\right]_{\par}$
+(ii) $\frac{\partial{j_{\par}}}{\partial{s}} =
+-\nabla_{\perp}\vdot\vec{j}_{\perp}$
+-- s represents an infinitesimal distance along the field line
+* in the ionosphere, the current density perpendicular to the Earth's
+magnetic field $\vec{B}_{E}$ is
+$\vec{j}_{perp}=\sigma_{P}\vec{E}-\sigma_{H}(\vec{E}\times\vec{b})$
+-- where the sigmas are the Pedersen and Hall conductivities, $\vec{b}$
+is a unit vector along $\vec{B}_{E}$
+* we can integrate the current continuity equation, (ii), from the
+satellite location to the bottom of the ionosphere (along the field
+line, I think) to get:
+$j_{\par}=\nabla_{\perp}\vdot\vec{I}_{\perp} =
+\nabla_{\perp}\vdot\left[\Sigma_{P}\vec{E}-\Sigma_{H}(\vec{E}\times\vec{b})\right]$
+-- the capital sigmas are the Pedersen and Hall conductances
+

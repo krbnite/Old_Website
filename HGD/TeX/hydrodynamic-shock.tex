@@ -1,0 +1,45 @@
+% mainfile: ../hw3.tex
+\textbf{For a MHD parallel shock, show that it reduces to a hydrodynamic
+shock.}
+
+By "parallel" shock, we mean that the upstream flow is parallel to the
+upstream magnetic field, and that the downstream flow is parallel to the
+downstream magnetic field.
+
+Let's start by writing down these quantities:
+\begin{center}
+  \begin{align}
+    \vec{u}_{up} = \left< u_{up}, 0, 0 \right> \\
+    \vec{u}_{down} = \left< u_{down}, 0, 0 \right>\\
+    \vec{B}_{up} = \left< B_{up}, 0, 0 \right>\\ 
+    \vec{B}_{down} = \left< B_{down}, 0, 0 \right> 
+  \end{align}
+\end{center}
+
+Then we write down the Rankine-Hugoniot relations:
+\begin{align}
+  \left[ B_{x}\right]^{2} = 0 \\
+  \left[ u_{x}B_{y} - u_{y}B_{x}\right] = 0 \\
+  \left[ \rho u_{x}\right] = 0 \\
+  \left[ \rho u_{x}^{2}+P+B_{y}^{2}/2\mu_{0}\right] = 0 \\
+  \left[ \rho u_{x}u_{y}-B_{x}B_{y}/\mu_{0}\right] = 0 \\
+  \left[ \frac{1}{2}\rho
+  u^{2}u_{x}+\frac{\Gamma}{\Gamma-1}pu_{x}+\frac{ B_{y}(
+  u_{x}B_{y}-u_{y}B_{x} )}{\mu_{0}}\right] = 0
+\end{align}
+
+Given equations (1)-(4), these relations reduce to:
+\begin{align}
+  \left[ B_{x}\right]^{2} = 0 \\
+  \left[ \rho u_{x}\right] = 0 \\
+  \left[ \rho u_{x}^{2}+P \right] = 0 \\
+  \left[ \frac{1}{2}\rho
+  u^{3}+\frac{\Gamma}{\Gamma-1}pu_{x}\right] = 0
+\end{align}
+
+The most obvious thing, I think, about these equations is that the
+magnetic field is uncouple from the plasma flow. That is, setting up the
+equations for the shock is independent of the magnetic field -- so a
+parallel shock in the MHD setting does not only reduce to a hydrodynamic
+shock in some limit, but is indeed a hydrodynamic shock with or without
+the presence of a magnetic field.

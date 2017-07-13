@@ -1,0 +1,260 @@
+/* all lists */
+/* Nav and Nav.ul text */
+#nav, #nav ul {
+	padding: 0 0 0 5px;
+	margin: 0;
+	list-style: none;
+	line-height: 1;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*appearance of links (in top level nav bar) we negate this later for sublists*/
+#nav a {
+	display: block;
+	width: 8.5em;
+	font-size: 9pt;
+	font-variant: normal;
+	color: white; /*was A52A2A (very cool, but inconsistent w/ bottom of page text*/  
+	text-decoration: none;
+	letter-spacing: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+
+/* all list items controls width of first level nav bar*/
+/* width needed or else Opera goes nuts */
+/* this controls size of items on nav bar */
+#nav li {
+	float: left;
+	width: 8em;
+}
+
+
+/* second-level lists */
+/* these are for navBar items that have drop-downs */
+#nav li ul {
+	position: absolute;
+	width: 8em;
+	left: -555em;
+	background-color: #999999;
+	padding-bottom: 0.5px;
+	padding-left: 0.5px;
+	visibility: visible;
+}
+
+/* (changes ANY attributes of sublist links) returns sublist font to standard not small caps and sets line height*/
+#nav li ul a {
+	font-variant:normal;
+	line-height:1.5;
+	width:20em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;   /*red=FF0000, purple=800080*/
+	background-color: #A52A2A; /*orange=FFA500, darkBlue=0000A0*/
+	margin-top: 1px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 1px;
+	padding-top: 1px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 1px;
+	border: 1px groove #999999;
+
+}
+
+/*underlines rollover links on sublists*/
+#nav li ul a:hover {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+
+#nav li:hover ul ul, #nav li:hover ul ul ul, #nav li.sfhover ul ul, #nav li.sfhover ul ul ul {
+	left: -555em;
+}
+
+/* lists nested under hovered list items */
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li.sfhover ul, #nav li li.sfhover ul, #nav li li li.sfhover ul { 
+	left: auto;
+}
+
+/*set bg image with no repeat, page font to Arial and margins to 0*/
+body {
+	background-color: #FFFFFF; 
+	background-position: 0px 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+}
+
+
+
+.events {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #FFFFFF;
+	background-color: #000000;
+	width: 330px;
+	height: 175px;
+	float: left;
+	padding-left: 10px;
+	padding-top: 10px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFFFFF;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
+}
+
+h1 {
+	font-variant: small-caps;
+	font-size: medium;
+}
+
+
+
+#wrapper {
+    position: absolute;
+    top: 378px;
+	width: 100vw;*/
+	left:  0px;
+	
+}
+
+#construction {
+    position:absolute;
+    top: 600px;
+    width: 100vw;*/
+}
+    
+
+#wrapper .events a {
+	color: #99CCFF;
+	text-decoration: none;
+	font-size: small;
+}
+#wrapper .events a:hover {
+	text-decoration: underline;
+}
+
+
+/* 00000000000000 */
+h2 {
+	background-color: white; 
+	color: black;
+	text-align: center;
+}
+
+/* CONTAINER */
+#container {
+	background-color: black;
+	width: 85vw;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* TOP NAV BAR
+/*absolutely positions div on page*/
+#nav {
+	z-index: 1;
+	background-color: black;
+	padding: 4vh 0 4vh 0;
+ 	width: 85vw; 
+	text-align: center;
+}
+
+/* MIDDLE PAGE CONTENT
+/*any page content for future reference goes in here*/
+/*optional: use #sidebar and #main inside #content  */
+#content {
+	clear: both;
+	width: 85vw;
+	color: white;
+	padding: 10 0 10 0px;
+	background-color: black;
+}
+#content a {
+	color: #AD3333;
+}
+#content table {
+	color: white;
+}
+
+
+/* SIDE NAV BAR */
+#swsidebar {
+	width: 20vw;
+        float: left;
+	background-color: #AD3333;
+	border-style: outset;
+	border-width: 2px;
+}
+#swsidebar a {
+	color: white;
+}
+
+/* MAIN */
+#swmain {
+	width: 64.5vw; 
+	float: right;
+	background-color: black;
+}
+#swmain table {
+	background-color: #303030;
+}
+
+
+/* Footer */
+#footer {
+	background-color: #303030;
+	color: white;
+	clear: both;
+	text-align: center;
+}
+
+/* INDEX */
+#indexgraphic {
+	width: 30vw;
+        float: left;
+}
+#indexmain {
+	width: 50vw;
+	float: right;
+	background-color: black;
+	color: white;
+	font-family: "Courier New","Lucida Console";
+}
+
+#indexmain table {
+	background-color: #303030;
+	color: white;
+}
+
+#indexmain, #subcontent1, #subcontent2, #idltop a {
+	color: #AD3333;
+}
+
+/* can phase out idltop since subcontent is same thing */
+#subcontent1 {
+	color: white;
+	background-color: #303030;
+	font-family: "Courier New","Lucida Console";
+	padding: 3 3 0 3%;
+}
+#subcontent2 {
+	color: #303030;
+	background-color: #909090;
+	font-family: "Courier New","Lucida Console";
+	padding: 3 3 0 3%;
+}
+
+#idltop {
+	color: white;
+	background-color: #303030;
+	font-family: "Courier New","Lucida Console";
+	padding: 3 3 0 3%;
+}
+

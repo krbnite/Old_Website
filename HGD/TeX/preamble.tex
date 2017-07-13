@@ -1,0 +1,156 @@
+\documentclass[12pt,a4paper]{article}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%                             #=#=# BEGIN PREAMBLE =#=#
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+% GRAPHICS / IMAGES
+% - - - - - - - - - - - - - - - - - - - - - - - - - -
+% The {graphicx} packages allows you to include images in your document.
+\usepackage{graphicx}
+% Set this if all graphics in one place: 
+ \graphicspath{ {Images/} }
+% The {placeins} package allow one to include the \FloatBarrier command,
+% which prevents floats from passing it. The [section] option redefines
+% of \section such that floats in a section stay in that section.
+\usepackage[section]{placeins}
+% - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+% MATH
+% - - - - - - - - - - - - - - - - - - - - - - - - - -
+% The {amsmath} package allows you to make nice looking equations.
+\usepackage{amsmath}
+% The {amsfonts} package gives you cool math symbols, like Z for the
+% integers; {amsfonts} is loaded automatically when you load {amssymb}
+\usepackage{amssymb}
+% Extend 'mathbb':
+\usepackage{mathbbol}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RR}{\mathbb{R}^{2}}
+\newcommand{\RRR}{\mathbb{R}^{3}}
+\newcommand{\RN}{\mathbb{R}^{N}}
+\newcommand{\Sph}{\mathbb{S}^{2}}
+\newcommand{\so}{\mathbb{S}^{1}}
+\newcommand{\soo}{\mathbb{S}^{2}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\id}{\mathbb{1}} % requires package {mathbbol}
+\newcommand{\oh}{\mathcal{O}}
+% Vectors
+\newcommand{\bvec}{\boldsymbol}
+% - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+% LAYOUT
+% - - - - - - - - - - - - - - - - - - - - - - - - - -
+% The {geometry} package allows for margin customization.
+% \usepackage{geometry}
+% The {fancyhdr} package allows for header/footer customization.
+% \usepackage{fancyhdr}
+%\pagestyle{fancy}
+% The {titlesec} packages allows for altering section/pages
+% commands/styles.
+%\usepackage{titlesec}
+% -- Here, I am redefining a section break to mean that the next section
+%  begins
+%    on a new, clean page.
+%\newcommand{\sectionbreak}{\clearpage}
+% - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+% TABLES and FIGURES
+% - - - - - - - - - - - - - - - - - - - - - - - - - -
+% The {array} package is needed for extra control (might not be
+% necessary)
+%   \usepackage{array}
+% The {multirow} package allows you to have more general tables
+%  -- also allows to choose which cells get borders
+%  e.g.:    
+%  Year | Month |   Days w/ Data   |
+%  --------------------------------|
+%  2000 |  01   | 03, 04, 10       |
+%       ---------------------------|
+%       |  06   | 15, 16           |
+%        --------------------------|
+%       |  11   | 02, 23, 24, 27   |
+%  --------------------------------
+\usepackage{multirow}
+% --btw, for floating tables, tabular environment must be placed 
+%   inside a table environment; if you want your table to be 
+%   exactly where you placed it, then only use tabular environment
+% --the table environment also allows one to add a \caption{}, 
+%   specify position (h: here, t: top, b: bottom, p: own page),
+%   and use labels (e.g., \label{tab:myTable}) so it can be 
+%   referenced later (\ref{tab:myTable})
+
+
+% The {caption} and {subcaption} packages allow you to create
+% multi-panel figures
+\usepackage{caption}
+\usepackage{subcaption}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+
+
+% REFERENCES / BIBLIOGRAPHY
+% - - - - - - - - - - - - - - - - - - - - - - - - - -
+% The {biblatex} package is used for references
+% Default style is numeric; can be changed to alphabetic or authoryear.
+% Sorting: none (bib in order refs are cited); ynt (year, name title);
+% etc
+%\usepackage[style=authoryear,sorting=nyt]{biblatex}
+%\addbibresource{references.bib}
+% That said,
+% for better author/year citing, the package {natbib} is often used
+\usepackage[square]{natbib}
+% More info: http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
+
+% For INLINE BIBLIOGRAPHY entries:
+% To have inline refs, must write: \nobibliography{<bib file>}
+% If you still want bibliography at end, must still use
+% \bibliography{..}, and also  \nobibliography*
+% For inline reference:  \bibentry{<cite tag>}
+\usepackage{bibentry}
+% --- if you want to include a CV (e.g., in my dissertation proposal),
+%  this is an ok way to do it, however, all CV items will also
+%  reappear in the bibliography at the end...which you may or may not
+%  care for (this package works by using the .bbl file that generates
+%  the bibliograph).
+% --- you might create a separate LaTeX project to do a CV, use
+%  {bibentry} to get the proper bibliography formats, then copy and
+%  paste
+%
+% - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+% Quick Reference:
+% List environments: itemize, enumerate
+% Math: equation, align, aligned, gather
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%                              #=#=# END PREAMBLE  #=#=#
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 

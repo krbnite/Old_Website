@@ -1,0 +1,67 @@
+% vim:tw=72 sw=2 ft=tex spell spelllang=en
+% mainfile: ../hw1.tex
+\textbf{What is the difference between a fluxgate magnetometer and a searchcoil magnetometer?}
+
+From \cite{Urban2010}:
+\begin{quotation}
+To construct a simple fluxgate magnetometer, two ferromagnetic rods are
+lined up parallel to each other. The rods are each wound with an
+electrically conducting coil---called a primary (or “drive”) coil---such
+that one rod is wound clockwise, the other counterclockwise. Another
+coil, called the secondary (or “sense”) coil, is wrapped about both rods
+and primary coils (see \ref{fig2}). An alternating current is then
+passed through the primary coils.
+
+When a large enough alternating current is passed through the primary
+coil, the ferrite goes through a cyclic saturation process: magnetized,
+unmagnetized, inversely magnetized, unmagnetized. Since the primary coil on one rod is wrapped in the reverse direction of the coil on the other, the induced magnetic fields of the two bars are equal in strength, but opposite in direction. Thus, in the absence of an external
+magnetic field, the two rods produce equal-but-oppositely-directed
+magnetic fields, resulting in no net magnetic flux passing through the
+secondary coil.
+\end{quotation}
+
+In the presence of a magnetic field, magnetization is favored in a
+preferred direction, allowing one of the rods to saturate quicker;
+during the phase cycling, the rods would be out of phase, producing a
+measurable voltage proportional to the strength of the externally
+applied field.
+
+Fluxgate magnetometers are used to measure the ultra low frequency DC
+magnetic fields comprising the geomagnetic field -- that is, the part of the frequency spectrum with periodicities between, say, 1-30 minutes.
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}[2a]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{../images/flux_mag.png}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[2b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{../images/search_mag.png}
+  \end{subfigure}
+  \caption{Left: Fluxgate. Right: Searchcoil.}
+  \label{fig2}
+\end{figure}
+
+A searchcoil magnetometer on the other hand is often used to measure AC
+magnetic fields. Searchcoils are better than fluxgates at frequencies
+higher than and around 1 [Hz]. \citep{coillot2012} 
+
+The searchcoil magnetometer is based on the induction sensor, the
+principle of which is an application of Faraday's Law:
+\begin{math}
+  V = -\frac{d\Phi}{dt}
+\end{math}
+
+For searchcoils, this equation is slightly modified due to the wrapping
+of n coils (with cross-sectional area A) around nothing [air] or a ferromagnetic rod:
+\begin{math}
+  V=-nA\frac{dB}{dt}
+\end{math}
+
+The time derivative in the equation indicates that higher frequencies
+will produce higher voltages. The time derivative also means that DC
+fields cannot be measured by the searchcoil magnetometer. Air coil
+induction sensors are easy and cheap to make, but often not sensitive
+enough for space physics missions, which instead opt to employ
+ferromagnetic cores (see figure \ref{fig2}).

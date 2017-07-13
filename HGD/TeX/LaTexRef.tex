@@ -1,0 +1,46 @@
+
+
+
+
+
+
+
+Tables.
+&: Column separator
+\\: start new row
+\hline: horizontal line
+\newline: start new line within a cell
+\cline{i-j}: partial hline starting in col i, ending in col j
+
+\begin{tabular}[pos]{table spec}:
+  table specs: l c r p{'width'} m{'width'} b{'width'} | ||
+  l: left justified
+  c: centered
+  r: right justified
+  p{'width'}: paragraph col w text vertically aligned at top
+  m{'width'}: '' '' in middle (requires array package)
+  b{'width'}: '' '' at bottom
+  |: vertical line
+  ||: double vertical line
+
+\end{tabular}
+
+pos: b (bot), c (center, def), t (top)
+
+
+\begin{tabular}{ l c r }
+  1 & 2 & 3 \\  
+  4 & 5 & 6 \\  
+  7 & 8 & 9 \\  
+\end{tabular}
+
+
+\begin{tabular}{|r|l|}
+  \hline
+  7C0 & hexadecimal \\  
+  3700 & octal \\   \cline{2-2}
+  11111000000 & binary \\  
+  \hline \hline
+  1984 & decimal \\  
+  \hline
+\end{tabular}

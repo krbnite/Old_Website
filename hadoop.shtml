@@ -1,0 +1,179 @@
+<html>
+<HEAD>
+<title>Hadoop Notes</title>
+<meta name="description" content="The professional page of Kevin Urban.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="js/script1.js"></script>
+<script type="text/javascript" src="js/script2.js"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ TeX: { extensions: ["cancel.js"] }});
+</script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</HEAD>
+
+<BODY>
+
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+<DIV id="content">
+
+<h2>Note and Thoughts on Udacity's Hadoop Course</h2>
+
+<p><b>What is Hadoop?</b><br/>
+(Core) Hadoop = HDFS + MapReduce<br/>
+-- HDFS: hadoop distributed file system<br/>
+-- store in HDFS, process with MapReduce (process data where it is stored rather than retrieving it from a central server)</P>
+
+<hr/>
+<p><b>What is the Hadoop Ecosystem?</b><br/>
+Hadoop Ecosystem = Core Hadoop + Software-that-has-sprung-up-around-Hadoop</p>
+
+<p>For example, to write MapReduce [MR] code, you need to know a lang like Python or Java, 
+but not everyone is a skilled programmer, although they might know how to issue SQL queries. 
+This led to other open source projects, e.g., Hive or Pig,  made a way to connect these people to Hadoop. </p>
+
+<p>Hive: instead of writing mappers and reducers, in Hive you just write SQL-like queries, then Hive converts it into MR code</p>
+
+<p>Pig: an alternative to do what Hive does, but is in the form of a scripting language</p>
+
+<p>All kinds of additional software has been built in to enhance or support Hadoop's utility:<br/>
+<ul>
+	<li> Impala: Hive and Pig are still using MR, which can take a while on big data; SQL-like Impala queries circumvent MR and gets the data directly from HDFS</li>
+	<li>Sqoop: turns relational databases into HDFS</li>
+	<li>Flume: ingests data as it is generated and inserts it into HDFS</li>
+	<li>HBase: real-time data base built on top of HDFS</li>
+	<li>Hue: graphical front end to Hadoop</li>
+	<li>Mahout: a machine learning library</li>
+</ul>
+
+<p>The Hadoop ecosystem can get complex and it can then become hard to make the different parts talk. 
+To remedy this, Cloudera puts out a Hadoop distribution (just like there are multiple Unix/Linux distros, 
+there can be various Hadoop distros) called CDH; it is free and open source. For most people, 
+this ecosystem will get you up and running and is good enough (versus building your own ecosystem).
+
+<hr/>
+<p><b>What is HDFS?</b><br/>
+Put simply, HDFS is the <b>H</b>adoop <b>D</b>istributed <b>F</b>ile <b>S</b>ystem.
+(Just as UNIX has its own file system, Hadoop has one too --- specially designed for processing 
+large data sets in parallel.)</p>
+
+<p>HDFS: Motivating Example
+  <ul>
+		<li>-- You have a data file myData.txt that is 150 MB</li>
+		<li>-- in HDFS, this is saved in chunks (le 64MB) with separate names (blk_largeNumber)</li>
+		<li>-- in our case, we have blk_1 (64MB), blk_2 (64MB), blk_3 (22MB)</li>
+		<li>-- blocks get distributed to data nodes; the nameNode daemon keeps track w meta-data)</li>
+	</ul></p>
+
+<p>Possible weaknesses: network failure between data nodes, data node disk failure, nameNode failure. </p>
+<p>Data node failures:<br/>
+<center> Hadoop deals with potential weaknesses by using data redundancy: each block of data gets stored on 3 data nodes. If a single node fails, no problem; furthermore, if the node fails, the nameNode daemon takes notice and re-replicates those blocks on the cluster.</center></p>
+
+<p>NameNode failures: the data inaccessible (network failure to name node) and possibly lost forever (disk failure):<br/>
+<center> Solution: nameNode is backed up on a Network File System (NFS), which serves as a standby (so there should always be an Active NameNode and a Standby NameNode)</center></p>
+
+<hr/>
+<p><b>USING HADOOP HDFS</b><br/>
+The good news:
+<ul>
+	<li> all commands at CLI start with "hadoop fs"</li>
+	<li> commands are made purposely UNIX-y to reduce the learning curve</li>
+	<li> UNIX-y commands that are not built in can be piped into in the usual manner</li>
+</ul></p>
+
+<p>Some command line examples:
+<ul>
+	<li>list files in home directory on hadoop cluster: hadoop fs -ls {opt:directory name}</li>
+	<li>put data file from location on local machine into HDFS (FTP-like syntax): 
+	hadoop fs -put myPurchases.txt {opt:destinationFileNameAndOrDir}</li>
+	<li>get data from HDFS to put on your local machine (FTP-like syntax):
+	hadoop fs -get fileName</li>
+	<li> look at last few lines in data file on the HDFS:
+	hadoop fs -tail fileName</li>
+	<li> display all an HDFS file's contents:
+	hadoop fs -cat myPurchases.txt</li>
+	<li> rename a file on HDFS:
+	hadoop fs -mv oldFileName newFileName</li>
+	<li> delete a file on HDFS:
+	hadoop fs -rm fileName</li>
+	<li> create a directory on HDFS:
+	hadoop fs -mkdir myDir</li>
+</ul>
+
+<hr/>
+<p><b>USING HADOOP MapReduce</b><br/>
+MapReduce processes the data in HDFS. Importantly, it does this in a way such that one can take 
+advantage of parallel processing.</p>
+
+<p>Motivation: linearly processing a data file can take a long time.</p> 
+
+<p>Hadoop does not do linear processing; instead it breaks all of your data into little chunks 
+(\(\le\) 64MB). It then can process those chunks in parallel for many types of analysis.</p>
+
+<p>To learn how MapReduce works, it good to use a concrete example and some metaphors.<br/>
+Example: Sales for the year 2012
+
+Say you own stores located all over the U.S. that each make millions of sales each year.
+Suppose you have a large data set with entries like:
+<ul>
+	<li>2012-01-01 London Clothes 25.99</li>
+	<li>2012-01-01 Miami Music 12.15</li>
+	<li>2012-01-01 NYC Toys 3.10</li>
+	<li>2012-01-01 Miami Clothes 50.00</li>
+</ul></p>
+
+<p>An obvious thing you might want to do with this data set is to compute the revenue
+at all locations for the year. The traditional way of doing this is with a hash table
+(aka associative array), which can use up all your memory and take a very long time.</p>
+
+<p>If you carefully consider the problem, it is clear that this situation is well-suited for
+parallel processing.  With MapReduce, instead of having one person (the hash table approach) reading the data file, you have multiple people doing it -- the mappers and the reducers.</p>
+
+<p>The mappers are each given a chunk of data s.t. all mappers can work at the same time over a small part of the full task; each mapper will make a pile of cards for each location</p>
+
+<p>The reducers are each responsible for a particular location (again, we are doing parallel --- instead of operating over locations linearly, location sums are computed in parallel); the reducers go to each mapper and retrieve the pile for their store, taking the small piles and creating a large pile; all there is left to do for the reducer is some over their large pile.</p>
+
+<p>Mappers each deal with a small amount of data and work in parallel; the output of this is called "intermediate records" (the index cards from above), which have (key, value) pairs (in our ex, the key was the location and the value was the $ amt of the sale). Once mappers have finished, a phase called "shuffle and sort" takes place: the shuffle is the movement of the intermediate records from the mappers to the reducers; the sort is the reducers organizing the records into sorted order.
+Finally, each reducer works on one set of records at a time (one pile of cards); it gets the key and list of all the values associated with that key; it then processes those values in some prescribed way (we added up the sales); then the reducer writes out the final results back to the HDFS.</p>
+
+<p>What if you wanted output in sorted order? Bad idea: use one reducer (since a reduces sorts its own work; this does NOT scale well). Good idea: use an extra step: (see instructor notes about parsers......)
+
+
+<hr/>
+<p><b>The Hadoop Daemons</b><br/>
+Daemons: piece of code running all the time</p>
+
+<ul>
+	<li>the data nodes</li>
+	<li>the namenode</li>
+	<li>the job tracker</li>
+	<li>the task trackers (one on each cluster node)</li>
+</ul>
+
+<p>When using MapReduce, you submit a request to the jobtracker, which splits the work into mappers and reducers
+<p>The task trackers actually runs the map and reduce tasks; since there is a task tracker on each machine, the most usual method is to have the task tracker on a single machine deal with the data tasks on that machine (although this isn't always the case since the task tracker can already be busy)
+
+
+<hr/>
+<p><b>Hadoop Streaming</b><br/>
+	- a feature of Hadoop that allows you to write your MapReduce code in almost any language you like
+
+
+
+
+
+
+
+
+
+</div><!--content-->
+</div><!--container-->
+
+
+</BODY>
+</HTML>

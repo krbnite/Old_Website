@@ -1,0 +1,80 @@
+<HTML>
+
+<HEAD>
+<TITLE>My IDL Libraries</TITLE>
+<meta name="description" content="A list of my IDL libraries and functions.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="../js/script1.js"></script>
+<script type="text/javascript" src="../js/script2.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</HEAD>
+
+
+<BODY BGCOLOR='white'>
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="../ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+<div id="content">
+	
+	<CENTER>
+		<hr/>
+		<b>INTERMAGNET Library</b>
+		<TABLE BORDER="1">
+		  <TR> 
+				<TD>Collate_IMO_Data</TD>
+			</TR>
+			<TR>
+				<TD>Get_IMO_CGM</TD>
+			</TR>
+			<TR>
+				<TD>Get_IMO_Day</TD>
+			</TR>
+			<TR>
+				<TD>Get_IMO_Params</TD>
+			</TR>
+			<TR>
+				<TD>Get_IMO_xy2ne</TD>
+			</TR>
+			<TR>
+				<TD>get_lshell</TD>
+			</TR>
+			<TR>
+				<TD>GetImoCgm</TD>
+			</TR>
+			<TR>
+				<TD>Imo_Cnv2Ne</TD>
+			</TR>
+			<TR>
+				<TD>Imo_Cnv_xy2ne</TD>
+			</TR>
+			<TR>
+				<TD>Imo_Coords</TD>
+			</TR>
+			<TR>
+				<TD>Imo_File_List</TD>
+			</TR>
+			<TR>
+				<TD>Imo_show_L</TD>
+			</TR>
+			<TR>
+				<TD>Locate_IMO</TD>
+			</TR>
+			<TR>
+				<TD>Which_IMO</TD>
+			</TR>
+		</TABLE>
+	</CENTER>
+
+</div><!--id="content"-->
+</div><!--id="container"-->
+
+</body>
+</html>
+
+
+					
+
+

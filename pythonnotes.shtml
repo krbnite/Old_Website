@@ -1,0 +1,180 @@
+<html>
+<HEAD>
+<title>Python Notes</title>
+<meta name="description" content="The professional page of Kevin Urban.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="js/script1.js"></script>
+<script type="text/javascript" src="js/script2.js"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ TeX: { extensions: ["cancel.js"] }});
+</script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</HEAD>
+
+<BODY>
+
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+<DIV id="content">
+
+<h2>Python Notes...</h2>
+<ul>
+	<li>I homebrewed python</li>
+	<li>I pip installed: numpy, (MatLab-like stuff), pandas (R-like stuff) [dependencies:
+	python-dateutil, pytz], matplotlib [dependencies: pyparsing, nose, funcsigs, pbr, mock],
+	SciPy, scikit-learn</li>
+	<li>Useful pre-packaged libraries: re (regular expressions), sys, os, argparse, gzip, logger,
+	itertools, collections (for defaultdict)</li>
+	<li>Working on IDL-R-Python-MatLab/Octave-Bash Rosetta Stone</li>
+</ul>
+
+<hr/>
+<h2>Notes (Derek Banas)</h2>
+-- <a href="https://www.youtube.com/watch?v=N4mEzFDjqtA">https://www.youtube.com/watch?v=N4mEzFDjqtA</a>
+
+<pre>
+List:    myList = [1,'a',2,'b']
+* Elements can be anything
+* can add and remove elements (myList.remove(x), myList.append(x), 
+myList.insert(index,x), myList1+myList2)
+* length of list:  len(myList)
+* can be converted to tuple:  myTuple = tuple(myList)
+* min/max: alphanumeric
+</pre>
+
+<hr/>
+<pre>
+Tuple:     myTuple = (1,'a',2,'b')
+* like a list, but more rigid --- cannot remove, insert, append
+* does have concatenation:  tuple1+tuple2
+* tuple length:  len(myTuple)
+* can be converted to list:  myList = list(myTuple)
+* min/max: alphanumeric
+</pre>
+
+<hr/>
+<pre>
+Dictionaries (aka Maps):  myDict = {'a': 1, 'b': 2}
+* this is basically a hash: key-value pairs
+* delete a key-value:   del myDict['a']
+* length of dictionary:  len(myDict)
+* seems like print(myDict['a']) and print(myDict.get('a')) do same thing....
+* get keys:   myDict.keys()
+* get values:  myDict.values()
+</pre>
+
+
+<hr/>
+<pre>
+Objects
+
+class Animal: 
+__name = ''    # two underscores means the var is private
+__height = 0   # to access or change, need methods
+__weight = 0   # (this is called encapsulation)
+__sound = 0  
+
+# Constructor  -- initializes the Animal object
+def __init__(self,name,height,weight,sound)
+# we mandated that all private vars must be set upon initiation
+self.__name = name
+self.__height = height
+self.__weight = weight
+self.__sound = sound
+
+# Setters and Getters (allows to access private vars)
+def set_name(self, name):
+self.__name = name
+def get_name(self)
+return self.__name
+def set_height(self, height):
+self.__height = height
+def get_ height(self)
+return self.__height
+def set_weight(self, weight):
+self.__weight = weight
+def get_ weight(self)
+return self.__weight
+def set_sound(self, sound):
+self.__sound = sound
+def get_ sound(self)
+return self.__sound
+
+# (something to do with polymorphism)
+def get_type(self):
+print('Animal')
+
+# print method (what should print to screen as a summary of object?)
+def toString(self):
+return "{} is {} cm tall, {} kg, and says {}".format(self.__name, 
+self.__height, self.__weight, self.__sound)
+
+
+
+cat = Animal('Luna',33,10,'Meow')
+print(cat.toString())
+</pre>
+
+
+<hr/>
+<pre>
+INHERITANCE
+* all this means is you are going to define a new class based on an old class, and that the new class will inherit all features of the old class + whatever more you want to add
+
+class Dog(Animal):
+__owner = ''
+def __init__(self,name,height,weight,sound,owner):
+self.__owner = owner
+super(Dog,self).__init__(name,height,weight,sound)
+def set_owner(self,owner):
+self.__owner = owner
+def get_owner(self)
+return self.__owner
+def get_type(self)
+print('Dog')
+# can overwrite functions from the parent class, if desired
+# function/method overwriting
+def toString(self):
+return "{} is {} cm tall, {} kg, and says {}. His owner is {}".format(self.__name, 
+self.__height, self.__weight, self.__sound, self.__owner)
+
+# method overloading (basically the ability to use or not use keywords in IDL)
+# he calls how_many an "attribute"
+def multiple_sounds(self, how_many=None):
+if how_many is None: 
+print(self.get_sound())
+else:
+print(self.get_sound() * how_many)
+
+spot = Dog('Spot',33,27,'Ruff','Derek')
+</pre>
+
+<hr/>
+<pre>
+Polymorphism
+* allows you to refer to objects as their super class
+
+class animalTesting:
+def get_type(self,animal):
+animal.get_type()
+
+test_animals = animalTesting()
+test_animals.get_type(cat)
+test_animals.get_type(spot)
+</pre>
+
+
+
+
+</div><!--content-->
+</div><!--container-->
+
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,39 @@
+<HTML>
+
+<HEAD>
+<TITLE>My IDL Libraries</TITLE>
+<meta name="description" content="A list of my IDL Libraries and functions.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="../js/script1.js"></script>
+<script type="text/javascript" src="../js/script2.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</HEAD>
+
+
+<BODY BGCOLOR='white'>
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="../ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+<div id="idltop">
+  These libraries contain loads of helpful and convenient functions for working 
+	with data sets from ground-based magnetometers (<a href="http://www.intermagnet.org/index-eng.php">INTERMAGNET</a>, 
+	<a href="http://www.sienageospace.dreamhosters.com/">Antarctic AGOs</a>),
+	spaceborne instruments (the plasma and magnetic field instruments on <a href="http://www.srl.caltech.edu/ACE/ASC/">
+		ACE</a>, the <a href="http://rbspice.ftecs.com/">RBSPICE</a> instrument on the 
+	<a href="http://vanallenprobes.jhuapl.edu/index.php">Van Allen Probes</a>), to polar boundary data
+	provided by other researchers (e.g., <a href="http://www.antarctica.ac.uk/bas_research/our_research/az/magnetic_reconnection/auroral_boundary_data.html">Longden UV/FUV boundaries</a>, <a href="http://sd-www.jhuapl.edu/Aurora/dataset_list.html">Newell
+		DMSP boundaries</a>). More importantly, my Signal Analysis package has many
+  useful analysis and visualization tools for time series and spectral
+	analysis. 
+
+</div><!--id="idltop"-->
+</div><!--id="container"-->
+</BODY>
+</HTML>
+
+
+					
+

@@ -1,0 +1,53 @@
+<HTML>
+
+<HEAD>
+<TITLE>My IDL Libraries</TITLE>
+<meta name="description" content="A list of my IDL Libraries and functions.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="../js/script1.js"></script>
+<script type="text/javascript" src="../js/script2.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</HEAD>
+
+
+<BODY BGCOLOR='white'>
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="../ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+<div id="content">
+	
+	<CENTER>
+		<hr/>
+		<b>Radiation Belt Storm Probes Ion Composition Experiment</b>
+		<TABLE border="1">
+		  <TR> 
+				<TD>Get_FEDO</TD>
+			</TR>
+			<TR>
+				<TD>Get_FEDU</TD>
+			</TR>
+			<TR>
+				<TD>Get_FEO</TD>
+			</TR>
+			<TR>
+				<TD>Plot_4Chan</TD>
+			</TR>
+			<TR>
+				<TD>Plot_FEDU</TD>
+			</TR>
+		</TABLE>
+	</CENTER>
+
+</div><!--id="content"-->
+</div><!--id="container"-->
+
+</BODY>
+</HTML>
+
+
+					
+
+

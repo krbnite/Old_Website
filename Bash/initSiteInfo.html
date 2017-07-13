@@ -1,0 +1,94 @@
+<html>
+<HEAD>
+<title>IMOGET</title>
+<meta name="description" content="The professional page of Kevin Urban.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ TeX: { extensions: ["cancel.js"] }});
+</script>
+</HEAD>
+
+<BODY>
+
+<pre>
+#!/bin/bash
+
+# NAME: init_siteInfo
+# PURPOSE: Make siteInfo database for current project
+# INPUT:  $1 =  {(s)econds,(m)inutes}
+# 		  $2 = {(d)efinitive, (p)rovisional, (q)uasi-definitive, (v)ariation}
+# 		  $3 = 'yyyymmdd'
+#
+# OUTPUT:
+# MAIN IDEAS:
+########################################################
+# Ultimately, one might want to separate vars/params for a site that are time-independent from those that are time-dependent.
+# Time-independent Vars (barring any massively destructive catastophes)
+# Geodetic Lat & Lon, Geographic Lat & Lon, Elevation
+# Time-dependent Vars
+# CGM Lat & Lon, IGRF unit vex, magnetic midnight, and to a small extent Lshell; coord_sys even falls into this category since, although unlikely, a particular IMO can report their data in different coordinates whenever they want to.
+# Before AGU, I'm just putting everything in one file per day.
+#
+#
+# EXPORTING VARS
+# I learned that if you define a var in the bash environment using export, then other programs like R, Python, php, IDL, etc, have access to them via their "pass to unix" commands. For example:
+#       month=03
+# 		export year=2013
+#       echo 'spawn,"echo $year"' | idl -quiet
+#           2013
+#       echo 'spawn,"echo $month"' | idl -quiet
+#       # returns nothing but a blank space
+#
+# So in priv__input.bash, I now export all the vars... It works; priv__get_IGRF no longer needs to take $year, $month, and $dom as inputs. It can just run within this very script's environment.
+#
+########################################################
+########################################################
+idlq2 () { /Applications/exelis/idl82/bin/idl -quiet 2>/dev/null; }
+rvs () { r --vanilla --slave ; }
+
+# Format BASH vars and exports them: yyyymmdd, rez, and type; also ouput year, month, dom
+source priv__input.bash $1 $2 $3
+path2data="../data/processed/${year}/${month}"
+
+
+# Extract information from raw INTERMAGNET files
+# -- siteNames, geodetic lat & lon, elevation, coord_sys, geocentric lat & lon
+echo "yyyymmdd='$yyyymmdd'; rez='$rez'; type='$type'; source('priv__get_imo_params.R')" | r --vanilla --slave
+# For future: I very likely no longer need to echo the vars into R since I now export the vars in priv__input.bash; this makes it so IDL, R, Python, etc, can use their system commands to get the var. Echoing is fine, but it's just a little wordy for a file like this used solely to glue together different verbs/fucntions.
+
+
+########################################################
+# Use GEOPACK library in IDL to get the IGRF unit vectors
+# NOTE: it just occurred to me that some of this information (eg., everything from the Rscript above) is static/unchanging information, while some of it (like these IGRF unit vectors) are epoch-dependent
+# So maybe there should be a static_params file and a epoch_params file
+echo; echo "Generating IGRF unit vectors."; echo
+source priv__get_IGRF.bash | idlq2 | paste ${path2data}/${yyyymmdd}_imo_params.txt - > temp.txt
+cat temp.txt | awk 'BEGIN{OFS=" "}{$1=$1; print}' > ${path2data}/${yyyymmdd}_imo_params.txt
+
+
+########################################################
+# LShell
+echo; echo "Generating L shells."; echo
+source priv__get_L.bash | idlq2 | paste ${path2data}/${yyyymmdd}_imo_params.txt - > temp.txt
+cat temp.txt | awk 'BEGIN{OFS=" "}{$1=$1; print}' > ${path2data}/${yyyymmdd}_imo_params.txt
+rm temp.txt
+
+
+########################################################
+# data_clean_up / make XYNEZ table
+# rvs is defined in my .bash_profile (it represents r --vanilla --slave)
+echo "Now cleaning up the data."
+rvs < priv__data_clean_up.R
+# NOTE: in future, I might have siteData save without the three time cols for each site since this is heavily replicated information in each siteData file; that is, the time cols (data,time,doy) is the same for each site and, moreover, the date and doy cols repeat the day's date/doy 3600 times; it would be more efficient to simply have a function/code that generates this kind of thing, if ever necessary.
+
+
+#######
+# For now -- can take out later (separate set-up from data analysis)
+idlq2 < priv__getBiasedSpectra.pro
+idlq2 < priv__periodogram.pro
+</pre>
+
+
+</body>
+</html>

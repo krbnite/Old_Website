@@ -1,0 +1,97 @@
+
+
+1. Open up Chrome
+2. Click on 3-barred square in upper right.
+3. Scroll down to More Tools
+4. Click on Developer Tools
+
+This amazing interface opens up that allows you learn about and edit any page on
+the web. 
+
+(i) There is a magnifying glass icon: click on it and move your cursor to a part of the page you want to learn about and click on it!
+
+(ii) Pick any color by clicking on the color square in the DT interface; a color space will open. Also, you can shift-click to learn about the specifics of the color in Hex, RGB, and HSL.
+
+------------
+
+Designing for mobile.
+1. Get your Android, a microUSB-to-USB cable, and your computer.
+2. Turn on Developer Mode for your Android Device (see manual); usually it is in Settings, About This Device, and click on Build Number 7 times.
+3. Turn on USB debugging located in Developer Options.
+4. Have right tools installed: on laptop Chrome Canary, on Android Chrome Beta.
+ -- actualy Canary is just the "bleeding edge" Chrome, so not totally necessary
+ -- Beta is basically the same thing, but for the Android
+5. Open up Chrome and go to chrome://inspect
+6. Make sure site is up on mobile, then connect to laptop via USB (confirm)
+7. You now have control of the tabs on your Android from your laptop
+8. You can inspect the webpages up on your Android; in fact, you can use the screencast option that simulates your mobile device screen on your laptop
+9. You now have all the features from Developer Tools availabel to help you develop for a mobile device.
+
+Port Forwarding
+ -- running your site from a local server
+1. To do this, make sure you have a server running on your local machine.
+ -- teacher uses Python's SimpleHTTPServer on port 9999 by entering in the Terminal: python -m SimpleHTTPServer 9999
+ -- check if its working: in browser go to: 
+     localhost:9999
+2. To access this on mobile device, set up port forwarding: go back to Chrome Inspect page, click on "port forwarding" (should see it set up for you), click on "enable", click on "done"
+ -- refresh page to see ports being used
+ 3. Now use mobile device and go to localhost:9999
+  -- wa la!
+
+
+Philosophy: Mobile First
+It is not that you purposely design for mobile devices, but that the simplicity that mobile devices demand fosters a design strategy: start simple and consider only the most important elements, then add the gravy if you have space.
+
+It used to be possible to consider web design as painting on a blank canvas. Not nowadays. The canvas is not static: you must design simultaneously for many canvases.
+
+If you design for a fixed canvas, like I originally did, then: (i) a mobile screen maybe smaller than that canvas, forcing user to pan and zoom; (ii) a mobile screen may be larger, leaving whitespace; (iii) content may only fit on mobile in landscape orientation.
+
+Originally, people tried to cheat their way to a solution by telling mobile browser that the page was really a different size... Instead of 1024x768, the mobile browser would be fooled into thinking it was smaller....
+This allows you tell mobile browser how wide the page shoulde be on small screen:
+(Proper rescales...)
+<meta name="viewport" content="width=700">
+-- mobile browser defaults to width=980
+There is also a height option for viewports...though most only use width parameter.
+*** NOTE that desktop/laptop browsers IGNORE this meta tag; i.e., the viewport tag is specifically added for mobile devices
+
+When using Developer Tools, if you change the viewport width, to see change on mobile device, you must close tab and open it back up on the mobile device...
+
+Using the viewport meta tag is cool, but has some down sides:
+* your content is almost always going to be rescaled
+* users of some devices will have to zoom
+
+
+TRULY SCALABLE WEBPAGES
+1. HTML, by default, floats text.
+2. The viewport metatag is not the best solution because after resizing webpage, it might shrink text to a size that is too small to comfortably read.
+3. One cool way to use the viewport metatag is to set the width to device-width:
+      content="width=device-width"
+  -- this forces browser to make intelligent decisons about the layout instead of forcing the layout to a fixed size
+4. Because of iOS, you actually have to use this:
+      content="width=device-width,initial-scale=1"
+	 -- the iOS does not properly rescale in portrait orientation without this
+	 -- this above tag is the RIGHT WAY to get started with MODERN, FLUID DESIGN
+5. Andriods have their fault to:
+      -- they do not scale properly with overflowed pages
+      -- there is a fix, but it disables the user from zooming
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1
+			-- BEST ADVICE: design such that overflow does NOT occur and DO NOT use minimum or maximum scales
+
+
+PAGE LAYOUT WRT VIEWPORTS: viewport units
+(1) Regular ViewPort Units
+1vw = 1% of viewport width
+1vh = 1% of viewport height
+e.g., #navbar { width: 25vw; height: 85vw}
+ -- oh wow, I changed every width in my .css file that was 1024px to 100vw
+ -- it now looks amazing on both desktop and phone
+(2) Vmin and Vmax units
+1vim = min{1vw,1vh}
+1vmax = max{1vw,1vh}
+   -- helps make layouts that are consistent across portrait/landscape modes
+EXAMPLE:
+<style>
+  button { width: 33vmin; height: 33vmin}
+</style>
+
+

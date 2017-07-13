@@ -1,0 +1,61 @@
+So far these notes are just from Wikipedia; open Griffiths and Jackson and get
+some more info
+--------------------------------------------------
+
+* the Poynting vector represents the directonal energy flux density (the rate
+of energy transfer per unit area, in units of Watts per square-meter) of an
+electromagnetic field
+
+* the usual ("Abraham") form of the Poynting vector is:
+$\vec{S}=\vec{E}\times\vec{H}$
+* but under the right conditions, this simplifies to:
+$\vec{S}=\frac{1}{\mu_{0}}\vec{E}\times\vec{B}
+* actually, there is also a Minkowski form of the Poynting vector as well,
+* which in free space looks like:
+$S=\frac{1}{\eps_{0}\mu_{0}}\vec{D}\times\vec{B}=c^{2}\vec{D}\times\vec{B}$
+-- in natural units, where c=1, it is not clear which form of the Poynting
+vector (Abraham or Minkowski) should be considered the true vector
+representing electromagnetic energy flow; Pfeifer [2001], "Momentum of an
+electromagnetic wave in dielectric media," summarizes the controversy, and
+also helps resolve it a bit (read paper and report details)
+
+
+Poynting's Theorem
+* note that the theorem below pertains only to linear, nondispersive, and
+uniform materials (i.e., if the constitutive relations can be written with
+constant permissivity and permeability)
+-- a generalization to dispersive media is possible (at the cost of extra
+terms and a loss of a clear physical interpretation)
+Let $u=\frac{1}{2}\left(\vec{E}\vdot\vec{D}+\vec{B}\vdot\vec{H}\right)$; this
+represents the electromagnetic energy density (a function of space and time).
+We have a conservation law like so:
+$\frac{\partial{u}}{\partial{t}} = -\nabla\vdot\vec{S} -
+\vec{J}_{f}\vdot\vec{E}$
+-- $\vec{J}_{f}$ is the current density of free charges
+-- the first term on the RHS represents the net electromagnetic energy flow
+into a small volume, while the second term represents the subtracted portion
+of the work done by free electrical currents that are not necessarily
+converted into electromagnetic energy (dissipation, heat). In this definition,
+bound electrical currents are not included in this term, and instead
+contribute to $\vec{S}$ and u.
+
+------
+
+For ionospheric calculations of Poynting flux, there are various types of 
+Poynting flux calculations that are done: for example, one can look at
+Ex$\Delta$B, where $\Delta$B is the magnetic field perturbation due to
+field-aligned currents [FACs]. So in this case, we are looking at the
+FAC-associated Poynting flux and ignored the Poynting flux associated with the
+quasi-static main geomagnetic field. Alternatively, one can look at Poynting
+flux as a function of frequency, or the Poynting flux of a given frequency
+band, e.g., one can compute the Poynting flux due to the ULF Pc5 frequency
+band.  
+
+
+
+
+
+
+REFERENCES
+Huang, Cheryl. Personal Communication (2015-Jan-27).
+* look at Griffiths and Jackson

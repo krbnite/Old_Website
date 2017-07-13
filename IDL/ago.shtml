@@ -1,0 +1,150 @@
+<HTML>
+
+<HEAD>
+<TITLE>My IDL Libraries</TITLE>
+<meta name="description" content="A list of my IDL Libraries and functions.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="../js/script1.js"></script>
+<script type="text/javascript" src="../js/script2.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</HEAD>
+
+
+<BODY BGCOLOR='white'>
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="../ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+<div id="content">
+	<CENTER>
+		<hr/>
+		<b>Anarctic Automated (and Manned) Geophysical Observatories: the AGO Library</b>
+		<TABLE border="1">
+		  <TR> 
+				<TD>AgoMLT</TD>
+				<TD>Returns a structure filled with hordes of data products organized
+					by MLT in seconds for simple time domain data products and in 24 independent
+					1-hr MLT bins for spectral data products. 
+					Simply set the start and final dates and which site. 
+					(Dependencies: agoMltDay, agoMltDays, ...) 
+					<p>NOTE: write more detailed description!</TD>
+			</TR>
+			<TR>
+				<TD>AgoMltDay</TD>
+				<TD>This program actually does all the hard work for AgoMlt and AgoMltDays. That
+					is, this program computes all the various data products I frequently work with 
+					as a function of MLT for a given day. It loads in two UT days such that it can
+					compute spectral data products for 24 1-hr MLT bins centered, each centered on
+					the beginning of the hour, e.g., the bin for 0300 is the clopen interval [0230,0330).
+					AgoMltDays simply wraps over AgoMltDay and collates the data products into daily columns
+					(i.e., returns NDayxN matrices, where N is number of elements in data product), 
+					whereas AgoMlt wraps over AgoMltDays in order to return NDayxN vectors. AgoMlt is
+					more useful when wanting to plot multi-day spans of a data product, where AgoMltDays
+					is useful when you want to compute MLT statistics for the 24 independent 1-hr 
+					bins.
+				</TD>
+			</TR>
+			<TR>
+				<TD>AgoMltDays</TD>
+				<TD> See AgoMltDay. (Should change name to something more suggestive; same
+					with AgoMlt.)</TD>
+			</TR>
+			<TR>
+				<TD>AgoPfEf</TD>
+				<TD>Prints to screen estimated Poynting fluxes and energies decomposed
+					by ULF frequency band with option to save. </TD>
+			</TR>
+			<TR>
+				<TD>AgoPfVsDst</TD>
+
+			</TR>
+			<TR>
+				<TD>AgoRPSD</TD>
+
+			</TR>
+			<TR>
+				<TD>AgoUT</TD>
+
+			</TR>
+			<TR>
+				<TD>AgoUtDay</TD>
+
+			</TR>
+			<TR>
+				<TD>GetAAgo</TD>
+
+			</TR>
+			<TR>
+			  <TD>GetAgo</TD>
+
+			</TR>
+			<TR>
+				<TD>GetAgoCgm</TD>
+
+			</TR>
+			<TR>
+				<TD>GetAgoMlt</TD>
+
+			</TR>
+			<TR>
+				<TD>GetAgoSite</TD>
+
+			</TR>
+			<TR>
+				<TD>GetAMgo</TD>
+
+			</TR>
+			<TR>
+				<TD>GetP2Clim97, P1Clim9899, P4Clim9899, P5Clim989900</TD>
+
+			</TR>
+			<TR>
+				<TD>P1Chan6Check9899, P2Chan6Check9697, P4Chan6Check9899, P5Chan6Check989900</TD>
+
+			</TR>
+			<TR>
+				<TD>P1MltData, P2MltData, P4MltData, P5MltData   </TD>
+
+			</TR>
+			<TR>
+				<TD>P1MltWH9899, P2MltWH9697, P4MltWH9899, P5MltWH989900</TD>
+			
+			</TR>
+			<TR>
+				<TD>PlotAgo</TD>
+
+			</TR>
+			<TR>
+				<TD>PrettyPSD</TD>
+
+			</TR>
+			<TR>
+				<TD>QTAgo</TD>
+
+			</TR>
+			<TR>
+				<TD>RdAgo</TD>
+
+			</TR>
+			<TR>
+				<TD>Weatherwax</TD>
+
+			</TR>
+			<TR>
+				<TD>WhichAGO</TD>
+
+			</TR>
+		</TABLE>
+	</CENTER>
+
+</div><!--id="content"-->
+</div><!--id="container"-->
+
+</BODY>
+</HTML>
+
+
+					
+

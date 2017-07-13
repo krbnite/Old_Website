@@ -1,0 +1,111 @@
+<html>
+<!--My Math Page-->
+
+<HEAD>
+  <title>Mathematical Physics</title>
+  <meta name="description" content="The professional page of Kevin Urban.">
+  <meta name="viewport" content="width=device-width">
+  <link rel="image_src" href="images/regularMe-sepia.jpg" />
+  <script type="text/javascript" src="js/script1.js"></script>
+  <script type="text/javascript" src="js/script2.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</HEAD>
+
+<BODY>
+<DIV id="container">
+
+<DIV id="nav">
+<!--#include virtual="ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+<div id="content">
+<p>At one point I thought I'd dive deep into the realm of pure mathematics. 
+While doing my master's in physics, I tried to fit in as many math courses as 
+possible: real/complex analysis, differntiable manifolds, topology, abstract 
+algebra. Mathematics can be addicting, especially when you get to this profound,
+abstract stuff at the advanced undergraduate / graduate level: one cannot help 
+but feel that there are many parts of mathematics just waiting for applied 
+scientists, engineers, and data scientists to discover and plunder! 
+
+At that time I began doing (read: trying to do) fractional calculus research 
+with Denis Blackmore. Somehow and some way that got me into operator algebras,
+quantum groups, and ultimately noncommutative geometry. The basic premise of 
+noncommutative geometry has to do with .... What a cool thought. Something 
+to meditate on.
+
+<p>While getting into all these different areas of mathematics, I tried to 
+attend various seminars and conferences on the subjects. I wanted to immerse 
+myself in it so maybe I'd learn it quicker. Not sure if that happened or not 
+given the heiroglyphic look of the powerpoint presentations barely got better 
+over time, but I had fun doing it.
+
+<p>I attended a week-long <a href="http://www.uoregon.edu/~njp/cft.html">
+	workshop</a> on operator algebras and conformal field theory hosted at the 
+University of Oregon this past summer; it was comprised of 
+<a href="http://math.mit.edu/~eep/CFTworkshop/">lectures</a> and many informal 
+discussions in between.
+
+<p>Later on I attended the <a href="http://www.math.dartmouth.edu/~ecoas/">East Coast Operator Algebra Symposium</a> (ECOAS) at Dartmouth College. You can get an idea of the fun from this <a href="http://www.math.dartmouth.edu/~ecoas/titles+abs.pdf">synopsis</a>. 
+
+<p>Really, I was just into going to mathematics seminars in general and trying to follow along. Just before I left for New Hampshire for ECOAS, I managed to sqeeze in a conference at CUNY Graduate Center on <a href="http://userhome.brooklyn.cuny.edu/rchamanara/Linda/index.htm">hyperbolic geometry and conformal dynamics</a> to get a taste for other things going on in the world of math.
+<hr>
+
+<p>This was all happening during a period of bibliomania --- i.e., I was buying way too many books. 
+
+<TABLE>
+	<TR><TD>
+			Averson, William. 1976 <a href="http://books.google.com/books?id=zRep59fhoGkC&printsec=frontcover&dq=an+invitation+to+c*-algebras&hl=en&ei=kV1cTO_0H4G88gaGlaX5AQ&sa=X&oi=book_result&ct=book-thumbnail&resnum=1&ved=0CC4Q6wEwAA#v=onepage&q&f=false">An Invitation to C*-Algebras.</a> Vol. 39. Graduate Texts in Mathematics. Springer. 
+	</TD></TR>
+	<TR><TD>
+			Conway, John B. 1990. <a href="http://books.google.com/books?id=c8TNZPhO1bQC&printsec=frontcover&dq=a+course+in+functional+analysis&hl=en&ei=f19cTO_iLcKB8gbV6_yDAw&sa=X&oi=book_result&ct=book-thumbnail&resnum=1&ved=0CDUQ6wEwAA#v=onepage&q&f=false">A Course in Functional Analysis.</a> Vol. 96. Graduate Texts in Mathematics. Springer.
+	</TD></TR>
+	<TR><TD>
+			Hatcher, Allen. 2001. <a href="http://books.google.com/books?id=xsIiEhRfwuIC&printsec=frontcover&dq=algebraic+topology+hatcher&hl=en&ei=yV5cTOO0GIOB8gbK-LiLAg&sa=X&oi=book_result&ct=book-thumbnail&resnum=1&ved=0CCsQ6wEwAA#v=onepage&q&f=false">Algebraic Topology. </a>Cambridge University Press.
+	</TD></TR>
+	<TR><TD>
+			Geroch, Robert. 1985. <a href="http://books.google.com/books?id=wp2A7ZBUwDgC&printsec=frontcover&dq=geroch+mathematical+physics&hl=en&ei=_mZcTMDiI4H68AbW36CCAg&sa=X&oi=book_result&ct=book-thumbnail&resnum=1&ved=0CDUQ6wEwAA#v=onepage&q&f=false">Mathematical Physics.</a> Chicago Lectures in Physics. The University of Chicago Press.
+	</TD></TR>
+	<TR><TD>
+			Lee, John M. 2000. <a href="http://books.google.com/books?id=9D8BTmRUNKoC&printsec=frontcover&dq=introduction+to+topological+manifolds&hl=en&ei=t2BcTNnYOIL68AbV84T4Ag&sa=X&oi=book_result&ct=book-thumbnail&resnum=1&ved=0CDYQ6wEwAA#v=onepage&q&f=false">Introduction to Topological Manifolds.</a> Vol. 202. Graduate Texts in Mathematics. Springer.
+	</TD></TR>
+	<TR><TD>
+			Nakahara, M. 2003. <a href="http://books.google.com/books?id=cH-XQB0Ex5wC&printsec=frontcover&dq=geometry,+topology,+and+physics&hl=en&ei=mGdcTPHOEoOB8gb9k-WOAg&sa=X&oi=book_result&ct=book-thumbnail&resnum=1&ved=0CC0Q6wEwAA#v=onepage&q&f=false">Geometry, Topology, and Physics.</a> 2nd ed. Graduate Student Series in Physics. Taylor & Francis Group.
+	</TD></TR>
+	<TR><TD>
+		Schottenloher, Martin. 2008. <a href="http://books.google.com/books?id=PkEqFYpQNggC&printsec=frontcover&dq=a+mathematical+introduction+to+conformal+field+theory&hl=en&ei=vF9cTPOjD4G78gaO89DMAg&sa=X&oi=book_result&ct=book-thumbnail&resnum=1&ved=0CCwQ6wEwAA#v=onepage&q&f=false">A Mathematical Introduction to Conformal Field Theory.</a> Vol. 759. Lecture Notes in Physics. Springer.
+  </TD></TR>
+</TABLE>
+
+
+<hr>
+Other Noncommuative Geometry Stuff:
+<TABLE>
+	<TR><TD>
+		<a href="http://www.alainconnes.org/en/">Alain Connes' website</a>
+	</TD></TR>
+	<TR><TD>
+	<TR><TD>
+		Ginzburg, Victor. 2005. <a href="http://arxiv.org/abs/math.AG/0506603">Lectures on Noncommutative Geometry</a> 
+	</TD></TR>
+	<TR><TD>
+		Connes, Alain, and Matilde Marcolli: <a href="http://arxiv.org/abs/math.QA/0601054">A Walk in the Noncommutative Garden</a>
+	</TD></TR>
+	<TR><TD>
+		Khalkhali, Masoud. 2004. <a href="http://arxiv.org/abs/math.KT/0408416">Very Basic Noncommutative Geometry</a> 
+	</TD></TR>
+	<TR><TD>
+		Marcolli, Matilde. 2004. <a href="http://arxiv.org/abs/math.QA/0409520">Lectures on Arithmetic Noncommutative Geometry</a>
+	</TD></TR>
+	<TR><TD>
+		Landi, Giovanni. 1997. <a href="http://arxiv.org/abs/hep-th/9701078">An Introduction to Noncommutative Spaces and their Geometry</a>
+	</TD></TR>
+</TABLE>
+
+
+</div><!--id="content"-->
+<div id="footer">
+	Hey!
+</div><!--id="footer"-->
+</div><!--id="container"-->
+</body>
+</html>

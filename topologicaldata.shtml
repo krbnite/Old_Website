@@ -1,0 +1,249 @@
+<html>
+<HEAD>
+<title>Topological Data Analysis</title>
+<meta name="description" content="The professional page of Kevin Urban.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="js/script1.js"></script>
+<script type="text/javascript" src="js/script2.js"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ TeX: { extensions: ["cancel.js"] }});
+</script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</HEAD>
+
+<BODY>
+
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+
+<DIV id="content">
+
+<h2>Topological Data Analysis</h2>
+<p>When I was studying topology and differentiable manifolds, I was always saying: "Man,
+this stuff has so much potential. I want to go as far down the rabbit as possible and
+come back out with gems that I can use for my science." I knew I didn't exactly want to
+do pure mathematics research -- but I wanted to learn as much of it as I could, and
+extract from it some solid ideas that I could apply to the real world. 
+
+<p>Ultimately, I found out about <a href="http://www.ayasdi.com/">Ayasdi</a> and have been interested in what
+they're doing for quite some time now --- but in bits pieces since I have my own work I have to do.</p>
+
+
+<hr/>
+My math advisor actually has worked on some computational topology topics:
+<ul>
+	<li><a href="https://carma.newcastle.edu.au/jon/Preprints/Books/Open%20Probs%20in%20Top/open2.pdf#page=501">
+		Computational Topology</a> (Warning: large pdf)</li>
+	<li><a href="http://www.polipapers.upv.es/index.php/AGT/article/view/1909">
+		Computational Differential Topology</a></li>
+</ul>
+
+
+<p>On this page I have notes I've collected over the years (note to self: find the
+notes you've collected over the years :-p)
+
+<hr/>
+<p><b>Some introductory material...</b></p>
+<p>Wikipedia
+<ul>
+	<li><a href="https://en.wikipedia.org/wiki/Topological_data_analysis">Topological Data Analysis</a></li>
+	<li><a href="https://en.wikipedia.org/wiki/Persistent_homology">Persistent Homology</a></li>
+	<li><a href="https://en.wikipedia.org/wiki/Computational_topology">Computational Topology</a></li>
+	<li><a href="https://en.wikipedia.org/wiki/Nerve_of_a_covering">Nerve of a Covering</a></li>
+	<li><a href="https://en.wikipedia.org/wiki/Betti_number">Betti Numbers</a></li>
+	<li><a href="https://en.wikipedia.org/wiki/Homology_(mathematics)">Homology</a></li>
+</ul></p>
+
+<p>Videos
+<ul>
+</ul></p>
+
+<p>Some blog posts
+<ul>
+	<li>DyingLoveGrape: Applying Topology to Data
+	<ul>
+		<li><a href="http://www.dyinglovegrape.com/math/topology_data_1.php">Part 1</a></li>
+		<li><a href="http://www.dyinglovegrape.com/math/topology_data_2.php">Part 2</a></li>
+		<li><a href="http://www.dyinglovegrape.com/math/topology_data_3.php">Part 3</a></li>
+	</ul></li>
+	<li><a href="https://shapeofdata.wordpress.com/">The Shape of Data</a> (very nice blog)</li>
+	<li><a href="https://normaldeviate.wordpress.com/2012/07/01/topological-data-analysis/">Normal Deviate: TDA</a></li>
+	<li><a href="https://normaldeviate.wordpress.com/2013/03/30/topological-inference/">Normal Deviate: Topological Inference</a></li>
+	<li><a href="http://mathoverflow.net/questions/141157/inference-using-topological-data-analysis-is-it-worth-it-for-a-regular-statisti">StackOverflow Notes on TDA</a></li>
+	<li><a href="https://shapeofdata.wordpress.com/2013/08/27/mapper-and-the-choice-of-scale/">Mapper and the Choice of Scale</a></li>
+</ul></p>
+
+<p><b>Presentation</b><br/>
+<ul>
+	<li><a href="http://www.math.utk.edu/~fernando/Students/GregClark/presentation.html#/">G. Clark</a> 
+	(this is not only a good quick reference, but a beautifully constructed presentation)</li>
+</ul>
+
+<p>Some e-Books</p>
+<ul>
+	<li><a href="http://www.ee.oulu.fi/research/imag/courses/Vaccarino/Edels_Book.pdf">Computational Topology:
+		an Introduction</a> (pdf)</li>
+	<li><a href="http://www.math.cornell.edu/~hatcher/AT/AT.pdf">Algebraic Topology</a> (Hatcher, pdf)</li>
+	<li><a href="https://books.google.com/books?hl=en&lr=&id=oKEGGMgnWKcC&oi=fnd&pg=PR11&dq=topology+for+computing+afra&ots=DxuCUXE190&sig=djSg8DHZr8e3Fbs14R0bK0BSZ64#v=onepage&q=topology%20for%20computing%20afra&f=false">Computing
+		for Topoology</a></li>
+</ul></p>
+
+<p>Courses</p>
+<ul>
+	<li><a href="http://web.cse.ohio-state.edu/~tamaldey/course/CTDA/CTDA.html">Ohio State</a></li>
+</ul>
+ 
+<hr/>
+<p><b>TDA in R</b><br/>
+<ul>
+	<li><a href="http://www.inside-r.org/packages/cran/phom/docs/phom">Persistent Homology in R</a></li>
+	<li><a href="http://cran.r-project.org/web/packages/TDA/vignettes/article.pdf">The Vignette</a></li>
+	<li><a href="http://www.r-bloggers.com/topological-data-analysis-with-r/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+RBloggers+%28R+bloggers%29">Topological Data Analysis with R</a> (J. Rickert)</li>
+</ul>
+</p>
+
+<p><b>TDA in Python</b><br/>
+<ul>
+	<li><a href="http://danifold.net/mapper/">Mapper</a></li>
+	<li><a href="http://www.mrzv.org/software/dionysus//">Dionysus</a> (in C++ w/ Python bindings)</li>
+	<li><a href="https://networkx.github.io/">NetworkX</a> (complex graph/network analysis)</li>
+	<li><a href="https://graph-tool.skewed.de/">Graph-Tool</a> (efficient network analysis)</li>
+</ul>
+</p>
+
+<p><b>TDA in Java</b><br/>
+<ul>
+	<li><a href="http://appliedtopology.github.io/javaplex/">JavaPlex</a></li>
+	<li><a href="http://www.math.duke.edu/~hadams/jplex/index.html">JPlex</a> (old version of JavaPlex)</li>
+</ul>
+
+<p><b>TDA from Command Line</b><br/>
+<ul>
+	<li><a href="https://code.google.com/p/phat/">pHat</a></li>
+	<li><a href="http://chomp.rutgers.edu/">CHomP</a></li>
+	<li><a href="http://www.sas.upenn.edu/~vnanda/perseus/index.html">Perseus</a></li>
+	<li><a href="http://www.graphviz.org/Documentation.php">GraphViz</a></li>
+</ul>
+</p>
+
+
+<h2>More about Ayasdi</h2>
+<ul>
+	<li><a href="http://www.ayasdi.com/blog/">Blog</a></li>
+	<li><a href="http://www.ayasdi.com/company/media/">List of News Articles</li>
+	<li><a href="https://www.youtube.com/channel/UCGAU91xtmFPC5AwQcsqQwjQ">YouTube Channel</a></li>
+	<li><a href="http://www.slideshare.net/ayasdi">SlideShare</a></li>
+	<li><a href="https://twitter.com/ayasdi">Twitter</a></li>
+</ul>
+
+<p><a href="http://www.ayasdi.com/blog/culture/kdnuggets-interview-anthony-bak-ayasdi-get-started-topology/">Cool interview with Anthony Bak</a></p>
+
+<p><b><a href="http://radar.oreilly.com/2015/07/data-has-a-shape.html">Data has a shape</a></b><br/>
+"...all machine learning algorithms solve optimization problems. The machine learning algorithm assumes a particular shape of the data for each problem. Then the optimization procedure finds the best parameters that make the data look like that shape. Topology does the reverse. Topology, even though it utilizes all these machine learning algorithms under the covers, allows you to discover the underlying shape of the data so that you don't have to assume it."
+
+<p><b>Associated Papers</b><br/>
+<ul>
+	<li><a href="https://www.birs.ca/workshops/2012/12w5081/report12w5081.pdf">Topological
+		Data Analysis and Machine Learning Theory</a> (Carlsson et al [2012])</li>
+	<li><a href="http://www.ayasdi.com/wp-content/uploads/2015/02/Topology_and_Data.pdf">Topology
+		and Data</a> (Carlsson [2009])</li>
+	<li><a href="http://www.nature.com/srep/2013/130207/srep01236/full/srep01236.html">Extracting
+		insights from the shape of complex data using topology</a> (Lum et al [2013])</li>
+	<li><a href="https://www.math.upenn.edu/~ghrist/preprints/barcodes.pdf">Barcodes: The Persistent Topology
+		of Data</a></li>
+</ul>
+</p>
+
+<p>Slides: <a href="http://www.slideshare.net/AnalyticsWeek/tda-33562822">Using TDA on your BigData</a></p>
+
+<hr/>
+<h2>Notes: Data Shape</h2>
+<p><b><a href="https://www.youtube.com/watch?t=21&v=iOxLgbnl1u4">Data Shape (Notes)</a> </b> (Ayasdi) ("i-yahzdi")<br/>
+Data has shape, and the shapes matter! </p>
+
+<p>In fact, most of us already know shape is important because we often use linear regression, which
+is nothing more than assuming the data is well-approximated by a specific shape --- a line.</p>
+
+<p>Unsurprisingly, data does not always lie along lines: for example, a data set with four distinct clusters, which
+is best represented by four points. Periodic time series data will often take shape as a circle or an ellipse
+on a scatterplot. Many data sets have localized regions that are linear, but have branching points.</p>
+
+<p>In data science, it is unlikely you know the shape of your data in advance: data science is not physics where we have an idea of what relationships should be beforehand. Furthermore, it is often extremely high dimensional, and
+so we cannot simply just "look at the data."</p>
+
+<p> Shape is defined in terms of a metric (Euclidiean distance, Hamming, correlation distance, etc); this encodes similarity (points that close are similar, points that are far are dissimilar).</p>
+
+<p>Three main ideas from topology are important for data analysis: 
+<ul>
+	<li>coordinate freeness (e.g., a circle is a circle, no matter where you plot it on the plane, what coordinates you use to desribe it, how you rotate it, etc); </li>
+	<li>invariance under deformation (e.g., think of the capital letter A written in different fonts, something the human visualization system automatically can detect as all being the same thing, which is hard to mimic computationally); </li>
+	<li>compressed representations (e.g., triangulations of manifolds approximate infinite information with finite information)</li>
+</ul>
+
+<p>The imporance of information compression: a circle is technically an infinite amount of coordinate pairs, 
+i.e., an infinite amount of information. But what if the specifics of the circle's geometry were not important? 
+What if all we need to know is that the circle is a connected, loopy thing? This propery can be encoded using
+much less information, e.g., we can represent the circle as a hexagon and need only know about its vertices and
+edges. </p>
+
+<p>Topology has two tasks: (1) represent shape, (2) measure shape</p>
+
+<p>Example: Say we start with a circle. Build an atlas on it (that is, overlapping coordinate charts); he calls 
+this a covering. Then represent each coordinate chart as a node and connect overlapping charts with an edge. 
+This object we just built is called a "nerve complex."</P>
+
+<p>How do you define closeness? In differential geometry you have a concrete idea because you are dealing with
+metric spaces. In topology, closeness is not quantitative, but takes on a relative notion of closess by
+using neighborhoods. Computationally, such neighborhoods are defined using a clustering algorithm: given a point cloud X and a covering U, build a simplicial complex using clustering.</P>
+
+<p>(NOTE TO SELF: conglomerative heirarchical clustering can probably be used on a bunch of days of mag data overlapped on to each other; it will select out the most common paths through the day....)</P>
+
+<p>Why do we need more than clustering? Well, clustering only does one thing: breaks things into pieces and more pieces. It doesn't further record the connections...</p>
+<p> DENDROGRAM: created by defining levels of closeness: r1, r2, r3, ...</p>
+
+<p>A notion from algebraic topology that helps us determine shape is the notion of a Betti numberr. 
+For example, the Betti number \(b_{1}\) (pronounced "betti 1") measures how many 1D loop classes there are. 
+The Betti number \(b_{2}\) ("betti 2") measures how many 2d surfaces there are.  In general,
+the ith Betti number \(b_{i}\) refers to the number i-dimensional holes on an n-dimensional surface.</p>
+
+<p>Some examples of shapes and their Betti decomposition:
+<ul>
+	<li>circle: b1=1, b2=0</li>
+	<li>sphere:  b1=0, b2=1</li>
+	<li>torus: b1=2, b2=1</li>
+</ul></p>
+
+
+<p>Some technical details on Betti numbers:
+<ul>
+	<li>Betti numbers are computed as dimensions of Boolean vector spaces: 
+	\(b_{i}(\mathbb{X}) = dim H_{i}(\mathbb{X})\), where \(H_{i}(\mathbb{X})\) is a functorial...</li>
+	<li>...i.e., the \(n^{th}\) Betti number represents the rank of the \(n^{th}\) homology group, \(H_{n}\)</li>
+</ul></p>
+	
+<hr/>
+<a href="http://www.slideshare.net/DeviousQuant/topological-data-analysis-49147172">Slides: TDA</a>
+
+
+
+<hr/>
+<p><b>More advanced reading...</b><br/>
+<ul>
+	<li><a href="http://appliedtopology.org/preprints/">Applied Topology Pre-Prints</a></li>
+	<li> <a href="http://link.springer.com/chapter/10.1007/978-3-662-43968-5_19">Topological Data Mining</a></li>
+	<li><a href="http://www.ima.umn.edu/2013-2014/W10.7-11.13/">Video Lectures: Workshop on TDA</a></li>
+</ul>
+
+
+</div><!--content-->
+</div><!--container-->
+
+
+</BODY>
+</HTML>
+
+

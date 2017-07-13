@@ -1,0 +1,258 @@
+\input{preamble.tex}
+\begin{document}
+
+\huge{Ionospheric Radio Wave Absorption}
+\rule{\textwidth}{1pt}
+\normalsize
+
+
+\textbf{I. Radio Wave Propagation in the Ionosphere} \\  
+  \\  
+  \textbf{A. Basic Description} \\  
+    A radio wave that passes through an ionized medium causes the
+    electrons of that medium to vibrate about a mean position.
+    If the vibrating electrons collide with the heavier, relatively
+    stationary ions, radio wave energy is absorbed from the wave and 
+    transferred to the medium. The rate of absorption depends on the 
+    collision frequency (i.e., the number of collisions per oscillation) 
+    -- that is, on $\nu/\omega$, where $\nu$ is the electron collision 
+    frequency and $\omega$ is the angular wave frequency of the radio 
+    wave.
+
+    By IGY 1957-58, it was understood that high-latitude radio
+    absorption is largely driven by geomagnetic disturbances, while mid-to-low
+    latitude radio absorption is strongly local time dependent, or in
+    other words, strongly controlled by the Sun's electromagnetic
+    radiation.
+
+  \textbf{B. Appleton-Hartree Quasi-Longitudianl Approximation} \\  
+    For a wave propagating sufficiently close to the geomagnetic field
+    direction, according to the classical Appleton-Hartree
+    quasi-longitudinal approximation, the effect of the electron-ion
+    collisions induced by the radio wave is to make the medium's index of
+    refraction complex:
+
+    \begin{gather}
+      n^{2}=1-\frac{\omega^{2}_{N}/\omega^{2}}
+      {1-i(\nu/\omega)\pm\omega_{H}cos(\theta/\omega)}=(\mu-i\chi)^{2}
+    \end{gather}
+
+    
+    A complex index of refraction is indicative of wave
+    absorption, where the real part indicates the phase velocity, while the
+    imaginary part indicates the amount of absorption (energy loss) when the
+    wave propagates through the medium. In this equation, $\mu$ and $\chi$ are the real 
+    and imaginary parts of the refractive index, $\omega_{N}$ is the plasma 
+    frequency, $\omega_{H}$ is the gyrofrequency, and $\theta$ is the angle 
+    between the magnetic field and the radio wave's direction of propagation. 
+
+    The wave amplitude of the radio wave, in the Appleton-Hartree
+    approximation, varies with distance l like: 
+
+    \begin{gather}
+      exp\left[ -\frac{\omega\chi}{c}l\right] exp\left[
+      i\omega t - \frac{\omega\mu}{c}l\right]
+    \end{gather}
+
+    The first term, governed by the complex part of the refractive index,
+    is what controls the energy transfer from the wave to the medium
+    (the ionospheric absorption), or in other words what controls the
+    decay of the wave. The coefficient multiplying distance l is
+    referred to as the "attenuation rate" K:
+
+    \begin{gather}
+      K=\frac{\omega}{c}\chi \quad\quad(in units of Np/m)
+    \end{gather}
+
+    NOTE: I think the unit "Np" here refers to the "Neper," which is a
+    logarithmic unit for ratios of measurements of physical field and power
+    quantities, such as gain and loss (but I'm not totally sure and should
+    look into this more). 
+
+    By plugging $\chi$ into the attenuation equation, one can see how the 
+    attenuation of the radio wave depends on parameters such the electron density 
+    and the collision frequency:
+    \begin{gather}
+      K=\frac{e^{2}}{2mc\epsilon_{0}}\cdot\frac{1}{\mu}\cdot\frac{N\nu}
+      {\nu^{2}+(\omega\pm\omega_{H}cos(\theta))} 
+    \end{gather}
+    
+    Here, e and m are electron charge and mass, c is the speed of light,
+    and $\epsilon_{0}$ is the permittivity of free space.
+    (\textbf{QUESTION}: is
+    free space an assumption going into the Appleton-Hartree
+    approximation?) If one sets $\mu=1$ for the lower ionosphere, one can compute the
+    "total absorption" over a path for both E-mode (-) and O-mode radio
+    waves (+):
+    \begin{gather}
+      A=4.6\cdot10^{-5}\int\frac{N\nu
+      dl}{\nu^{2}+(\omega\pm\omega_{H}cos(\theta))^{2}} 
+      \quad\quad (in units of dB)
+    \end{gather}
+
+    (\textbf{QUESTION}: why is $\mu=1$ is a good approximation?)
+    
+    Since the E-wave corresponds to a smaller denominator,
+    $\omega-\omega_{H}cos(\theta)$, it is more readily absorbed by the
+    ionosphere than the O-wave.
+    
+    Looking at the total absorption equation, one can see that at any frequency
+    or height, the absorption increases linearly with electron density:
+    more electrons in a given region of the ionosphere and you get more
+    radio wave absorption. The height at which absorption is most sensitive 
+    to changes in electron denity, N, is that height where 
+    $\nu=\omega\pm\omega_{H}cos(\theta)$
+   
+    Although Appleton-Hartree quasi-longitudinal approximation is
+    convenient analytically and has easily interpretable physics, it can
+    ultimately be overly simplistic since it does not take into account 
+    the dependence of on collision frequency, $\nu$, on electron energy.
+    For example, the Appleton-Hartree approximation breaks down in the D
+    region ionosphere (read: does not describe observations well when
+    used to model the D region ionosphere).
+
+
+  \textbf{C. Sen-Wyller Generalized Formulation} \\  
+    As mentioned, sometimes the Appleton-Hartree approximation of radio
+    wave absorption in the ionosphere can be overly simplistic. 
+    For example, in the D region, the collision frequency is dependent on
+    electron energy. One must generalize the Appleton-Hartree
+    approximation by introducing the proper functional dependence of
+    the collision frequency, $\nu$, on electron energy. 
+    The Sen-Wyller formulation of radio wave absorption generalizes the
+    Appleton-Hartree approximation in this way by introducing the 
+    quantity $\nu_{m}$ in place of $\nu$, where $\nu_{m}$ is the collision
+    frequency for a distribution of monoenergetic electrons and
+    corresponds to the most probable velocity in the actual electron
+    distribution. In the Appleton-Hartree approximation, $\nu$ corresponds to 
+    the RMS velocity of the electron distribution. 
+    
+    One can show that $\nu$ is related to $\nu_{m}$. (Derive these.) At low altitudes, where $\nu\gg\omega$, the generalized Sen-Wyller formula
+    recovers the Appleton-Hartree approximation by setting
+
+    \begin{gather*}
+      \nu=\frac{3}{2}\nu_{m}
+    \end{gather*}
+
+    At high altitudes, where $\nu\ll\omega$, the Appleton-Hartree formula
+    is recovered from the generalized (Sen-Wyller) formula by setting
+
+    \begin{gather*}
+      \nu=\frac{5}{2}\nu_{m}
+    \end{gather*}
+    
+    (\textbf{QUESTION}: Why 5/2 instead of 3/2?)
+
+\textbf{II. Mid-to-Low Latitudes} \\  
+
+\textbf{III. High Latitudes} \\  
+   By IGY 1957-58, it was clear that high-latitude (auroral) radio
+   absorption is driven by geophysical disturbances.
+
+   There exist two major types of high-latitude ionospheric absorption 
+   events: auroral absorption [AA] and polar cap absorption [PCA].
+   The distinction between these two types of high-latitude absorption was
+   originally made via characteristic time variations: although both can
+   produce over 10dB of absorption on a 30-MHz riometer, PCA tends to be
+   smooth and to last for several days, whereas AA is irregular and
+   short-lived. Nowadays, with polar-orbiting spacecraft, the two types
+   of high-latitude absorption events can further be distinguished by
+   direct observations of particles during conjunctions with the
+   ground-based riometers.
+
+   The geographic distributions of PCA and AA differ as well: PCA
+   covers the whole polar cap, whereas AA is confined to a belt near the
+   auroral regions (the intensity of AA decreases both poleward and
+   equatorward of this belt). Furthermore, AA occurs more frequently
+   than does PCA.
+
+   Hargreeves [1969] says that another type of absorption should have its
+   own classifcation: Sudden Commencement Absorption [SCA], an enhancement
+   associated with sudden-commencement magnetic storms.
+
+   NOTE TO SELF: It seems like Hargreeves alternates between reserving
+   the term ``auroral absorption'' for high-latitude absorption events
+   in general and for the phenomenon specifically referred to as
+   ``auroral absorption.'' This next passage is a great example; it very
+   much appears to generaly describe both AA and PCA.
+
+   So what is the physical mechanism of auroral absorption? According to
+   Hargreeves [1969]:
+   -- in short, the entry of energetic auroral particles cause radio waves
+   to be absorbed by the upper atmosphere
+   -- the stages may be represented like so: auroral particle
+   precipitation (CAUSE) => production of ionization in the atmosphere =>
+   equilibrium electron density (i.e., recombination processes) => radio
+   absorption (EFFECT)
+   -- so with a riometer, we measure absorption, but do so for example in
+   order to infer particle precipitation (i.e., absorption is a
+   quantitative observable that can be used to deduce information about
+   other parameters not directly measurable, at least from the ground)
+
+  \textbf{A. Auroral Absorption}
+     From Hargreeves [1969] (decadal review of riometry):
+     Auroral radio absorption observations were first reported Appleton 
+     [1933] (Ionospheric investigations in high latitudes). 
+
+     During periods of auroral and magnetic activity, the intensity of an
+     ionospherically-reflected mid-to-high frequency radio wave is weakened,
+     often to extinction.  Appleton [1933] inferred the cause of these radio
+     wave extinctions to be due to absorption of the radio waves due to
+     ``the production of ionization at abnormally low levels...below
+     that at which we can detect ionization produced by ultra-violet
+     light." The agent was thought to be "ionizing charged particles
+     [which] produce electrification below the normal lower region
+     [i.e., the E region]." 
+     -- I'm not quite sure was this last bullet means; read more and figure 
+     it out!!!
+
+     Before IGY 1957-58, auroral absorption was studied by
+     radio reflection methods (e.g., via "blackouts" recorded by ionosondes);
+     Hargreeves [1969] says the reflection methods were too sensitive 
+     -- "at frequencies of a
+     few MHz...the amount of absorption...at high latitudes leads all too
+     readily to the blackout condition, at which point the measurements cease
+     to be quantitative." And so, much reflection work was based on blackout
+     statistics.
+
+     By the time of Hargreeves [1969], although reflection methods were still
+     used, they had largely
+     fallen out of favor as the "cosmic noise method" became popular,
+     particularly the "riometer technique"
+
+
+     The phenomenon called "auroral absorption" 
+     is produced by the entry of auroral electrons 
+     At high latitudes, Hargreeves [1969] says that AA is the type of
+     absorption that occurs most often. AA is is a complex phenomenon
+     (relative to similar phenomena, like PCA) and as of Hargreeves
+     [1969] was not understood.
+
+     AA is a sporadic phenomenon, growing and decaying with auroral and
+     magnetic activity, yet doing so without any exact correspondence
+
+     REVIEWS ON AURORAL ABSORPTION:
+     1963: B. Hultqvist, "Studies of ionospheric absorption of radio waves by the
+     cosmic noise method," in Radio Astronomical and Satellite Studies of the
+     Atmosphere.
+     1966: B. Hultqvist, "Ionospheric absorption of cosmic radio noise," in
+     Space Science Reviews.
+     1966: R. R. Brown, "Electron precipitation in the auroral zone," in
+     Space Science Reviews.
+     1967: C. G. Little, "Auroral absorption of radio waves," in Aurora and
+     Airglow.
+
+
+  \textbf{B. Polar Cap Absorption}
+     Due to abnormal ionization produced by the incidence of solar protons 
+     after an intense solar flare.
+     Hargreeves [1969] says PCA is pretty well
+     understood (solar energetic protons from solar flares)
+     * for comprehensive review of Polar Cap Absorption, Hargreeves [1969]
+     tells me to see Bailey [1964], "Polar Cap Absorption"
+
+\end{document}
+
+
+
+

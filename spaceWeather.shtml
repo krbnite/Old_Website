@@ -1,0 +1,182 @@
+<html>
+
+<HEAD>
+<title>Kevin Urban: Geospace Research</title>
+<meta name="description" content="The professional page of Kevin Urban.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="js/script1.js"></script>
+<script type="text/javascript" src="js/script2.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</HEAD>
+
+<BODY>
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+<hr/>
+
+<div id="content">
+
+			<h2>2014</h2>
+			<DIV id="subcontent1">
+				<a href="https://agu.confex.com/agu/fm14/meetingapp.cgi#Paper/15942">
+					Locating the open-closed boundary during the passage of a corotating interaction region</a></p>
+				<p><u>Abstract</u>: During the 2007-2009 solar quiet period there existed a unique opportunity to study 
+				the synoptic variability of the open-closed boundary (OCB) using data provided by fluxgate magnetometers
+			 	located at South Pole, McMurdo, and from a network of Automatic Geophysical Observatories distributed 
+				across the Antarctic continent. In Urban et al [2011], this synoptic variability was analyzed during a 
+				geomagnetic quiet period of early August 2008 and excellent (>83%) agreement was found between the 
+				experimental observations and the BATSRUS space weather model. In this paper we discuss the OCB's synoptic 
+				behavior under the forcing of a geomagnetic storm driven by a corotating interaction region and again compare
+			 	these results to predictions made with different versions of BATSRUS model runs. Strictly adhering to the 
+				method developed in Urban et al [2011], we show only weak agreement between the experimental data and model 
+				during this geomagnetically-active time, independent of the model resolution and the incorporation of the 
+				Rice Convection Model. Given that a potential source of disagreement could be from the rigidity of the 
+				original open/closed field line determination technique itself (developed for geomagnetic quiescence), we 
+				adapt the technique to variations in local time and geomagnetic activity; any remaining discrepancies 
+				between the data and the model are investigated with DMSP spacecraft-determined boundary data.</p>
+				<p><u>Authors</u>: Kevin Urban, Andrew Gerrard, Louis Lanzerotti, and Allan Weatherwax</p>
+			</DIV><!--id="subcontent1"-->
+
+			 
+			<DIV id="subcontent1">
+				<p><a href="http://adsabs.harvard.edu/abs/2014AGUFMSM21A..08G">
+					Modulation of Ring Current He-Ions by Bounce-Resonant ULF Waves</a></p>
+				<p><u>Abstract</u>: The Radiation Belt Storm Probe Ion Composition Experiment (RBSPICE) 
+				instrument on the Van Allan Probes makes unique measurements of, among other ring current species, 
+				He-ions in the 65-keV to 520-keV energy range. In this paper we report the spatial and temporal 
+				variability of the high L-shell, low energy He-ion phase-space densities (PSD), as measured on both 
+				spacecraft during non-storm intervals. We find that the He-ion PSD at these locations and energies 
+				change dramatically from orbit to orbit across similar regions of the magnetosphere, and this 
+				variability is often related to simultaneously-observed variability in H-ion PSD (also at high 
+				L-shell and low energy). We show that the hourly modulation of both species is highly correlated to 
+				Pc1 and Pc3 wave activity. Specifically, we conclude that Pc3 frequency bounce-resonant ULF waves 
+				are responsible for scattering of He-ions, and thus control the non-storm morphology of ring current 
+				He-ions.</p>
+				<p><u>Authors</u>: Andrew Gerrard, Louis Lanzerotti, Jerry Manweiler, Jacob Bortnik, and Kevin Urban</p>
+			</DIV><!--id="subcontent1"-->
+
+
+
+<!-- ####################### 2013 ####################### -->
+			<h2>2013</h2>
+			<DIV id="subcontent1">
+				<p><a href="http://adsabs.harvard.edu/abs/2013AGUFMSM33A2129U">
+					Solar wind-driven ULF activity in Earth's inner radiation belt: Effects on trapped electrons</a></p>
+				<p><u>Abstract</u>: We report that, before and during multi-banded energetic electron events observed at 
+				near-equatorial, low L-values in the Van Allen Probes RBSPICE electron flux data, ULF power is distributed 
+				quasi-uniformly across broad ULF ranges (e.g., 9-20 minutes) for hours at a time. Data are used from 40+ 
+				conjugate ground-based magnetometers within the L-shell range [1-2]. This finding of geomagnetic power levels
+			 	is in contrast to previous conclusions from low Earth-orbit DEMETER spacecraft data that similar trapped 
+				particle structures result from power distributed quasi-monochromatically at some central period within this 
+				band. Though modeling results associated with previous claims reproduce the multi-band energy structure in the 
+				simulated electron flux data, the model hinges on the existence of a sole monochromatic wave whose power is 
+				distributed over a range of azimuthal wave numbers. Given that we find the magnetometer data from many sites 
+				to have power distributed quasi-uniformly over a broad ULF range, we note that it's possible to isolate a 
+				"quasi-monochromatic" ULF wave of one's choosing from such a spectrum given the right choice of a filter. 
+				We also show that the ribbed energy structures in the RBSPICE electron fluxes are highly associated with 
+				the Kp Index and solar wind data; specifically, the structures seem to be associated with the speed of the 
+				solar wind, and therefore with the passage of interplanetary structures past Earth.
+				<p><u>Authors</u>: Kevin Urban, Andrew Gerrard, Louis Lanzerotti, and Donald Mitchell</p>
+			</DIV><!--id="subcontent1"-->
+
+
+<!-- ####################### 2012 ####################### -->
+			<h2>2012</h2>
+			<DIV id="subcontent1">
+				<p><a href="http://adsabs.harvard.edu/abs/2012AGUFMSA43A2076U">
+					Particle precipitation regimes of the polar cap in the midst of deep 
+					geomagnetic quiescence: perspectives from the AGO magnetometer network</a></p>
+				<p><u>Abstract</u>: In Urban et al [2011], a scheme was devised to synoptically monitor the open-closed 
+				boundary [OCB] by employing magnetic field data from the AGO network of fluxgate magnetometers across 
+				the Antarctic plateau. For each magnetometer in the network, the scheme was designed to decide 
+				whether or not the instrument was sampling an open or closed magnetic field line at 10-minute temporal 
+				resolution. To verify the scheme, the data product was compared to BATSRUS output during a quiet interval in 
+				2008 preceding the passage of a corotating interaction region [CIR]. Although the comparison was favorable 
+				during the quiescent period, there remains an inherent ambiguity involved in using a model to verify the 
+				approach. This current study aims to directly compare the results of our OCB detection scheme with particle 
+				precipitation data as measured by DMSP satellites. The quietest periods during the unusually quiet 2008-2009 
+				timespan are investigated to expose possible relationships between certain OCB signatures in the magnetometer 
+				data and the various particle regimes as defined by well-documented particle precipitation methods.</p>
+				<p><u>Authors</u>: Kevin Urban and Andrew Gerrard</p>
+			</DIV><!--id="subcontent2"-->
+
+
+<!-- ####################### 2011 ####################### -->
+    <h2>2011</h2>
+		<DIV id="subcontent1">
+			<p><a href="http://onlinelibrary.wiley.com/doi/10.1029/2011SW000688/full">
+				Quiet-time observations of the open-closed boundary prior to the CIR-induced
+				storm of 9 August 2008</a>
+			<p><u>Abstract</u>: The open-closed magnetic field line boundary (OCB) is an important indicator 
+			of magnetospheric dynamics and can be used to identify locations of particle precipitation at the 
+			edge of the magnetosphere. The OCB can fluctuate during geomagnetic events, and the extent of this 
+			variability is a vital component of space weather research and modeling. There was a unique opportunity
+		 	to identify and study the synoptic variability of the OCB during the extended 2007¿2009 solar quiet 
+			period through use of the Polar Experiment Network for Geophysical Upper-atmosphere Investigations¿Automatic 
+			Geophysical Observatory (PENGUIn-AGO) network of ground-based fluxgate magnetometers on the Antarctic continent. 
+			The fluxgates, which measured the occurrence of standing Pc5 modes on closed field magnetic field lines,
+		 	allowed for identification of the OCB structure and study of the synoptic behavior of the OCB before and 
+			during a corotating interaction region (CIR)-driven magnetic storm. Observations were compared with results 
+			from the BATSRUS space weather model and show 83% agreement for over ¿2 days before the CIR event. It is shown
+		 	that such synoptic magnetometer data sets of the OCB during these storms allow for a careful test of current 
+			space weather models. The current study investigates the pre¿storm time period, while a future paper 
+			will address the storm time evolution of the OCB.</p>
+			<p><u>Authors</u>: Kevin Urban, Andrew Gerrard, Louis Lanzerotti, Aaron Ridley, Yajnavalkya Bhattacharya, and 
+			Allan Weatherwax</p>
+		</DIV><!--id="subcontent1"-->
+		<DIV id="subcontent1">
+			<p><a href="http://adsabs.harvard.edu/abs/2011AGUFMSA51A1923U">
+				Synoptic-scale magnetometer observations of the open-closed field line boundary</a></p>
+			<p><u>Abstract</u>: The open-closed field line boundary (OCB) of Earth's magnetosphere can be utilized as a 
+			window into the global state of the magnetospheric system. During various geomagnetic events, the OCB can 
+			vary in both size and shape; the extent of this variability is a vital component of space weather research 
+			and modeling. During the 2007-2009 solar quiet period there was a unique opportunity to identify and study the 
+			synoptic variability of the OCB during such events through use of the Polar Experiment Network for Geophysical 
+			Upper-atmosphere Investigations-Automatic Geophysical Observatory (PENGUIn-AGO) network of ground-based 
+			fluxgate magnetometers on the Antarctic continent. The magnetometers, spanning a range of latitudes and local 
+			times, measure the occurrence of standing Pc5 modes on closed magnetic field lines, as well as a long period 
+			band indicative of closed field lines extending into the magnetotail. Synthesis of this information can 
+			lead to isolating the structure and dynamics of the OCB, for example, before and during the passage of a 
+			co-rotating interaction region (CIR) or coronal mass ejection (CME). Observations were compared with results 
+			from the BATSRUS space weather model and show 83% agreement during geomagnetic quiescence. The model and 
+			the data differ during a geomagnetic storm driven by a CIR. Discrepancies between the data and the model 
+			are currently being investigated.</p>
+			<p><u>Authors</u>: Kevin Urban, Andrew Gerrard, Louis Lanzerotti, Aaron Ridley, Yajnavalkya Bhattacharya, and 
+			Allan Weatherwax</p>
+		</DIV><!--id="subcontent1"-->
+
+		<DIV id="subcontent1">
+			<p><a href="http://adsabs.harvard.edu/abs/2011AGUFMSH21B1917B">
+				Solar p-mode frequency plasma waves in high speed solar wind streams</a></p>
+			<p><u>Abstract</u>: We report our finding that discrete plasma wave frequencies in the 3-20
+		 	minute period band (solar p-mode frequencies) are concentrated in high speed solar wind 
+			streams originating from solar coronal holes. The results are based on analysis of solar 
+			wind proton velocities measured by the SWEPAM (Solar Wind Electron, Proton, and Alpha Monitor)
+		 	instrument on board the ACE (Advanced Composition Explorer) satellite. The analysis spans several 
+			solar rotations (CIR events) during the quiet sun period of June through August 2008, when 
+			CME and other transient solar-produced events were absent. Waves in the solar wind plasma 
+			may carry signatures of the Sun's interior structure, and dynamics in the chromosphere and corona. 
+			This finding adds important new insights to past findings that solar p-mode frequencies propagate as 
+			plasma waves into the interplanetary medium. The dominance of such waves in the high speed streams 
+			implies that the open field lines from solar polar coronal holes provide a key path for the waves to 
+			propagate to large distances from the Sun.</p>
+			<p><u>Authors</u>: Yajnavalkya Bhattacharya, Andrew Gerrard, Kevin Urban, Louis Lanzerotti, and
+			David Thomson</p>
+		</DIV><!--id="subcontent1"-->
+
+<!-- ####################### 2010 ####################### -->
+    <h2>2010</h2>
+		<DIV id="subcontent1">
+			<p>Master's Thesis: Synoptic variability of a CIR-driven open-closed boundary during solar minimum</p>
+
+		</DIV><!--id="subcontent1"-->
+
+
+</div><!--id="content"-->
+</div><!--id="container"-->
+</body>
+</html>
+

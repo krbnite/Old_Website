@@ -1,0 +1,100 @@
+<html>
+
+<HEAD>
+<title>Kevin Urban</title>
+<meta name="description" content="The professional page of Kevin Urban.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="../js/script1.js"></script>
+<script type="text/javascript" src="../js/script2.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</HEAD>
+
+<BODY>
+<DIV id="container">
+
+<DIV id="nav">
+	<!--#include virtual="../ssi/navBar.html"-->
+</DIV><!--id="nav"-->
+<hr/>
+
+<div id="content">
+
+  <div id="swsidebar">
+		<!--#include virtual="../ssi/swsidebar.html"-->
+	</div><!--id="sidebar"-->
+
+
+	<div id="swmain">
+		<table>
+			<tr>
+				<td><img src="images/sw_spaceweather.jpg" /></td>
+			</tr>
+			<tr>
+				<td>
+					<h2>Corotating Interaction Regions</h2>
+					<p>High above the Earth&#146;s lower and middle atmosphere there exists a 
+					spread of dynamical conditions characterizing what has become known as 
+					space weather. In the manner that &#147;weather&#148; entails the myriad conditions and dynamically changing environment of the troposphere, the phrase &#147;space weather&#148; refers to the conditions and on-going transformations of the near-space environment&#151;often referred to as geospace&#151;which includes such realms as the ionosphere, magnetosphere, and plasmasphere. Beyond the terrestrial similarities, space weather also refers to the present conditions at the surface of the sun and to a continuous solar output of charged particles, supersonically in transit, known as the solar wind.</p>
+
+					<p>The solar wind is typically categorized into two major types: fast 
+					and 
+					slow. The slow wind is typically on the order of 400 km/s (~ one million miles per hour), while the fast wind is approximately double that speed. This is definitely an oversimplification, especially during times surrounding solar maximum when a highly variable slow wind becomes dominant. However, during solar minimum the categorization is crude but appropriate, the distinction being quite clear; during this time period, the winds are characteristic of distinct regions of origin.</p>
+				</td>
+			</tr>
+			<tr><td> <img src="images/sw_CIR-carcrash.jpg" width="40%"/></td></tr>
+			<tr>
+				<td>
+					<p>The fast wind is associated with coronal holes and open field 
+					regions 
+					of the corona (regions in which the magnetic field lines extend into the solar system rather than reconnecting with the surface of the sun), often originating in the Sun&#146;s polar regions. On the other hand, slow winds generally stem from the active regions concentrated near the magnetic equator, usually within what is called the streamer belt.</p>
+
+					<p>The Sun&#146;s magnetic axis makes an angle with its axis of 
+					rotation, 
+					which means as the Sun rotates, a range of magnetic latitudes intersect the ecliptic plane. Thus, if the source regions of the fast and slow solar wind endure multiple solar rotations, a succession of fast and slow solar winds will encounter Earth. Unlike wind in our atmosphere, in which a fast wind catching up to a slower wind could mix with the slower wind while displacing it, the fast solar wind cannot penetrate into a region of slow wind; this produces an interaction region between the two winds&#151;an area of compressed plasma and magnetic field, which when encountering Earth can trigger a geomagnetic storm (up to a few days worth of disturbed geomagnetic activity). </p>
+					<p>If the source regions on the Sun persist through multiple rotations, 
+					the compression region throughout interplanetary space takes on a shape that appears to spiral about the Sun, as if the Sun is dragging the region around as it rotates about its axis. Note, however, that nothing is physically being dragged (a parcel of solar wind itself travels, to a good approximation, radially outward). This phenomenon&#151;a region of interaction between a fast and a slow wind, which globally appears to co-rotate with the Sun&#151;is known as a corotating interaction region (CIR). The geomagnetic storms triggered by these interaction regions tend to recur with a 27-day periodicity, in accord with the Sun&#146;s synodic rotational period.</p>
+				</td>
+			</tr>
+		</table>
+
+		<hr />
+
+
+		<h2>The Earth&#146;s Magnetosphere</h2>
+		<p>It is well known that the magnetic field close to the Earth&#146;s surface is approximately dipolar&#151;this was first calculated and described mathematically by C. F. Gauss using what is now known as spherical harmonic analysis in the early 19th century. But on larger scales, this isn't the case. 
+		</p>
+
+		<p>Ninety kilometers altitude marks the lower limit of the ionosphere: a region of ionized particles, electrons, and neutral atoms. The ionized population is due to ultraviolet radiation from the sun striking ambient atoms and molecules. At the lowest ionospheric altitudes, ionized particles are short-lived and quickly recombine to form neutrals, but ascending higher, ionization gradually outperforms recombination. At the outer limits of the ionosphere, the neutral wind component fades completely from existence; this region, dominated only by plasma, is called the magnetosphere&#151;a realm endowed with a complex system of electrical currents formed as a result of the interaction between the solar wind and Earth&#146;s magnetic field. A dipolar model of the geomagnetic field just won&#146;t cut it in this place!</p>
+		<br><img src="images/magnetosphere.jpg" align="left" />
+
+		<p>As the solar wind comes in contact with the terrestrial field on the dayside, most of the charged particles in the solar wind are deflected around the earth&#151;this deflection initializes at the &#147;bow shock&#148; and is akin to water rushing by a speedboat. This bow shock can loosely be interpreted as the point of contact between the solar wind and the magnetosphere, although it is actually not a point of contact at all: the bow shock, unlike shocks formed in more familiar media, is collisionless. 
+
+		<p>While much of the solar wind is deflected at the bow shock, it is not entirely prevented from entering the magnetosphere: a number of particles manage to funnel through magnetosphere near the poles in hole-like structures called the polar cusps. This solar wind plasma then mixes into the plasma of the magnetosphere and ionosphere, creating the aurora. 
+		On the nightside, the terrestrial field is elongated: this is the effect of the solar wind traversing along the exterior of the boundary separating the two plasma domains (the magnetopause), stretching and dragging the terrestrial field lines. This continual flow casts the nightside magnetosphere into a teardrop-like shape called the &#147;magnetotail.&#148; 
+
+		<hr />
+
+		<h2>Geomagnetic Storms and Substorms</h2>
+		<p>When a CIR crosses paths with the magnetopause, Alfvenic structures in the solar wind cause the magnetosphere to undergo vigorous oscillations and deformations&#151;magnetic field lines in the tail bend and stretch, excessively so, such that they snap, releasing all kinds of particles and radiation into the inner-magnetosphere and ionosphere, mostly concentrating in the auroral zone. This release of energy and its associated magnetic disturbance is known as a magnetospheric substorm. 
+
+		<p>There exist three phases of a typical substorm: growth, expansion, and recovery. During the growth phase, energy from the solar wind is stored in the magnetotail. The expansion phase begins when the magnetotail becomes unstable; this is usually called the &#147;substorm onset&#148; and it is the point at which the accumulated energy is impulsively released. The recovery phase marks the return towards the pre-substorm state&#151;not necessarily geomagnetic quiet given that many substorms occur at some point in much larger and longer-lived geomagnetic disturbances called magnetic storms. Note though that despite the name &#147;substorm,&#148; a substorm neednÕt take place during or be associated with a magnetic storm. The index typically used to monitor substorm activity is called the Auroral Electrojet (AE) index; these indices are derived from the magnetic-north component of the geomagnetic field at 12 reference stations situated under the auroral oval&#146;s statistical location.
+
+		<p>A typical CIR can induce many substorms, one after another, and most CIRs ultimately conjure up weak-to-moderate geomagnetic storms; some argue that this is precisely what a geomagnetic storm is&#151;a succession of substorms, regardless of origin&#151;but this is still a widely debated issue (i.e. some argue that there exist evidence suggesting geomagnetic storm activity in absence of substorm activity). 
+
+		<p>In general, a geomagnetic storm has three phases: initial, main, and recovery. The initial phase of a storm can last anywhere from minutes to hours; during this phase, the horizontal component of the field increases, reaching up to a few tens of nanotesla higher than geomagnetic quiet. During the next phase of the storm, called the main phase, a sharp drop in the horizontal component is recorded, with values reaching as low as a 100 nanotesla or more below the quiet-time value; this phase can last between a half hour to several hours. The recovery phase is last phase of the storm and is the period in which the geomagnetic field gradually returns&#151;over a day or two, up to a week&#151;to the quiet (undisturbed) value. 
+
+		<p>During solar maximum, when the solar wind is not generated in such a simple configuration as during solar minimum and the Sun is highly active with myriad explosive phenomena, it is difficult to distinguish the effects of a CIR on the magnetosphere. The simple configuration of solar minimum makes possible a study of how corotating interaction region modulates the magnetospheric configuration and permits the possibility of distinguishing its effects on the open-closed boundary. During the summer of 2008, such quiet time existed and it was possible to single out a CIR event and to observe its effects on the OCB using a ground-based network of magnetometers distributed across the Antarctic plateau. 
+
+		<hr />
+
+		<h2>PENGUIn AGOs</h2>
+
+
+		<br clear="all" />
+		<hr />
+	</div><!--id="main"-->
+</div><!--id="content"-->
+</div><!--id="container"-->
+</body>
+</html>
+

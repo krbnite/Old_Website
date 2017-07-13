@@ -1,0 +1,63 @@
+<html>
+<HEAD>
+<title>IMOGET</title>
+<meta name="description" content="The professional page of Kevin Urban.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ TeX: { extensions: ["cancel.js"] }});
+</script>
+</HEAD>
+
+<BODY>
+
+
+<pre>
+
+#!/bin/sh
+#source ~/.bash_profile
+
+# NOTES: To use from CLI
+# ./get_IGRF.bash 2013 03 01 | idl -quiet 2>/dev/null
+
+year=$1
+month=$2
+dom=$3
+hr=0; min=0; sec=0
+
+elv=(`cat ../data/processed/$year/$month/${dom}_imo* | awk 'NR>1{print $4}'`)
+lat=(`cat ../data/processed/$year/$month/${dom}_imo* | awk 'NR>1{print $7}'`)
+lon=(`cat ../data/processed/$year/$month/${dom}_imo* | awk 'NR>1{print $8}'`)
+n_sites=${#elv[*]}
+
+# IN GEOPACK, "elevation" is in RE, where ground-level is 1; the elevation data from INTERMAGNET is in km and ground-level is @ 0-km
+# Conversion: km->Re   (1 RE = 6378.5 km; 1 km = 0.0001568 RE)
+# elv_geo = elv_imag*0.0001568 + 1
+</pre>
+
+<p>for ((i=0; i&lt;n_sites; i++)); do<br/>
+&nbsp;&nbsp; sed &lt;&lt;-sayIt #| idl 
+<pre>
+  .run
+  dlm_load,'geopack'
+  colat=90-(${lat[$i]})
+  elv_geo = ${elv[$i]}*0.0001568 + 1
+  geopack_recalc,$year,$month,$dom,$hr,$min,$sec,/date
+  geopack_igrf_geo,elv_geo,colat,${lon[$i]},Z,X,Y,/degree
+  ;# I only care about unit vectors
+  Z=-Z
+  X=-X
+  F=sqrt(X^2 + Y^2 + Z^2)
+  X=X/F; Y=Y/F; Z=Z/F
+  print,X,Y,Z,X^2+Y^2+Z^2
+  ;# Hmm, this shit's not giving me unit vectors...that's for sure.
+  end
+  sayIt
+  done
+
+
+</pre>
+
+
+</BODY>
+</HTML>

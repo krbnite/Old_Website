@@ -1,0 +1,40 @@
+<HTML>
+<!--THIS IS MY WEBSITE-->
+<HEAD>
+<TITLE>Kevin Urban</TITLE>
+<meta name="description" content="The professional page of Kevin Urban.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="text/javascript" src="js/script1.js"></script>
+<script type="text/javascript" src="js/script2.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</HEAD>
+
+<style type="text/css">
+<!-- 
+h2 {background-color: gray;}-->
+</style>
+
+<BODY>
+<!--#include virtual="ssi/navBar.html"-->
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js">
+  $(function () {
+      // Want to select prez from side bar and have active one show
+      // $("#id").hide(300).show(300).slideUp(400).slideDown(200).delay(500);
+      // $("#id").fadeIn(300).fadeOut(400).fadeToggle(200).slideToggle(250);
+      // $("#id").toggle(300).css({color:'red'});
+  }); // end jQuery
+</script>
+
+<div id="main">
+	<iframe src="http://www.slideshare.net/slideshow/embed_code/46723410" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+	<iframe src="http://www.slideshare.net/slideshow/embed_code/46724570" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/inverseuniverse/2015-0302-prezafrlagofluxgatedataquality" title="2015-Mar-02: AGO Fluxgate Data: Extracting value from an imperfect time series" target="_blank">2015-Mar-02: AGO Fluxgate Data: Extracting value from an imperfect time series</a> </strong> from <strong><a href="//www.slideshare.net/inverseuniverse" target="_blank">inverseuniverse</a></strong> </div>
+
+
+	<!-- This is a cool one: it hosts all prezs at once -->
+	<iframe src="http://www.slideshare.net/inverseuniverse/slideshelf" width="615px" height="470px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+</div id="main">
+
+</BODY>
+</HTML>
